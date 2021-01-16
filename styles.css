@@ -160,7 +160,8 @@ p
 
 select /* FIND SOMETHING THAT WORKS IN SAFARI */
 {
-	text-indent: 12.5px;
+		text-align-last: center;
+	text-align: -webkit-center;
 }
 
 
