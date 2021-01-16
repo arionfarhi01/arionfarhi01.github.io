@@ -89,8 +89,8 @@ function closeNav()
 {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("push").style.marginLeft = "0";
-   document.getElementById("menuImage").style.display = "inline";
-   document.getElementById("titleText").style.display = "block";
+  document.getElementById("menuImage").style.display = "inline";
+  document.getElementById("titleText").style.display = "block";
 }
 
 
