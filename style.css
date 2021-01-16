@@ -94,7 +94,6 @@ form
 	border-radius: 20px;
 	text-align: center;
 	border: 1px dotted var(--red);
-	margin-bottom: 22.5%;
 }
 
 hr
@@ -161,7 +160,7 @@ p
 
 select /* only works for chrome */
 {
-	text-align-last: center;
+	 /* text-align-last: center; */
 }
 
 
@@ -169,7 +168,7 @@ select /* only works for chrome */
 
 footer
 {
-	margin-top: 20%;
+	margin-top: 25%;
 }
 
 .footerText
