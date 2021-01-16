@@ -32,12 +32,18 @@ html
 
 header
 {
-	background-color: #F2F2F2;
+	background-color: #FAFAFA;
 	margin-left: -2.5%;
 	margin-top: -2%;
 	position: fixed;
   	top: .5%;
- 	width: 100%
+ 	width: 100%;
+ 	z-index: 9999;
+
+ 	/* shadow */
+ 	box-shadow: 4px 4px 2px #ccc;
+    -moz-box-shadow: 4px 4px 2px #ccc;
+    -webkit-box-shadow: 4px 4px 2px #ccc;
 }
 
 #titleText
@@ -138,7 +144,7 @@ p
 	font-size: 1.02em;
 }
 
-select /* MAKE SURE WORKS IN SAFARI */
+select /* FIND SOMETHING THAT WORKS IN SAFARI */
 {
 	text-align-last: center;
 }
@@ -215,10 +221,15 @@ footer
   transition: 0.5s;
 }
 
-.sidenav a:hover 
+/* Links */
+a:link
 {
-   text-decoration: none;
-   background-color: #F2F2F2;
+	text-decoration: none;
+}
+
+a:hover, a:active
+{
+   text-decoration: underline;
 }
 
 /* Position and style the close button (top right corner) */
