@@ -11,7 +11,6 @@
 
 /* body */ 
 
-
 body
 {
 	font-family: "Ubuntu";
@@ -159,6 +158,11 @@ p
 	font-size: 1.02em;
 }
 
+select /* only works for chrome */
+{
+	text-align-last: center;
+}
+
 
 /* footer */
 
@@ -217,7 +221,7 @@ footer
   left: 0;
   overflow-x: hidden; 
   padding-top: 15%; 
-  transition: 0.5s; 
+  transition: 0.4s; 
 }
 
 /* The navigation menu links */
@@ -228,7 +232,7 @@ footer
   font-size: 1.25em;
   color: var(--red);
   display: block;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 /* Links */
@@ -255,7 +259,7 @@ a:hover, a:active
 
 #push 
 {
-  transition: margin-left .5s;
+  transition: margin-left .4s;
   padding: 20px;
 }
 
