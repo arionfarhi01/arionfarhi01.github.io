@@ -5,7 +5,7 @@
 	<meta charset= "utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
 	<title>Hangr</title>
-	<link rel= "stylesheet" href= "../styles/style.css">
+	<link rel= "stylesheet" href= "style.css">
 </head>
 
 <body>
@@ -14,13 +14,14 @@
 
 				<!-- MENU -->
 				<div id= "menu">
-					<input type="image" src="../images/menu.png" name="menu" id="menuImage" onclick= "openMenu()"/>
+					<input type="image" src="menu.png" name="menu" id="menuImage" onclick= "openNav()"/>
+				</div>
 
-					<div id= "menuDropdown">
-						<a href="#">Link 1</a>
-					    <a href="#">Link 2</a>
-					    <a href="#">Link 3</a>
-					</div>
+				<!-- SIDE NAV -->
+				<div id= "mySidenav" class= "sidenav">
+					<a href="javascript:void(0)" class= "closebtn" onclick="closeNav()">&times;</a>
+					<a href= "index.html">Course search</a>
+					<a href= "feedback.html">Feedback</a>
 				</div>
 
 				<!-- TITLE -->
@@ -30,9 +31,12 @@
 
 			</header>
 
-		<main>
-			<p> 404 ERROR </p>
+		<main id = "push">
+			<br>
+			<p> contact us </p>
 		</main>
+
+		<script src= "index.js"></script>
 
 </body>
 
