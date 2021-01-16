@@ -131,7 +131,7 @@ input[type=text]
 	margin-top: 2%;
 }
 
-/* Make placeholders italic */
+/* make placeholders italic */
 
 ::-webkit-input-placeholder {
    font-style: italic;
@@ -208,7 +208,7 @@ footer
 }
 
 
-/* SIDE NAVIGATION */
+/* side navigation */
 
 /* The side navigation menu */
 .sidenav 
@@ -235,7 +235,7 @@ footer
   transition: 0.4s;
 }
 
-/* Links */
+/* links */
 a:link
 {
 	text-decoration: none;
@@ -246,7 +246,7 @@ a:hover, a:active
    text-decoration: underline;
 }
 
-/* Position and style the close button (top right corner) */
+/* position and style the close button (top right corner) */
 .sidenav .closebtn 
 {
   position: absolute;
@@ -261,6 +261,56 @@ a:hover, a:active
 {
   transition: margin-left .4s;
   padding: 20px;
+}
+
+/* media queries */
+
+/* ipad or iphone */
+@media screen and (min-width: 700px) 
+{
+
+ form
+ {
+ 	right: 35px;
+ 	width: 100%;
+ }
+
+ #push
+ {
+ 	display: flex;
+ 	flex-direction: row;
+ }
+
+footer
+ {
+ 	margin-top: 6.5%;
+ 	margin-bottom: auto;
+ 	margin-left: auto;
+ 	margin-right: 5%;
+ }
+
+ header
+ {
+ 	width: 105%;
+ 	margin-right: auto;
+ 	margin-left: -2.5%;
+ 	margin-bottom: 0%;
+ }
+
+ #titleText
+ {
+  	font-size: 1.75em;
+ 	text-indent: -2%;
+ 	margin-top: 1%;
+ }
+
+ #menuImage
+ {
+ 	left: 40px;
+ 	top: 45px;
+ 	width: 32.5px;
+ }
+
 }
 
 
