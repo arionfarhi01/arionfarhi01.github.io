@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* variables */
+
+:root
+{
+	--red: rgb(255,49,8, .95);
+}
+
+
+/* body */ 
+
+body
+{
+	font-family: "Ubuntu";
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+html
+{
+	--webkit: text-size-adjust: 100%; 
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: 
+}
+
+
+/* header */
+
+header
+{
+	background-color: #F2F2F2;
+	margin-left: -2.5%;
+	margin-top: -2%;
+	position: fixed;
+  	top: .5%;
+ 	width: 100%
+}
+
+#titleText
+{
+	display: block;
+	color: var(--red);
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 0%;
+}
+
+small
+{
+	display: inline;
+	clear: both;
+	font-size: .1em;
+	position: relative;
+	bottom: 12px;
+}
+
+
+#menuImage 
+{
+	width: 25px;
+	position: relative;
+	top: 30px;
+	left: 20px;
+	margin-top: -5%;
+}
+
+.show
+{
+	display: block;
+	width: 250px;
+}
+
+
+/* form */ 
+
+form
+{
+	position: relative;
+	top: 40px;
+	margin-left: 3%;
+	margin-right: 3%;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-radius: 20px;
+	text-align: center;
+	border: 1px dotted var(--red);
+}
+
+hr
+{
+	margin-top: -4%;
+}
+
+#dropdown
+{
+	margin-top: 1%;
+	margin-bottom: 7%;
+}
+
+#courseTitle
+{
+	padding-bottom: 4%;
+}
+
+#submitButton
+{
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+
+}
+
+input[type=submit]
+{
+	font-size: .85em;
+}
+
+input[type=text]
+{
+	text-align: center;
+	margin-top: 2%;
+	font-style: italic;
+}
+
+h2
+{
+	text-align: center;
+	padding-bottom: 3%;
+	font-size: 1.25em;
+}
+
+p
+{
+	font-size: 1.02em;
+}
+
+select /* MAKE SURE WORKS IN SAFARI */
+{
+	text-align-last: center;
+}
+
+
+/* footer */
+
+footer
+{
+	margin-top: 20%;
+}
+
+.footerText
+{
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.emp
+{
+	color: var(--red);
+}
+
+.footerText > a:link, a:visited
+{
+	color: var(--red);
+}
+
+#bottomFooterText
+{
+	font-size: .5em;
+	text-align: center;
+}
+
+/* error messages */
+
+#error1, #error2, #error3
+{
+	font-size: .5em;
+	color: var(--red);
+	text-align: center;
+}
+
+#error3
+{
+	padding-bottom: 2%;
+}
+
+
+/* SIDE NAVIGATION */
+
+/* The side navigation menu */
+.sidenav 
+{
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  z-index: .5; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
+  padding-top: 15%; 
+  transition: 0.5s; 
+}
+
+/* The navigation menu links */
+.sidenav a 
+{
+  padding: 3% 5% 5% 20%;
+  text-decoration: underline;
+  font-size: 1.25em;
+  color: var(--red);
+  display: block;
+  transition: 0.5s;
+}
+
+.sidenav a:hover 
+{
+   text-decoration: none;
+   background-color: #F2F2F2;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn 
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+#push 
+{
+  transition: margin-left .5s;
+  padding: 20px;
+}
+

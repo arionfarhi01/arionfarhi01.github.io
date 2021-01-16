@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+
+/* variables */
+
+:root
+{
+	--red: rgb(255,49,8, .95);
+}
+
+
+/* header */
+
+header
+{
+	background-color:var(--red);
+	margin: -2%;
+	padding-bottom: 1%
+}
+
+#menu
+{
+	display: inline-block;
+	width: 25px;
+	margin-left: 2.5%;
+	padding-top: 4%;
+	position: relative;
+	top: 3px;
+}
+
+#title
+{
+	display: inline-block;
+	color: white;
+	font-size: 1.75em;
+	text-indent: 7%;
+	letter-spacing: 1px;
+}
+
+/* body */ 
+
+body
+{
+	font-family: "Maven Pro";
+}
+
+html
+{
+	--webkit: text-size-adjust: 100%; 
+	scroll-behavior: smooth;
+}
+
+
+/* form */ 
+
+form
+{
+	margin-top: 5%;
+	background-color: lightgrey;
+	padding: 20px;
+	border-radius: 20px;
+	border: 1px dashed var(--red);
+}
+
+/* error messages */
+
+#error1, #error2, #error3
+{
+	font-size: .5em;
+	color: var(--red);
+}
+
+
+/* landscape mode??? */ 
