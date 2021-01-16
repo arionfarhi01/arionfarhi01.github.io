@@ -1,9 +1,36 @@
 @import 'style.css';
 
+
+p
+{
+	font-size: .9em;
+	text-align: center;
+	margin-bottom: 0%;
+}
+
+#top
+{
+	margin-top: 10%;
+}
+
+#bottom
+{
+	margin-bottom: 10%;
+}
+
 h2
 {
-	font-size: 5em;
+	margin-bottom: 4%;
+	margin-top: 4%;
+	font-size: 4.5em;
 	color: var(--red);
 	text-align: center;
-	margin-top: 20%;
+}
+
+a:link, a:visited
+{
+	margin-top: 15%;
+	font-size: 1.25em;
+	text-decoration: underline;
+
 }
