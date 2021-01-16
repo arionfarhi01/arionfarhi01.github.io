@@ -79,8 +79,16 @@ function changePlaceholders()
 
 function openNav() 
 {
-  document.getElementById("mySidenav").style.width = "32%";
-  document.getElementById("push").style.marginLeft = "32%";
+  if (window.matchMedia('(min-width: 1000px)').matches)
+  {
+    document.getElementById("mySidenav").style.width = "16%";
+    document.getElementById("push").style.marginLeft = "16%";
+  }
+  else
+  {
+    document.getElementById("mySidenav").style.width = "32%";
+    document.getElementById("push").style.marginLeft = "32%";
+  }
   document.getElementById("menuImage").style.display = "none";
   document.getElementById("titleText").style.display = "none";
 }

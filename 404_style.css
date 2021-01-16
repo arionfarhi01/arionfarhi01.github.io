@@ -1,0 +1,9 @@
+@import 'style.css';
+
+h2
+{
+	font-size: 5em;
+	color: var(--red);
+	text-align: center;
+	margin-top: 20%;
+}
