@@ -86,7 +86,7 @@ small
 form
 {
 	position: relative;
-	top: 55px;
+	top: 52px;
 	margin-left: 3%;
 	margin-right: 3%;
 	padding-left: 25px;
@@ -94,6 +94,7 @@ form
 	border-radius: 20px;
 	text-align: center;
 	border: 1px dotted var(--red);
+	margin-bottom: 21%;
 }
 
 hr
