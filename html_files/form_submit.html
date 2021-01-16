@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+<head>
+	<meta charset= "utf-8">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+	<title>Hangr</title>
+	<link rel= "stylesheet" href= "../styles/style.css">
+	<link rel="shortcut icon" href="../images/icon.ico"/>
+</head>
+
+<body>
+		
+			<header>
+
+				<!-- MENU -->
+				<div id= "menu">
+					<input type="image" src="../images/menu.png" name="menu" id="menuImage" onclick= "openNav()"/>
+				</div>
+
+				<!-- SIDE NAV -->
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="index.html">Home</a>
+					<a href="feedback.html">Feedback</a>
+					<a href="contact_us.html">Contact Us</a>
+				</div>
+
+				<!-- TITLE -->
+				<div id= "title">
+					<h1 id= "titleText">HANGR<small>beta</small></h1>
+				</div>
+
+			</header>
+
+		<main id= "push">
+			<br>
+			<br>
+			<p id = "matchResults"> NO MATCH </p>
+			<a href = "index.html"> Click here to go back </a>
+			<br>
+			<a href = "#" id="joinOrMake"> Click here to make group </a>
+		</main>
+
+		<script src= "../scripts/form_submit.js"></script>
+
+</body>
+
+</html>
