@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+<head>
+
+	<meta charset= "utf-8">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+	<title>Hangr</title>
+	<link rel= "stylesheet" href= "../styles/style.css">
+	<link rel="shortcut icon" href="../images/icon.ico"/>
+
+</head>
+
+<body>
+
+		<header>
+
+			<!-- SIDE NAV BUTTON -->
+
+			<div id= "menu">
+				<input type="image" src="../images/menu.png" name="menu" id="menuImage" onclick= "openNav()"/>
+			</div>
+
+			<!-- SIDE NAV -->
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="feedback.html">Feedback</a>
+				<a href="contact_us.html">Contact Us</a>
+			</div>
+
+			<!-- TITLE -->
+			<div id= "title">
+				<h1 id= "titleText">HANGR<small>(beta)</small></h1>
+			</div>
+
+
+		</header>
+
+
+		<main id= "push">
+
+			<form name= "indexForm" action= "form_submit.html" autocomplete= "off">
+
+				<h2> Find Your Class Group Chat  </h2>
+				<hr>
+
+				<!-- UNIVERSITY DROPDOWN -->
+				<p> 
+					<select id= "dropdown" 
+					name= "university" 
+					onchange= "getCollegeSelection()" >
+
+						<option value = "" selected diabled> -Select University- </option>
+
+						<!-- ADD UNIVERSITIES HERE: ALPHABETICAL -->
+						<option value= "georgetown_university"> Georgetown University </option>
+						<option value= "new_york_university"> New York University </option>
+
+					</select>
+				</p>
+					
+
+				<!-- COURSE TITLE -->
+				<div id = "courseTitle">
+
+					<p> Course Title: <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
+					<p id = "error1"> </p>
+
+				</div>
+
+				<!-- SECTION NUMBER -->
+				<div id = "sectionNumber">
+
+					<p> Section Number: <br> <input
+					type= "text" name= "SectionNumber" id="input2" placeholder= "" onblur= "return validateFormSection()"> </p> 
+					 <p id = "error2"> </p>
+
+				</div>
+
+				<!-- SUBMIT BUTTON -->
+				<div id= "submitButton">
+
+					<p><input type= "submit" value= "Search" onclick= "return validateSubmission()"></p>
+					<p id = "error3"> </p>
+
+				</div>
+
+			</form>
+
+
+			<footer>
+
+				<p class= "footerText"> <span class= "emp"> HANGR</span> is a platform with the goal of connecting college students with their campus in ways never seen before. </p>
+				<p class= "footerText"> We are still in our very early stages, and much more is to come. Until then, your feedback is greatly appreciated!
+				<p class= "footerText"> <a href= "feedback.html"> Feedback </a> | <a href= "contact_us.html"> Contact Us </a>
+
+				<br>
+				<br>
+				<br>
+				<br>
+				<hr>
+
+				<p id= "bottomFooterText"> HANGR 2021 | NYC </p>
+
+			</footer>
+		
+		</main>
+
+		<script src= "../scripts/index.js"></script>
+
+</body>
+
+</html>
