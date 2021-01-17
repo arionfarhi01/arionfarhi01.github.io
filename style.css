@@ -264,12 +264,11 @@ a:hover, a:active
 }
 
 /* media queries */
-
-@media screen and (orientation: landscape)
+@media screen and (min-width: 700px) 
 {
-	header
+	form
 	{
-		width: 150%;
+		right: 100px;
 	}
 }
 
