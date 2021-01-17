@@ -10,26 +10,36 @@ p
 
 #top
 {
-	margin-top: 10%;
+	margin-top: 35px;
 }
 
 #bottom
 {
-	margin-bottom: 10%;
+	margin-bottom: 25px;
 }
 
 h2
 {
-	margin-bottom: 4%;
-	margin-top: 4%;
+	margin-bottom: 0px;
+	margin-top: 25px;
 	font-size: 4.5em;
 	color: var(--red);
 	text-align: center;
 }
 
-a:link, a:visited
+a:link#backbutton, a:visited#backbutton
 {
-	margin-top: 15%;
+	margin-top: 15px;
 	font-size: 1.25em;
 	text-decoration: underline;
+}
+
+@media screen and (min-width: 700px) 
+{
+
+}
+
+/* full screen computer */
+@media screen and (min-width: 1100px) 
+{
 }

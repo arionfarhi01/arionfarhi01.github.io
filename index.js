@@ -217,4 +217,3 @@ function validateSubmission()
 
 /* END OF FIELD VALIDATION */
 
-
