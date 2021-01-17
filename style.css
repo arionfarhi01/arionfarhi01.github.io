@@ -265,16 +265,7 @@ a:hover, a:active
 
 /* media queries */
 
-/* landscape */
-@media screen and (orientation: landscape) 
-{
-	form
-	{
-		right: 100px;
-	}
-}
-
-/* ipad */
+/* ipad and landscape iphone */
 @media screen and (min-width: 700px) 
 {
 
@@ -316,7 +307,7 @@ a:hover, a:active
 	 #menuImage
 	 {
 	 	left: 40px;
-	 	top: 42.5px;
+	 	top: 45px;
 	 	width: 30px;
 	 }
 
