@@ -264,7 +264,9 @@ a:hover, a:active
 }
 
 /* media queries */
-@media screen and (min-width: 700px) 
+
+/* landscape */
+@media screen and (orientation: landscape) 
 {
 	form
 	{
