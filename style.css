@@ -267,7 +267,10 @@ a:hover, a:active
 
 @media screen and (orientation: landscape)
 {
-	
+	header
+	{
+		width: 150%;
+	}
 }
 
 /* ipad */
