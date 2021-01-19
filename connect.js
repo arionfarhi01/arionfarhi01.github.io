@@ -134,10 +134,9 @@ function submitGroupClicked()
 		link:
 		(document.forms["linkForm"]["link"].value).replace(/ /g, "").toLowerCase()
 	}
-	ref.push(data); //upload data
-
 	/* delete submission button and notify success */
 	document.getElementById("submitGroup").remove();
 	document.getElementById("notifySubmission").innerHTML = "Group made successfully!";
+	ref.push(data); //upload data
 }
 
