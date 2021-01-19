@@ -41,6 +41,7 @@ function checkIfCollegeChanged()
 	}
 }
 
+/*  !!! ADD TO THIS ONE WHEN ADDING COLLEGES !!! */
 /* EDITS PLACEHOLDERS IN DROPDOWN */
 
 function changePlaceholders()
@@ -51,13 +52,13 @@ function changePlaceholders()
 		document.getElementById("input2").setAttribute("placeholder","");
 	}
 
-	if (collegeSelected == "new_york_university")
+	if (collegeSelected == "New York University")
 	{
 		document.getElementById("input1").setAttribute("placeholder","i.e. ACCT-UB 1");
 		document.getElementById("input2").setAttribute("placeholder","i.e. 001");
 	}
 
-	if (collegeSelected == "georgetown_university")
+	if (collegeSelected == "Georgetown University")
 	{
 		document.getElementById("input1").setAttribute("placeholder","i.e. ECON 001");
 		document.getElementById("input2").setAttribute("placeholder","i.e. 01");
@@ -83,6 +84,7 @@ function openNav()
   {
     document.getElementById("mySidenav").style.width = "16%";
     document.getElementById("push").style.marginLeft = "16%";
+    document.getElementById("push1").style.marginLeft = "16%";
   }
   else
   {
@@ -173,47 +175,21 @@ function validateFormSection()
   /* CHECKS IF HAS NUMBERS ONLY */
   var numbers = /^[0-9]+$/;
 
+  /* CHECKS IF NUMBER IS GREATER THAN 999 */
+  if (sectionNumberNoSpace > 999 || sectionNumberNoSpace < 1)
+  {
+    document.getElementById("error2").innerHTML = "Section Number must be between 1-999";
+  }
+
   if(!sectionNumberNoSpace.match(numbers) && !(sectionNumberNoSpace == "") )
   {
   	document.getElementById("error2").innerHTML = "Section Number may consist of numbers only";
   }
 
-  /* CHECKS IF NUMBER IS GREATER THAN 999 */
-  if (sectionNumberNoSpace > 999)
-  {
-  	document.getElementById("error2").innerHTML = "Section Number must be between 0-999";
-  }
 
   /* CONDENSE INPUT FULLY */
   sectionNumberMinimizedFinal = sectionNumberNoSpace.replace(/^0+/, ''); /* deletes leading zeroes */
 }
-
-/* STOP FORM FROM SUBMITTING IF ERRORS IN VALIDATION */
-
-function validateSubmission()
-{
-	var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
-	var sectionNumber = document.forms["indexForm"]["SectionNumber"].value;
-
-	if ((courseTitle == "" || sectionNumber == ""))
-	{
-		document.getElementById("error3").innerHTML = "Fields cannot be blank";
-		return false;
-	}
-
-	if (document.getElementById("error1").innerHTML != "" || document.getElementById("error2").innerHTML != "")
-	{
-		document.getElementById("error3").innerHTML = "Incorrect information";
-		return false;
-	}
-
-	if (collegeChanged < 1)
-	{
-		document.getElementById("error3").innerHTML = "Select a university";
-		return false;
-	}
-}
-
 
 /* END OF FIELD VALIDATION */
 

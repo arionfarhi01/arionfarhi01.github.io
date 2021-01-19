@@ -6,8 +6,9 @@
 	<meta charset= "utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
 	<title>Hangr</title>
-	<link rel= "stylesheet" href= "style_indexqueries.css">
+	<link rel= "stylesheet" href= "form_submit_style.css">
 	<link rel="shortcut icon" href="icon.ico"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -36,10 +37,11 @@
 
 		</header>
 
+<div id= "index">
 
 		<main id= "push">
 
-			<form name= "indexForm" action= "form_submit.html" autocomplete= "off">
+			<form name= "indexForm" autocomplete= "off">
 
 				<h2> Find Your Class Group Chat  </h2>
 				<hr>
@@ -48,15 +50,15 @@
 				<p> 
 					<select id= "dropdown" 
 					name= "university" 
-					onchange= "getCollegeSelection()" >
+					onchange= "return getCollegeSelection()" >
 
 						<option value = "" selected diabled> &nbsp; &nbsp; - Select University - &nbsp; &nbsp; </option>
 
 						<!-- ADD UNIVERSITIES HERE: ALPHABETICAL -->
-						<option value= "georgetown_university"> Georgetown University </option>
-						<option value= "new_york_university"> New York University </option>
-
+						<option value= "Georgetown University"> Georgetown University </option>
+						<option value= "New York University"> New York University </option>
 					</select>
+
 				</p>
 					
 
@@ -80,7 +82,7 @@
 				<!-- SUBMIT BUTTON -->
 				<div id= "submitButton">
 
-					<p><input type= "submit" value= "Search" onclick= "return validateSubmission()"></p>
+					<p><input type= "submit" value= "Search" onclick= "return validateSubmission()" ></p>
 					<p id = "error3"> </p>
 
 				</div>
@@ -103,8 +105,52 @@
 			</footer>
 		
 		</main>
+</div>
+
+<div id= "form_submit">
+
+	<div id= "push">
+
+		<div id= "match">
+
+			<p id= "backButton"> <a href = "index.html"> < Course Search </a> </p>
+
+			<h2> It's a match! </h2>
+			<p id= "collegeDisplay"></p> 
+			<p id= "courseTitleDisplay"></p>
+			<p id= "sectionNumberDisplay"></p>
+
+		</div>
+
+		<div id= "noMatch">
+
+			<p id= "backButton"> <a href = "index.html"> < Course Search </a> </p>
+
+			<h2> It's a match! NOT! </h2>
+			<p id= "collegeDisplay"></p> 
+			<p id= "courseTitleDisplay"></p>
+			<p id= "sectionNumberDisplay"></p>
+			<div id= "submitGroup">
+				<p><input type= "submit" value= "Submit Group" onclick= "submitGroupClicked()" ></p>
+				<p id = "error4"> </p> <!-- verification -->
+			</div> 
+
+		</div>
+
+	</div>
+
+</div>
 
 		<script src= "index.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+
+	<!--Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+	<script src="connect.js"></script>
 
 </body>
 
