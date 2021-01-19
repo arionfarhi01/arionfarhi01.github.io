@@ -196,7 +196,7 @@ footer
 
 /* error messages */
 
-#error1, #error2, #error3
+#error1, #error2, #error3, #error4
 {
 	font-size: .5em;
 	color: var(--red);

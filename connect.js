@@ -70,14 +70,14 @@ function submitData() //stores user input and sees if matches with database
 			}
 			else //if match
 			{
-				doesMatch(courseTitleVal, collegeVal, sectionNumberVal);
+				doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData);
 			}
 
     });
 
-} //delete other divs
+} 
 
-function doesMatch(courseTitleVal, collegeVal, sectionNumberVal)
+function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 {
 	document.getElementById("match").style.display = "block";
 	document.getElementById("noMatch").remove();
@@ -85,6 +85,11 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal)
 	document.getElementById("collegeDisplay").innerHTML = collegeVal;
 	document.getElementById("courseTitleDisplay").innerHTML = courseTitleVal;
 	document.getElementById("sectionNumberDisplay").innerHTML = sectionNumberVal;
+
+	/* show list */ 
+	var userDataStr = JSON.stringify(userData); //turns data into string
+	var userDataSplit = userDataStr.split("\"");
+	document.getElementById("link").innerHTML = userDataSplit[9];
 }
 
 function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
@@ -99,6 +104,24 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 
 function submitGroupClicked()
 {
+	var link = ((document.forms["linkForm"]["link"].value).replace(/ /g, "").toLowerCase());
+	
+	/* verify link is correct */
+	if (link == "")
+	{
+		error4.innerHTML = "Enter a link";
+		return false;
+	}
+	else if (!link.includes("groupme.com/join_group/"))
+	{
+		error4.innerHTML = "Enter groupme sharing links only";
+		return false;
+	}
+	else
+	{
+		error4.innerHTML = "";
+	}
+
 	/* redeclare database */
 	collegeVal = document.getElementById("collegeDisplay").innerHTML;
 	var ref = database.ref(collegeVal);
@@ -107,9 +130,14 @@ function submitGroupClicked()
 	{
 		class: 
 		document.getElementById("courseTitleDisplay").innerHTML + "_" +
-		document.getElementById("sectionNumberDisplay").innerHTML
+		document.getElementById("sectionNumberDisplay").innerHTML,
+		link:
+		(document.forms["linkForm"]["link"].value).replace(/ /g, "").toLowerCase()
 	}
-	ref.push(data);
-	// message user confirming success and then send back to index? or send to page just confirming success
+	ref.push(data); //upload data
+
+	/* delete submission button and notify success */
+	document.getElementById("submitGroup").remove();
+	document.getElementById("notifySubmission").innerHTML = "Group made successfully!";
 }
 

@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset= "utf-8">
-	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
 	<title>Hangr</title>
 	<link rel= "stylesheet" href= "form_submit_style.css">
 	<link rel="shortcut icon" href="icon.ico"/>
@@ -120,6 +120,9 @@
 			<p id= "courseTitleDisplay"></p>
 			<p id= "sectionNumberDisplay"></p>
 
+			<h2>Link:</h2>
+			<h2 id= "link"></h2>
+
 		</div>
 
 		<div id= "noMatch">
@@ -130,10 +133,20 @@
 			<p id= "collegeDisplay"></p> 
 			<p id= "courseTitleDisplay"></p>
 			<p id= "sectionNumberDisplay"></p>
+
+			<!-- TYPE LINK HERE -->
+			<form name= "linkForm">
+				<p> Link: <input type= "text" name= "link" id = "groupLink" placeholder= "groupme.com/join/.." autocomplete="off"></p>
+			</form>
+
+			<!-- SUBMIT BUTTON -->
+			<br>
+			<br>
 			<div id= "submitGroup">
 				<p><input type= "submit" value= "Submit Group" onclick= "submitGroupClicked()" ></p>
-				<p id = "error4"> </p> <!-- verification -->
+				<p id = "error4"> </p>
 			</div> 
+			<h2 id= "notifySubmission"></h2>
 
 		</div>
 
