@@ -166,6 +166,7 @@ function validateFormSection()
   if (sectionNumberNoSpace == "") 
   {
     document.getElementById("error2").innerHTML = "Section Number cannot be blank";
+    return false;
   }
   else
   {
@@ -179,11 +180,13 @@ function validateFormSection()
   if (sectionNumberNoSpace > 999 || sectionNumberNoSpace < 1)
   {
     document.getElementById("error2").innerHTML = "Section Number must be between 1-999";
+    return false;
   }
 
   if(!sectionNumberNoSpace.match(numbers) && !(sectionNumberNoSpace == "") )
   {
   	document.getElementById("error2").innerHTML = "Section Number may consist of numbers only";
+    return false;
   }
 
 
