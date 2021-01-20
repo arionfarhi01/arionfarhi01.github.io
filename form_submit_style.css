@@ -132,8 +132,3 @@ input[type=text]:focus
 	border-radius: 10px;
 	background-color: lightgrey;
 }
-
-a:link, a: visited, a:hover, a:active
-{
-	background-color: white;
-}
