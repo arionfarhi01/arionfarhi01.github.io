@@ -1,5 +1,8 @@
 
+/* normal font */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/* bold font*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 /* variables */
 
@@ -36,7 +39,7 @@ header
 	margin-left: -2.5%;
 	margin-top: -2%;
 	position: fixed;
-  	top: .5%;
+  	top: .7%;
  	width: 100%;
  	z-index: 9999;
 
@@ -84,7 +87,7 @@ small
 
 /* form */ 
 
-form
+#form
 {
 	position: relative;
 	top: 52px;
@@ -95,6 +98,11 @@ form
 	border-radius: 20px;
 	text-align: center;
 	border: 1px dotted var(--red);
+}
+
+.bold
+{
+	font-weight: 700;
 }
 
 hr
@@ -118,7 +126,6 @@ hr
 	text-align: center;
 	padding-top: 3%;
 	padding-bottom: 1%;
-
 }
 
 input[type=submit]
@@ -134,16 +141,20 @@ input[type=text]
 
 /* make placeholders italic */
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder 
+{
    font-style: italic;
 }
-:-moz-placeholder {
+:-moz-placeholder 
+{
    font-style: italic;  
 }
-::-moz-placeholder {
+::-moz-placeholder 
+{
    font-style: italic;  
 }
-:-ms-input-placeholder {  
+:-ms-input-placeholder 
+{  
    font-style: italic; 
 }
 
@@ -151,13 +162,9 @@ h2
 {
 	text-align: center;
 	padding-bottom: 3%;
-	font-size: 1.25em;
+	font-size: 1.125em;
 }
 
-p
-{
-	font-size: 1.02em;
-}
 
 select /* only works for chrome */
 {
@@ -178,9 +185,31 @@ footer
 	margin-bottom: 5%;
 }
 
-.emp
+ul
+{
+	margin-top: 5%;
+	list-style: none;
+	color: rgb(111,120,126);
+	text-align: center;
+	margin-left: -15%;
+}
+
+li
+{
+	margin-bottom: 2%;
+}
+
+#red
 {
 	color: var(--red);
+}
+
+.emp
+{
+	font-size: 1.25em;
+	text-align: center;
+	margin-bottom: -1.5%;
+	text-align: center;
 }
 
 .footerText > a:link, a:visited
@@ -264,6 +293,8 @@ a:hover, a:active
   transition: margin-left .4s;
   padding: 20px;
 }
+
+/* MEDIA QUERIES */
 
 /* ipad and landscape iphone */
 @media screen and (min-width: 700px) 

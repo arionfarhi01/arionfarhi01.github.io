@@ -6,12 +6,134 @@
 	margin-top: 15%;
 }
 
-#backButton
+#backButtonLink
 {
 	font-size: .75em;
+	color: black; /* NOT WORK */
 }
 
-#submitGroup
+#noMatchHeader
 {
 	text-align: center;
+	font-size: 1.1em;
+	border: 1px solid var(--red);
+	border-radius: 30px;
+	margin-bottom: 7.5%;
+	background-color: #FAFAFA; 
+}
+
+#line
+{
+	margin-top: -2%;
+	margin-bottom: 4%;
+	border-top: 1px solid black;
+}
+
+
+summary
+{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	border: 1px dashed lightgrey;
+	border-radius: 30px;
+	text-align: center;
+}
+
+.title
+{
+	margin-bottom: -3%;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#formTitle
+{
+	font-size: 1.15em;
+	font-weight: bold;
+	/*text-decoration-color: var(--red); */
+}
+
+#courseTitleDisplay, #sectionNumberDisplay
+{
+	font-style: normal;
+}
+
+#linkform
+{
+	text-align: center;
+}
+
+#groupLink
+{
+	width: 75%;
+	margin-bottom: 5%;
+	height: 20px;
+}
+
+input[type=text]:focus
+{
+	outline: 1px solid #00a2ed;
+}
+
+#linkform input[type=text]
+{
+	margin-top: 3%;
+	border-radius: 7.5px;
+}
+
+#linkform input[type=text]::-webkit-input-placeholder 
+{
+   font-style: normal;
+}
+#linkform input[type=text]:-moz-placeholder 
+{
+   font-style: normal; 
+}
+#linkform input[type=text]::-moz-placeholder 
+{
+   font-style: normal; 
+}
+#linkform input[type=text]:-ms-input-placeholder 
+{  
+   font-style: normal; 
+}
+
+#addAnother
+{
+	display: none; 
+	text-align: center;
+	margin-top: -5%;
+	background-color: var(--red);
+	color: black;
+	font-size: 1.05em;
+	font-weight: bold;
+	margin-left: 20%;
+	margin-right: 20%;
+	border-radius: 15px;
+	padding: 2.5%;
+}
+
+#notifySubmission
+{
+	margin-top: -3%;
+}
+
+#linkHead
+{
+	margin-top: 7.5%;
+	margin-bottom: 0%;
+}
+
+#link
+{
+	font-size: .85em;
+	margin-top: 0%;
+	text-align: center;
+	border-radius: 10px;
+	background-color: lightgrey;
+}
+
+a:link, a: visited, a:hover, a:active
+{
+	background-color: white;
 }

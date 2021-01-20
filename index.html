@@ -41,7 +41,7 @@
 
 		<main id= "push">
 
-			<form name= "indexForm" autocomplete= "off">
+			<form name= "indexForm" id= "form" autocomplete= "off">
 
 				<h2> Find Your Class Group Chat  </h2>
 				<hr>
@@ -65,7 +65,7 @@
 				<!-- COURSE TITLE -->
 				<div id = "courseTitle">
 
-					<p> Course Title: <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
+					<p> <span class= "bold"> Course Title: </span> <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
 					<p id = "error1"> </p>
 
 				</div>
@@ -73,7 +73,7 @@
 				<!-- SECTION NUMBER -->
 				<div id = "sectionNumber">
 
-					<p> Section Number: <br> <input
+					<p> <span class= "bold"> Section Number: </span> <br> <input
 					type= "text" name= "SectionNumber" id="input2" placeholder= "" onblur= "return validateFormSection()"> </p> 
 					 <p id = "error2"> </p>
 
@@ -81,8 +81,7 @@
 
 				<!-- SUBMIT BUTTON -->
 				<div id= "submitButton">
-
-					<p><input type= "submit" value= "Search" onclick= "return validateSubmission()" ></p>
+						<p><input type= "submit" id= "button" value= "Search" onclick= "return validateSubmission()" ></p>
 					<p id = "error3"> </p>
 
 				</div>
@@ -91,9 +90,15 @@
 
 
 			<footer>
+				<p class = "emp"> How <span id="red">HANGR </span> Works </p>
 
-				<p class= "footerText"> <span class= "emp"> HANGR</span> is a platform with the goal of connecting college students with their campus in ways never seen before. </p>
+				<ul> 
+					<li> Enter your university, course title, and section number. </li>
+					<li> You can now join the GroupMe for this class. If the groupme isn't added yet, you can add it yourself so others can join. </li>
+				</ul>
+
 				<p class= "footerText"> We are still in our very early stages, and much more is to come. Until then, your feedback is greatly appreciated!
+
 				<p class= "footerText"> <a href= "feedback.html"> Feedback </a> | <a href= "contact_us.html"> Contact Us </a>
 
 				<br>
@@ -113,40 +118,68 @@
 
 		<div id= "match">
 
-			<p id= "backButton"> <a href = "index.html"> < Course Search </a> </p>
+			<p id= "backButton"> <a href = "index.html" id="backButtonLink"> < Course Search </a> </p>
 
-			<h2> It's a match! </h2>
-			<p id= "collegeDisplay"></p> 
-			<p id= "courseTitleDisplay"></p>
-			<p id= "sectionNumberDisplay"></p>
+			<hr id="line">
 
-			<h2>Link:</h2>
-			<h2 id= "link"></h2>
+			<div id= "noMatchHeader">
+				<p> It's a match! Press the link below <br> to join the class groupchat! </p>
+			</div>
+
+			<!-- FORM THAT DISPLAYS COLLEGE INFO -->
+			<summary>
+
+				<p id= "formTitle"><span id= "collegeDisplay"></span></p> 
+
+				<p class="title"> Course Title: </p>
+				<p id= "courseTitleDisplay"></p>
+
+				<p class="title"> Section Number: </p>
+				<p id= "sectionNumberDisplay"></p>
+
+			</summary>
+
+			<h2 class= "bold" id="linkHead">Link:</h2>
+			<p id= "link"></p>
 
 		</div>
 
 		<div id= "noMatch">
 
-			<p id= "backButton"> <a href = "index.html"> < Course Search </a> </p>
+			<p id= "backButton"> <a href = "index.html" id="backButtonLink"> < Course Search </a> </p>
 
-			<h2> It's a match! NOT! </h2>
-			<p id= "collegeDisplay"></p> 
-			<p id= "courseTitleDisplay"></p>
-			<p id= "sectionNumberDisplay"></p>
+			<hr id="line">
 
-			<!-- TYPE LINK HERE -->
-			<form name= "linkForm">
-				<p> Link: <input type= "text" name= "link" id = "groupLink" placeholder= "groupme.com/join/.." autocomplete="off"></p>
-			</form>
+			<div id= "noMatchHeader">
+				<p> Be the first to add a GroupMe <br> link to this class! </p>
+			</div>
 
-			<!-- SUBMIT BUTTON -->
-			<br>
-			<br>
-			<div id= "submitGroup">
-				<p><input type= "submit" value= "Submit Group" onclick= "submitGroupClicked()" ></p>
+			<!-- FORM THAT DISPLAYS COLLEGE INFO -->
+			<summary>
+
+				<p id= "formTitle"><span id= "collegeDisplay"></span></p> 
+
+				<p class="title"> Course Title: </p>
+				<p id= "courseTitleDisplay"></p>
+
+				<p class="title"> Section Number: </p>
+				<p id= "sectionNumberDisplay"></p>
+
+			</summary>
+
+			<form name= "linkForm" id="linkform" onsubmit="return false">
+				<!-- TYPE LINK HERE -->
+				<p> <span class="bold"> Add link: &nbsp; </span> <input type= "text" name= "link" id = "groupLink" placeholder= "groupme.com/join/..." autocomplete="off"></p>
+
+				<!-- SUBMIT BUTTON -->
+				<div id= "submitGroup">
+					<p><input type= "submit" id="submitLink" value= "Submit Link" onclick= "submitGroupClicked()" ></p>
+
 				<p id = "error4"> </p>
-			</div> 
-			<h2 id= "notifySubmission"></h2>
+				</div> 
+				<h2 id= "notifySubmission"></h2>
+				<button id="addAnother" onclick= "goToIndex()">Search For Another Course</button>
+			</form>
 
 		</div>
 
@@ -154,7 +187,7 @@
 
 </div>
 
-		<script src= "index.js"></script>
+	<script src= "index.js"></script>
 
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>

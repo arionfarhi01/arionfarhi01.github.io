@@ -89,7 +89,8 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 	/* show list */ 
 	var userDataStr = JSON.stringify(userData); //turns data into string
 	var userDataSplit = userDataStr.split("\"");
-	document.getElementById("link").innerHTML = userDataSplit[9];
+	document.getElementById("link").innerHTML = "<a href= \"" + userDataSplit[9] + "\">" + userDataSplit[9] + "</a>";
+	console.log(document.getElementById("link"));
 }
 
 function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
@@ -105,7 +106,7 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 function submitGroupClicked()
 {
 	var link = ((document.forms["linkForm"]["link"].value).replace(/ /g, "").toLowerCase());
-	
+
 	/* verify link is correct */
 	if (link == "")
 	{
@@ -137,6 +138,12 @@ function submitGroupClicked()
 	/* delete submission button and notify success */
 	document.getElementById("submitGroup").remove();
 	document.getElementById("notifySubmission").innerHTML = "Group made successfully!";
+	document.getElementById("addAnother").style.display = "block";
 	ref.push(data); //upload data
+}
+
+function goToIndex()
+{
+	window.location.href = "index.html"
 }
 
