@@ -98,6 +98,7 @@ small
 	border-radius: 20px;
 	text-align: center;
 	border: 1px dotted var(--red);
+	margin-bottom: 25%;
 }
 
 .bold
@@ -189,7 +190,7 @@ footer
 
 ul
 {
-	margin-top: 5%;
+	margin-top: 3%;
 	list-style: none;
 	color: rgb(111,120,126);
 	text-align: center;
@@ -198,6 +199,7 @@ ul
 
 li
 {
+	font-size: .75em;
 	margin-bottom: 2%;
 }
 
@@ -208,7 +210,7 @@ li
 
 .emp
 {
-	font-size: 1.25em;
+	font-size: 1.2em;
 	text-align: center;
 	margin-bottom: -1.5%;
 	text-align: center;
