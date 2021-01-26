@@ -80,7 +80,7 @@ function submitData() //stores user input and sees if matches with database
 function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 {
 	document.getElementById("match").style.display = "block";
-	document.getElementById("addAnother").style.display = "block";
+	//document.getElementById("addAnother").style.display = "block";
 	document.getElementById("noMatch").remove();
 
 	document.getElementById("collegeDisplay").innerHTML = collegeVal;

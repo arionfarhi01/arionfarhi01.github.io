@@ -188,21 +188,20 @@ footer
 	font-size: .75em;
 }
 
-ul
+#how_to
 {
 	margin-top: 3%;
 	list-style: none;
 	color: rgb(111,120,126);
+	font-size: .65em;
+	margin-bottom: 2%;
 	text-align: center;
-	position: relative;
-	right: 20px;
 
 }
 
-li
+#margin
 {
-	font-size: .65em;
-	margin-bottom: 2%;
+	margin-bottom: -2.5%;
 }
 
 #red
@@ -215,6 +214,8 @@ li
 	font-size: 1.2em;
 	text-align: center;
 	margin-bottom: -1%; 
+	position: relative;
+	left: 5px;
 }
 
 .footerText > a:link, a:visited

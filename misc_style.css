@@ -9,11 +9,12 @@ body
 {
 	font-size: .75em;
 	color: black; 
+	text-decoration: underline;
 }
 
 #backButtonLink a:active
 {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 #special
@@ -25,9 +26,29 @@ body
 
 h2
 {
-	margin-bottom: 0px;
-	margin-top: -2%;
+	margin-bottom: 10%;
+	margin-top: -1%;
 	font-size: 2.5em;
 	color: var(--red);
 	text-align: center;
+}
+
+h3
+{
+	text-align: center;
+	font-size: 1.35em;
+	text-decoration: underline;
+	text-decoration-color: var(--red);
+}
+
+.centeredParagraph
+{
+	text-align: center;
+}
+
+#border
+{
+	padding: 2%;
+	border: 2px dashed lightgrey;
+	border-radius: 20px;
 }
