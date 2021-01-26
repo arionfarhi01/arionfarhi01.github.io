@@ -131,6 +131,7 @@ hr
 input[type=submit]
 {
 	font-size: .85em;
+	border: 1.5px solid black;
 }
 
 input[type=text]
