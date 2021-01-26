@@ -56,3 +56,19 @@ h3
 	border: 2px dashed lightgrey;
 	border-radius: 20px;
 }
+
+form
+{
+	text-align: center;
+	margin-top: 10%;
+}
+
+input[type= "submit"]
+{
+	margin-top: 5%;
+	font-size: 1em;
+	padding-left: 2%;
+	padding-right: 2%;
+	border: 2px solid black;
+	border-radius: 5px;
+}
