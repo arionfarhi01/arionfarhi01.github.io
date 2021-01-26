@@ -11,14 +11,10 @@ body
 	color: black; 
 }
 
-.underline
-{
-	text-decoration: underline;
-}
 
 #backButtonLink a:active #backButtonLink a:hover
 {
-	color: var(--red);
+	text-decoration: underline;
 }
 
 #special
@@ -59,7 +55,6 @@ h3
 
 form
 {
-	text-align: center;
 	margin-top: 10%;
 }
 
@@ -69,6 +64,10 @@ input[type= "submit"]
 	font-size: 1em;
 	padding-left: 2%;
 	padding-right: 2%;
-	border: 2px solid black;
 	border-radius: 5px;
+}
+
+#marginCheck
+{
+	margin-bottom: -3%;
 }
