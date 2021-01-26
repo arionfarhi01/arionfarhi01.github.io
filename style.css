@@ -174,13 +174,8 @@ select /* only works for chrome */
 
 input
 {
-	padding-left: 3%;
-	padding-right: 3%;
-}
-
-input[type = "submit"]
-{
-	padding-right: 3%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 
