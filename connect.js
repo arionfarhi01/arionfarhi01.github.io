@@ -11,37 +11,37 @@ var firebaseConfig =
 };
 	// initialize firebase
 
-	 firebase.initializeApp(firebaseConfig);
-	 firebase.analytics();
-	 const database = firebase.database();
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	const database = firebase.database();
 
-/* STOP FORM FROM SUBMITTING IF ERRORS IN VALIDATION */
+	/* STOP FORM FROM SUBMITTING IF ERRORS IN VALIDATION */
 
-function validateSubmission()
-{
-	var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
-	var sectionNumber = document.forms["indexForm"]["SectionNumber"].value;
-
-	if ((courseTitle == "" || sectionNumber == ""))
+	function validateSubmission()
 	{
-		document.getElementById("error3").innerHTML = "Fields cannot be blank";
+		var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
+		var sectionNumber = document.forms["indexForm"]["SectionNumber"].value;
+
+		if ((courseTitle == "" || sectionNumber == ""))
+		{
+			document.getElementById("error3").innerHTML = "Fields cannot be blank";
+			return false;
+		}
+
+		if (document.getElementById("error1").innerHTML != "" || document.getElementById("error2").innerHTML != "")
+		{
+			document.getElementById("error3").innerHTML = "Incorrect information";
+			return false;
+		}
+
+		if (collegeChanged < 1)
+		{
+			document.getElementById("error3").innerHTML = "Select a university";
+			return false;
+		}
+		submitData();
 		return false;
 	}
-
-	if (document.getElementById("error1").innerHTML != "" || document.getElementById("error2").innerHTML != "")
-	{
-		document.getElementById("error3").innerHTML = "Incorrect information";
-		return false;
-	}
-
-	if (collegeChanged < 1)
-	{
-		document.getElementById("error3").innerHTML = "Select a university";
-		return false;
-	}
-	submitData();
-	return false;
-}
 
 function submitData() //stores user input and sees if matches with database
 {
@@ -59,27 +59,28 @@ function submitData() //stores user input and sees if matches with database
 	/* compare user input to database */
 	firebase.database().ref(collegeVal).orderByChild("class").equalTo(inputAsString).once("value", snapshot => 
 	{
-		    var userData = snapshot.val();
+		var userData = snapshot.val();
 
 		    //replace index page with form submit
 		    document.getElementById("index").remove();
 
 		    if (userData == null) //if no match 
 		    {
-			    doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal);
-			}
+		    	doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal);
+		    }
 			else //if match
 			{
 				doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData);
 			}
 
-    });
+		});
 
 } 
 
 function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 {
 	document.getElementById("match").style.display = "block";
+	document.getElementById("addAnother").style.display = "block";
 	document.getElementById("noMatch").remove();
 
 	document.getElementById("collegeDisplay").innerHTML = collegeVal;

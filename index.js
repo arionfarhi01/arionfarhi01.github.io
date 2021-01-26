@@ -64,9 +64,15 @@ function changePlaceholders()
 		document.getElementById("input2").setAttribute("placeholder","i.e. 01");
 	}
 
-	/* CLEARS INPUTS AFTER CHANGING COLLEGES */
-	document.forms["indexForm"]["CourseTitle"].value = "";
-	document.forms["indexForm"]["SectionNumber"].value = "";
+  if (collegeSelected == "Penn State University")
+  {
+    document.getElementById("input1").setAttribute("placeholder","i.e. ART 10");
+    document.getElementById("input2").setAttribute("placeholder","i.e. 001");
+  }
+
+  /* CLEARS INPUTS AFTER CHANGING COLLEGES */
+  document.forms["indexForm"]["CourseTitle"].value = "";
+  document.forms["indexForm"]["SectionNumber"].value = "";
 }
 
 
@@ -140,19 +146,19 @@ function validateFormTitle()
   var regExp = /[a-zA-Z]/g;
   if(!(regExp.test(courseTitle)) && !(courseTitleNoSpace == ""))
   {
-  		document.getElementById("error1").innerHTML = "Course Title requires letters and numbers";
+    document.getElementById("error1").innerHTML = "Course Title requires letters and numbers";
   }
 
   /* CHECKS IF HAS LETTERS AND NUMBERS AND DASH ONLY */
   var letterNumber = /^[0-9a-zA-Z-]+$/;
   if(!courseTitleNoSpace.match(letterNumber) && !(courseTitleNoSpace == ""))
   {
-	document.getElementById("error1").innerHTML = "Course Title may consist of letters, numbers, and a dash only";
-  }
+   document.getElementById("error1").innerHTML = "Course Title may consist of letters, numbers, and a dash only";
+ }
 
-  /* CONDENSE INPUT FULLY */
-  var courseTitleMinimized = courseTitleNoSpace.toLowerCase();
-  courseTitleMinimizedFinal = courseTitleMinimized.replaceAll("-","");
+ /* CONDENSE INPUT FULLY */
+ var courseTitleMinimized = courseTitleNoSpace.toLowerCase();
+ courseTitleMinimizedFinal = courseTitleMinimized.replaceAll("-","");
 
 }
 
