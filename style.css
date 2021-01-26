@@ -104,7 +104,7 @@ small
 .bold
 {
 	font-weight: 700;
-	font-size: 1.075em;
+	font-size: 1em;
 }
 
 hr
@@ -115,7 +115,7 @@ hr
 #dropdown
 {
 	margin-top: 5%;
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 }
 
 #courseTitle
@@ -171,7 +171,7 @@ h2
 select /* only works for chrome */
 {
 	text-align-last: center; 
-	font-size: .925em;
+	font-size: .8em;
 }
 
 
@@ -194,7 +194,9 @@ ul
 	list-style: none;
 	color: rgb(111,120,126);
 	text-align: center;
-	margin-left: -15%;
+	margin-right: 8%;
+	margin-left: -8%;
+
 }
 
 li
