@@ -169,7 +169,12 @@ h2
 select /* only works for chrome */
 {
 	text-align-last: center; 
-	font-size: .75em;
+	font-size: .85em;
+}
+
+input
+{
+	padding-left: 5%;
 }
 
 
