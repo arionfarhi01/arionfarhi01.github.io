@@ -25,8 +25,8 @@
 		<!-- SIDE NAV -->
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="feedback.html">Feedback</a>
 			<a href="contact_us.html">Contact Us</a>
+			<a href="feedback.html">Feedback</a>
 		</div>
 
 		<!-- TITLE -->
@@ -121,10 +121,6 @@
 
 						<p id= "backButton"> <a href = "index.html" id="backButtonLink"> < <span class= "underline">Course Search </span> </a> </p>
 
-						<div id= "matchHeader">
-							<p> It's a match! Press the link below <br> to join the class groupchat! </p>
-						</div>
-
 						<!-- FORM THAT DISPLAYS COLLEGE INFO -->
 						<summary>
 
@@ -138,12 +134,15 @@
 
 						</summary>
 
+						<!--
+						<div id= "matchHeader">
+							<p> It's a match! Press the link below <br> to join the class groupchat! </p>
+						</div>
+					-->
+
 						<h2 class= "bold" id="linkHead">Link:</h2>
 						<p id= "link"></p>
-						<br>
-						<br>
-						<button id="addAnother" onclick= "goToIndex()">Search For Another Course</button>
-
+						<p class= "explain">Press the link above to join your class GroupMe! </p>
 					</div>
 
 					<div id= "noMatch"> <!--groups don't match-->
@@ -152,6 +151,7 @@
 
 						<div id= "matchHeader">
 							<p> Be the first to add a GroupMe <br> link to this class! </p>
+							<hr id= "short">
 						</div>
 
 						<!-- FORM THAT DISPLAYS COLLEGE INFO -->
@@ -171,12 +171,10 @@
 							<!-- TYPE LINK HERE -->
 							<p> <span class="bold"> Add link: <br> </span> <input type= "text" name= "link" id = "groupLink" placeholder= "groupme.com/join_group/..." autocomplete="off"></p>
 
-							<ul id= "how_to_add"> 
-								<li> How To Get Link: </li>
-								<li> - In the GroupMe app, tap on the group that you wish to share </li>
-								<li> - Tap on group setting in the top left corner, then press on settings </li>
-								<li> - Press on share group then copy and paste the link -- ADD MORE </li>
-							</ul>
+								<p class= "explain"> How To Get Link: <br id= "margin1">
+								 - In the GroupMe app, tap on the group that you wish to share <br>
+								 - Tap on group setting in the top left corner, then press on settings <br>
+								 - Press on share group then copy and paste the link -- ADD MORE </p>
 
 							<!-- SUBMIT BUTTON -->
 							<div id= "submitGroup">

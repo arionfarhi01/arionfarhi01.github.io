@@ -198,7 +198,7 @@ footer
 	font-size: .75em;
 }
 
-#how_to
+#how_to, .explain
 {
 	margin-top: 3%;
 	list-style: none;
