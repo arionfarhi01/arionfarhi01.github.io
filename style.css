@@ -98,13 +98,12 @@ small
 	border-radius: 20px;
 	text-align: center;
 	border: 1px dotted var(--red);
-	margin-bottom: 25%;
+	margin-bottom: 20%;
 }
 
 .bold
 {
 	font-weight: 700;
-	font-size: 1em;
 }
 
 hr
@@ -186,6 +185,7 @@ footer
 {
 	text-align: center;
 	margin-bottom: 5%;
+	font-size: .75em;
 }
 
 ul
@@ -194,14 +194,14 @@ ul
 	list-style: none;
 	color: rgb(111,120,126);
 	text-align: center;
-	margin-right: 8%;
-	margin-left: -8%;
+	position: relative;
+	right: 20px;
 
 }
 
 li
 {
-	font-size: .75em;
+	font-size: .65em;
 	margin-bottom: 2%;
 }
 
@@ -214,8 +214,7 @@ li
 {
 	font-size: 1.2em;
 	text-align: center;
-	margin-bottom: -1.5%;
-	text-align: center;
+	margin-bottom: -1%; 
 }
 
 .footerText > a:link, a:visited
