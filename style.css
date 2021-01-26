@@ -98,7 +98,6 @@ small
 	border-radius: 20px;
 	text-align: center;
 	border: 1px dotted var(--red);
-	margin-bottom: 20%;
 }
 
 .bold
@@ -114,7 +113,7 @@ hr
 #dropdown
 {
 	margin-top: 5%;
-	margin-bottom: 10%;
+	margin-bottom: 7.5%;
 }
 
 #courseTitle
@@ -170,7 +169,7 @@ h2
 select /* only works for chrome */
 {
 	text-align-last: center; 
-	font-size: .8em;
+	font-size: .75em;
 }
 
 
@@ -214,8 +213,7 @@ footer
 	font-size: 1.2em;
 	text-align: center;
 	margin-bottom: -1%; 
-	position: relative;
-	left: 5px;
+	margin-top: -2.5%;
 }
 
 .footerText > a:link, a:visited

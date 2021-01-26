@@ -9,12 +9,16 @@ body
 {
 	font-size: .75em;
 	color: black; 
+}
+
+.underline
+{
 	text-decoration: underline;
 }
 
 #backButtonLink a:active
 {
-	text-decoration: none;
+	background-color: var(--red);
 }
 
 #special

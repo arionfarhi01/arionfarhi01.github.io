@@ -10,12 +10,12 @@
 {
 	font-size: .75em;
 	color: black;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 #backButtonLink a:active
 {
-	text-decoration: none;
+	background-color: var(--red);
 }
 
 
@@ -27,6 +27,11 @@
 	border-radius: 30px;
 	margin-bottom: 7.5%;
 	background-color: #FAFAFA; 
+}
+
+.underline
+{
+	text-decoration: underline;
 }
 
 
