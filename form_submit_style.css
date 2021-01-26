@@ -13,9 +13,9 @@
 	text-decoration: none;
 }
 
-#backButtonLink a:active
+#backButtonLink a:active #backButtonLink a:hover
 {
-	background-color: var(--red);
+	color: var(--red);
 }
 
 

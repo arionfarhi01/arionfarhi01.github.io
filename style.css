@@ -69,12 +69,12 @@ small
 }
 
 
-#menuImage 
+#menuImage /* changes with input */
 {
 	width: 25px;
 	position: relative;
 	top: 30px;
-	left: 15px;
+	left: 0px;
 	margin-top: -5%;
 }
 
@@ -176,6 +176,7 @@ input
 {
 	padding-left: 10%;
 	padding-right: 10%;
+	font-size: 1.1em;
 }
 
 
