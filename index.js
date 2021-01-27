@@ -203,8 +203,4 @@ function validateFormSection()
 /* END OF FIELD VALIDATION */
 
 
-if(window.innerWidth > window.innerHeight){
-    document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
-}
-
 
