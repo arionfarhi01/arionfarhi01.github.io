@@ -202,7 +202,9 @@ function validateFormSection()
 
 /* END OF FIELD VALIDATION */
 
-if(window.innerHeight > window.innerWidth){
+screen.lockOrientation("portrait-primary");
+
+if(window.innerWidth > window.innerHeight){
     document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
 }
 
