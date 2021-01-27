@@ -90,9 +90,10 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 	/* show list */ 
 	var userDataStr = JSON.stringify(userData); //turns data into string
 	var userDataSplit = userDataStr.split("\"");
-	var userDataFinal = userDataSplit[9].link("https://" + userDataSplit[9]);
+	var userData3 = userDataSplit[9].split("/");
+	console.log(userData3);
+	var userDataFinal = userDataSplit[9].link("https://groupme.com/join_group/" + userData3[4] + "/" + userData3[5]);
 	document.getElementById("link").innerHTML = userDataFinal;
-	console.log(document.getElementById("link"));
 }
 
 function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
@@ -107,8 +108,8 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 
 function submitGroupClicked()
 {
-	var link = document.forms["linkForm"]["link"].value.replace(/ /g, "").toLowerCase();
-	
+	var link = document.forms["linkForm"]["link"].value.replace(/ /g, "");
+	/* fix glitch with capitals in groupme */
 	try
 	{
 		link = link.split("groupme.com");
@@ -125,7 +126,7 @@ function submitGroupClicked()
 		return false;
 	}
 
-	linkFinal = "groupme.com" + link[1];	
+	linkFinal = "https://groupme.com" + link[1];	
 
 	/* verify link is correct */
 	if (linkFinal == "")
