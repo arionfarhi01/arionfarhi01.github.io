@@ -19,7 +19,7 @@ var firebaseConfig =
 
 	function validateSubmission()
 	{
-		var appWindow = window.open("groupme://www.groupme.com/");
+		var appWindow = window.open("groupme://www.groupme.com/join_group/59833834/u3Y3saXX");
 		/*var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
 		var sectionNumber = document.forms["indexForm"]["SectionNumber"].value;
 
