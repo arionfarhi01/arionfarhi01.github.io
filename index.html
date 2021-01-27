@@ -67,7 +67,7 @@
 			<!-- COURSE TITLE -->
 			<div id = "courseTitle">
 
-				<p> <span class= "bold"> Course Title: </span> <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onchange= "return validateFormTitle();"></p> 
+				<p> <span class= "bold"> Course Title: </span> <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
 				<p id = "error1"> </p>
 
 			</div>
@@ -76,7 +76,7 @@
 			<div id = "sectionNumber">
 
 				<p> <span class= "bold"> Section Number: </span> <br> <input
-					type= "text" name= "SectionNumber" id="input2" placeholder= "" onchange= "return validateFormSection()"> </p> 
+					type= "text" name= "SectionNumber" id="input2" placeholder= "" onblur= "return validateFormSection()"> </p> 
 					<p id = "error2"> </p>
 
 				</div>
@@ -136,7 +136,7 @@
 						</summary>
 
 						<div id= "matchHeader">
-								<p> Join your class GroupMe with this link! </p>
+								<p> Join your class GroupMe with this link: </p>
 							</div>
 
 						<p id= "link"></p>
@@ -166,7 +166,7 @@
 						<form name= "linkForm" id="linkform" onsubmit="return false">
 
 							<div id= "noMatchHeader">
-								<p> Be the first to add a GroupMe link to this class! </p>
+								<p> Be the first to add a GroupMe link to this class: </p>
 							</div>
 
 							<!-- TYPE LINK HERE -->
