@@ -106,17 +106,26 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 
 function submitGroupClicked()
 {
-	var link = ((document.forms["linkForm"]["link"].value).replace(/ /g, "").toLowerCase());
+	var link = document.forms["linkForm"]["link"].value.replace(/ /g, "").toLowerCase();
+	try
+	{
+		link = link.split("groupme.com");
+	}
+	catch (no_groupme)
+	{
+		error4.innerHTML = "Link is incorrect";
+	}
+	linkFinal = "groupme.com" + link[1];	
 
 	/* verify link is correct */
-	if (link == "")
+	if (linkFinal == "")
 	{
 		error4.innerHTML = "Enter a link";
 		return false;
 	}
-	else if (!link.includes("groupme.com/join_group/"))
+	else if (!linkFinal.includes("groupme.com/join_group/"))
 	{
-		error4.innerHTML = "Enter groupme sharing links only";
+		error4.innerHTML = "Enter GroupMe sharing links only";
 		return false;
 	}
 	else
@@ -130,11 +139,11 @@ function submitGroupClicked()
 
 	var data = // how data is held before it is pushed/submitted to entry
 	{
-		class: 
-		document.getElementById("courseTitleDisplay").innerHTML + "_" +
-		document.getElementById("sectionNumberDisplay").innerHTML,
-		link:
-		(document.forms["linkForm"]["link"].value).replace(/ /g, "").toLowerCase()
+	 	class: 
+	 	document.getElementById("courseTitleDisplay").innerHTML + "_" +
+	 	document.getElementById("sectionNumberDisplay").innerHTML,
+	 	link:
+	 	linkFinal
 	}
 	/* delete submission button and notify success */
 	document.getElementById("submitGroup").remove();

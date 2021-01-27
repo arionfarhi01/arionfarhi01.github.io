@@ -23,18 +23,28 @@
 {
 	text-align: center;
 	font-size: .8em;
-	margin-bottom: -2%;
 	font-weight: bold;
+}
+
+#noMatchHeader
+{
+	text-align: center;
+	font-size: .8em;
+	font-weight: bold;
+	margin-bottom: -4.5%;
+	margin-top: 17.5%;
 }
 
 
 summary
 {
+	margin-top: 7.5%;
 	margin-left: 1.5%;
 	margin-right: 1.5%;
 	border: 1px dashed lightgrey;
 	border-radius: 30px;
 	text-align: center;
+	margin-bottom: 15%;
 }
 
 .title
@@ -59,18 +69,18 @@ summary
 #linkform
 {
 	text-align: center;
+	margin-top: -3%;
 }
 
 #groupLink
 {
-	width: 75%;
-	margin-bottom: 2%;
+	width: 85%;
 	height: 20px;
 	border: 3px dotted var(--red);
-	padding-left: 4%;
-	padding-right: 4%;
-	padding-top: .75%;
-	padding-bottom: .75%;
+	padding-left: 6.5%;
+	padding-right: 6.5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	border-radius: 10px;
 }
 
@@ -82,7 +92,8 @@ input[type=text]:focus
 #linkform input[type=text]
 {
 	margin-top: 3%;
-	border-radius: 7.5px;
+	border-radius: 10px;
+	font-size: .825em;
 }
 
 #linkform input[type=text]::-webkit-input-placeholder 
@@ -149,6 +160,7 @@ input[type=text]:focus
 	padding-bottom: 2%;
 	padding-left: .5%;
 	padding-right: .5%;
+	margin-top: -1.5%;
 }
 
 #how_to_add
@@ -169,7 +181,24 @@ input[type=text]:focus
 	list-style: none;
 	color: rgb(111,120,126);
 	font-size: .65em;
-	margin-bottom: 2%;
+	margin-bottom: -2%;
 	text-align: center;
+	text-decoration: underline;
+}
+
+.explain1NoMarg
+{
+	margin-top: 5%;
+	margin-bottom: -4%;
+	list-style: none;
+	color: rgb(111,120,126);
+	font-size: .65em;
+	text-align: center;
+}
+
+#submitLink
+{
+	margin-top: 6%;
+	margin-bottom: 1.5%;
 }
 
