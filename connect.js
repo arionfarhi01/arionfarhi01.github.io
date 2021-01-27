@@ -19,7 +19,8 @@ var firebaseConfig =
 
 	function validateSubmission()
 	{
-		var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
+		var appWindow = window.open("groupme://www.groupme.com/");
+		/*var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
 		var sectionNumber = document.forms["indexForm"]["SectionNumber"].value;
 
 		if ((courseTitle == "" || sectionNumber == ""))
@@ -40,7 +41,7 @@ var firebaseConfig =
 			return false;
 		}
 		submitData();
-		return false;
+		return false;*/
 	}
 
 function submitData() //stores user input and sees if matches with database
