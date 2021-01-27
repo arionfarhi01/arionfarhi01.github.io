@@ -90,7 +90,7 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 	/* show list */ 
 	var userDataStr = JSON.stringify(userData); //turns data into string
 	var userDataSplit = userDataStr.split("\"");
-	document.getElementById("link").innerHTML = "<a href= \"" + userDataSplit[9] + "\">" + userDataSplit[9] + "</a>";
+	document.getElementById("link").innerHTML = "<a href= https://\"" + userDataSplit[9] + "\">" + userDataSplit[9] + "</a>";
 	console.log(document.getElementById("link"));
 }
 
