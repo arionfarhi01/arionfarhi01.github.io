@@ -107,14 +107,23 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 function submitGroupClicked()
 {
 	var link = document.forms["linkForm"]["link"].value.replace(/ /g, "").toLowerCase();
+	
 	try
 	{
 		link = link.split("groupme.com");
 	}
 	catch (no_groupme)
 	{
-		error4.innerHTML = "Link is incorrect";
+		error4.innerHTML = "Invalid Link";
+		return false;
 	}
+
+	if (link[1].length < 25)
+	{
+		error4.innerHTML = "Invalid Link";
+		return false;
+	}
+
 	linkFinal = "groupme.com" + link[1];	
 
 	/* verify link is correct */
@@ -147,6 +156,7 @@ function submitGroupClicked()
 	}
 	/* delete submission button and notify success */
 	document.getElementById("submitGroup").remove();
+	document.getElementById("toGetDiv").remove();
 	document.getElementById("notifySubmission").innerHTML = "Group made successfully!";
 	document.getElementById("addAnother").style.display = "block";
 	ref.push(data); //upload data
