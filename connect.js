@@ -80,7 +80,7 @@ function submitData() //stores user input and sees if matches with database
 function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 {
 	document.getElementById("match").style.display = "block";
-	//document.getElementById("addAnother").style.display = "block";
+	document.getElementById("addAnother").style.display = "block";
 	document.getElementById("noMatch").remove();
 
 	document.getElementById("collegeDisplay").innerHTML = collegeVal;
@@ -91,7 +91,6 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 	var userDataStr = JSON.stringify(userData); //turns data into string
 	var userDataSplit = userDataStr.split("\"");
 	var userData3 = userDataSplit[9].split("/");
-	console.log(userData3);
 	var userDataFinal = userDataSplit[9].link("https://groupme.com/join_group/" + userData3[4] + "/" + userData3[5]);
 	document.getElementById("link").innerHTML = userDataFinal;
 }

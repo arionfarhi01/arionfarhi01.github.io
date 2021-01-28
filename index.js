@@ -71,8 +71,8 @@ function changePlaceholders()
   }
 
   /* CLEARS INPUTS AFTER CHANGING COLLEGES */
-  document.forms["indexForm"]["CourseTitle"].value = "";
-  document.forms["indexForm"]["SectionNumber"].value = "";
+  //document.forms["indexForm"]["CourseTitle"].value = "";
+  //document.forms["indexForm"]["SectionNumber"].value = "";
 }
 
 

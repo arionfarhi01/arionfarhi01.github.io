@@ -118,13 +118,14 @@ input[type=text]:focus
 	display: none; 
 	text-align: center;
 	margin-top: -5%;
-	border: 3px solid black;
-	background-color: var(--red);
 	font-size: 1em;
+	border: 3px solid var(--red);
+	background-color: var(--red);
+	color: white;
 	font-weight: bold;
 	margin-left: 20%;
 	margin-right: 20%;
-	border-radius: 15px;
+	border-radius: 20px;
 	padding: 2.5%;
 }
 
