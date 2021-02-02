@@ -5,11 +5,10 @@
 
 	<meta charset= "utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
-	<title>Hangr</title>
 	<link rel= "stylesheet" href= "form_submit_style.css">
 	<link rel="shortcut icon" href="icon.ico"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	<title>Hangr</title>
 
 </head>
 
@@ -17,13 +16,14 @@
 
 	<header>
 
-		<!-- SIDE NAV BUTTON -->
+		<!-- MENU BUTTON -->
 
 		<div id= "menu">
-			<input type="image" src="menu.png" name="menu" id="menuImage" onclick= "openNav()"/>
+			<input type="image" src="menu.png" name="menu" id="menuButton" onclick= "openNav()"/>
 		</div>
 
 		<!-- SIDE NAV -->
+
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="contact_us.html">Contact Us</a>
@@ -31,8 +31,9 @@
 		</div>
 
 		<!-- TITLE -->
+
 		<div id= "title">
-			<h1 id= "titleText">HANGR<small>(beta)</small></h1>
+			<a href= "index.html"><h1 id= "titleText">HANGR<small>(beta)</small></h1></a>
 		</div>
 
 
@@ -48,7 +49,9 @@
 				<hr>
 
 				<!-- UNIVERSITY DROPDOWN -->
+
 				<p> 
+
 					<select id= "dropdown" 
 					name= "university" 
 					onchange= "return getCollegeSelection()" >
@@ -56,6 +59,7 @@
 					<option value = "" selected diabled> &nbsp; &nbsp; - Select University - &nbsp; &nbsp; </option>
 
 					<!-- ADD UNIVERSITIES HERE: ALPHABETICAL -->
+
 					<option value= "Georgetown University"> Georgetown University </option>
 					<option value= "New York University"> New York University </option>
 					<option value= "Penn State University"> Penn State University </option>
@@ -65,6 +69,7 @@
 
 
 			<!-- COURSE TITLE -->
+
 			<div id = "courseTitle">
 
 				<p> <span class= "bold"> Course Title: </span> <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
@@ -73,6 +78,7 @@
 			</div>
 
 			<!-- SECTION NUMBER -->
+
 			<div id = "sectionNumber">
 
 				<p> <span class= "bold"> Section Number: </span> <br> <input
@@ -82,6 +88,7 @@
 				</div>
 
 				<!-- SUBMIT BUTTON -->
+
 				<div id= "submitButton">
 					<p><input type= "submit" id= "button" value= "Search" onclick= "return validateSubmission()" ></p>
 					<p id = "error3"> </p>
@@ -92,27 +99,31 @@
 
 
 			<footer>
+				
 				<p class = "emp"> How <span id="red">HANGR </span> Works </p>
 
-				<div id= "how_to"> 
-					<p id="margin"> Enter your university, course title, and section number. </p>
+				<div class= "tutorial"> 
+					<p id="bot_margin"> Enter your university, course title, and section number. </p>
 					<p> If a GroupMe link has been previously added to this class, you can now join the GroupMe! If a GroupMe link isn't added yet, you can add it yourself so others can join. </p>
 				</div>
 
-				<p class= "footerText"> We are still in our very early stages, and much more is to come. Until then, your feedback is greatly appreciated! </p>
+				<p class= "call_to_action"> We are still in our very early stages, and much more is to come. Until then, your feedback is greatly appreciated! </p>
 
-					<p class= "footerText"> <a href= "feedback.html"> Feedback </a> | <a href= "contact_us.html"> Contact Us </a>
+					<p class= "call_to_action"> <a href= "feedback.html"> Feedback </a> | <a href= "contact_us.html"> Contact Us </a>
 
 						<br>
 						<br>
 						<hr>
 
-						<p id= "bottomFooterText"> HANGR 2021 | NYC </p>
+						<p id= "bottomText"> HANGR 2021 | NYC </p>
 
 					</footer>
 
 				</main>
 			</div>
+
+
+			<!-- !!! FORM SUBMIT PAGES BEGIN HERE !!! -->
 
 			<div id= "form_submit">
 
@@ -120,7 +131,7 @@
 
 					<div id= "match"> <!--groups match!-->
 
-						<p id= "backButton"> <a href = "index.html" id="backButtonLink"> < <span class= "underline">course search </span> </a> </p>
+						<p id= "backButton"> <a href = "index.html" id="backButtonLink"> < course search </a> </p>
 
 						<!-- FORM THAT DISPLAYS COLLEGE INFO -->
 						<summary>

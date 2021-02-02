@@ -1,18 +1,28 @@
 
-/* normal font */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-/* bold font*/
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+/* variables and fonts */
 
-/* variables */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 :root
 {
 	--red: rgb(255,49,8, .95);
 }
 
+.bold
+{
+	font-weight: 700;
+}
 
-/* body */ 
+#red
+{
+	color: var(--red);
+}
+
+
+
+
+/* overall page functions */ 
 
 body
 {
@@ -29,6 +39,21 @@ html
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: 
 }
+
+/* links */
+
+a:link /* make links not underlined normally */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* make links underlined when pressed */
+{
+   text-decoration: underline;
+   background-color: none;
+}
+
+
 
 
 /* header */
@@ -49,6 +74,15 @@ header
     -webkit-box-shadow: 4px 4px 2px #ccc;
 }
 
+#menuButton 
+{
+	width: 26px;
+	position: relative;
+	top: 32px;
+	left: 12.5px;
+	margin-top: -5%;
+}
+
 #titleText
 {
 	display: block;
@@ -59,7 +93,7 @@ header
 	text-indent: 5%; /* centers exactly */
 }
 
-small
+small /* for "beta" */
 {
 	display: inline;
 	clear: both;
@@ -69,20 +103,6 @@ small
 }
 
 
-#menuImage /* changes with input */
-{
-	width: 26px;
-	position: relative;
-	top: 31px;
-	left: 12.5px;
-	margin-top: -5%;
-}
-
-.show
-{
-	display: block;
-	width: 250px;
-}
 
 
 /* form */ 
@@ -100,47 +120,58 @@ small
 	border: 1px dotted var(--red);
 }
 
-.bold
+h2 /* "find your class groupme" */
 {
-	font-weight: 700;
+	text-align: center;
+	padding-bottom: 3%;
+	font-size: 1.125em;
 }
 
-hr
+hr /* underneath "find your class groupme" */
 {
 	margin-top: -4%;
 }
 
-#dropdown
+#dropdown /* input #1 */
 {
 	margin-top: 5%;
 	margin-bottom: 7.5%;
 }
 
-#courseTitle
+#courseTitle /* input #2 */
 {
 	padding-bottom: 4%;
 }
-
-#submitButton
+ 
+#submitButton /* input #3 */
 {
 	text-align: center;
 	padding-top: 3%;
 	padding-bottom: 1%;
 }
 
-input[type=submit]
+input[type=submit] /* submit buttin */
 {
 	font-size: .85em;
 	border: 1.5px solid black;
 }
 
-input[type=text]
+input /* makes input bar bigger, input font bigger size, input centered */
 {
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: .9em;
 	text-align: center;
 	margin-top: 2%;
 }
 
-/* make placeholders italic */
+select /* only works for chrome, centers text */
+{
+	text-align-last: center; 
+	font-size: .85em;
+}
+
+/* makes placeholders italic */
 
 ::-webkit-input-placeholder 
 {
@@ -159,82 +190,6 @@ input[type=text]
    font-style: italic; 
 }
 
-h2
-{
-	text-align: center;
-	padding-bottom: 3%;
-	font-size: 1.125em;
-}
-
-
-select /* only works for chrome */
-{
-	text-align-last: center; 
-	font-size: .85em;
-}
-
-input
-{
-	padding-left: 5%;
-	padding-right: 5%;
-	font-size: .9em;
-}
-
-
-/* footer */
-
-footer
-{
-	margin-top: 22.5%;
-}
-
-.footerText
-{
-	text-align: center;
-	margin-bottom: 5%;
-	font-size: .75em;
-}
-
-#how_to, .explain
-{
-	margin-top: 3%;
-	list-style: none;
-	color: rgb(111,120,126);
-	font-size: .65em;
-	margin-bottom: 2%;
-	text-align: center;
-
-}
-
-#margin
-{
-	margin-bottom: -2.5%;
-}
-
-#red
-{
-	color: var(--red);
-}
-
-.emp
-{
-	font-size: 1em;
-	text-align: center;
-	margin-bottom: -1%; 
-	margin-top: -2.5%;
-}
-
-.footerText > a:link, a:visited
-{
-	color: var(--red);
-}
-
-#bottomFooterText
-{
-	font-size: .5em;
-	text-align: center;
-}
-
 /* error messages */
 
 #error1, #error2, #error3, #error4
@@ -250,10 +205,62 @@ footer
 }
 
 
+
+
+/* footer */
+
+footer
+{
+	margin-top: 22.5%;
+}
+
+.emp /* "how hangr works" */
+{
+	font-size: 1em;
+	text-align: center;
+	margin-bottom: -1%; 
+	margin-top: -2.5%;
+}
+
+.tutorial, .explain /* text below "how hangr words" */
+{
+	margin-top: 3%;
+	list-style: none;
+	color: rgb(111,120,126);
+	font-size: .65em;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+#bot_margin
+{
+	margin-bottom: -2.5%;
+}
+
+.call_to_action /* We are still in... */
+{
+	text-align: center;
+	margin-bottom: 5%;
+	font-size: .75em;
+}
+
+.call_to_action > a:link, a:visited /* style links red */
+{
+	color: var(--red);
+}
+
+#bottomText
+{
+	font-size: .5em;
+	text-align: center;
+}
+
+
+
+
 /* side navigation */
 
-/* The side navigation menu */
-.sidenav 
+.sidenav /* general menu */
 {
   height: 100%; 
   width: 0; 
@@ -266,8 +273,7 @@ footer
   transition: 0.4s; 
 }
 
-/* The navigation menu links */
-.sidenav a 
+.sidenav a /* link styling */
 {
   padding: 3% 5% 5% 20%;
   text-decoration: underline;
@@ -277,30 +283,17 @@ footer
   transition: 0.4s;
 }
 
-/* links */
-a:link
-{
-	text-decoration: none;
-}
-
-a:hover, a:active
-{
-   text-decoration: underline;
-   background-color: none;
-}
-
-/* position and style the close button (top right corner) */
-.sidenav .closebtn 
+.sidenav .closebtn /* close button */
 {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0; /* top right corner */
   font-size: 36px;
   margin-left: 50px;
   text-decoration: none;
 }
 
-#push
+#push /* shifts scrren over when opening nav up */
 {
   transition: margin-left .4s;
   padding: 20px;

@@ -97,7 +97,7 @@ function openNav()
     document.getElementById("mySidenav").style.width = "32%";
     document.getElementById("push").style.marginLeft = "32%";
   }
-  document.getElementById("menuImage").style.display = "none";
+  document.getElementById("menuButton").style.display = "none";
   document.getElementById("titleText").style.display = "none";
 }
 
@@ -105,7 +105,7 @@ function closeNav()
 {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("push").style.marginLeft = "0";
-  document.getElementById("menuImage").style.display = "inline";
+  document.getElementById("menuButton").style.display = "inline";
   document.getElementById("titleText").style.display = "block";
 }
 
