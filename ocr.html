@@ -22,7 +22,8 @@
 
 		Tesseract.recognize(
   		image,
-  		'Gotham SSm 4r',
+  		'Font',
+  		//'Gotham SSm 4r',
  		 { 
  	 	logger: m => console.log(m) }
 		).then(({ data: { text } }) => {
