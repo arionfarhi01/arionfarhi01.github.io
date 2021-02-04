@@ -22,23 +22,25 @@ var firebaseConfig =
 		var courseTitle = document.forms["indexForm"]["CourseTitle"].value;
 		var sectionNumber = document.forms["indexForm"]["SectionNumber"].value;
 
-		if ((courseTitle == "" || sectionNumber == ""))
-		{
-			document.getElementById("error3").innerHTML = "Fields cannot be blank";
-			return false;
-		}
-
-		if (document.getElementById("error1").innerHTML != "" || document.getElementById("error2").innerHTML != "")
-		{
-			document.getElementById("error3").innerHTML = "Incorrect information";
-			return false;
-		}
-
 		if (collegeChanged < 1)
 		{
 			document.getElementById("error3").innerHTML = "Select a university";
 			return false;
 		}
+
+		if (courseTitle == "")
+		{
+			document.getElementById("error3").innerHTML = "Course Title cannot be blank";
+			return false;
+		}
+
+		if (document.getElementById("error1").innerHTML != "" || document.getElementById("error2").innerHTML == "Section Number may consist of numbers only" || document.getElementById("error2").innerHTML == "Section Number must be between 1-999")
+		{
+			document.getElementById("error3").innerHTML = "Incorrect information";
+			return false;
+		}
+
+
 		submitData();
 		return false;
 	}
@@ -86,6 +88,10 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 	document.getElementById("collegeDisplay").innerHTML = collegeVal;
 	document.getElementById("courseTitleDisplay").innerHTML = courseTitleVal;
 	document.getElementById("sectionNumberDisplay").innerHTML = sectionNumberVal;
+	if (sectionNumberVal == "")
+	{
+		document.getElementById("sectionNumberSummary").remove();
+	}
 
 	/* show list */ 
 	var userDataStr = JSON.stringify(userData); //turns data into string
@@ -103,6 +109,10 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 	document.getElementById("collegeDisplay").innerHTML = collegeVal;
 	document.getElementById("courseTitleDisplay").innerHTML = courseTitleVal;
 	document.getElementById("sectionNumberDisplay").innerHTML = sectionNumberVal;
+	if (sectionNumberVal == "")
+	{
+		document.getElementById("sectionNumberSummary").remove();
+	}
 }
 
 function submitGroupClicked()

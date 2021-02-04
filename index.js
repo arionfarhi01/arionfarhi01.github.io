@@ -168,6 +168,7 @@ function validateFormSection()
   var sectionNumberNoSpace = sectionNumber.replace(/ /g, "");
 
   /* CHECKS IF BLANK */
+  /*
 
   if (sectionNumberNoSpace == "") 
   {
@@ -178,12 +179,13 @@ function validateFormSection()
   {
   	document.getElementById("error2").innerHTML = "";
   }
+  */
 
   /* CHECKS IF HAS NUMBERS ONLY */
   var numbers = /^[0-9]+$/;
 
   /* CHECKS IF NUMBER IS GREATER THAN 999 */
-  if (sectionNumberNoSpace > 999 || sectionNumberNoSpace < 1)
+  if ((sectionNumberNoSpace > 999 || sectionNumberNoSpace < 1) & !(sectionNumberNoSpace == ""))
   {
     document.getElementById("error2").innerHTML = "Section Number must be between 1-999";
     return false;

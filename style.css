@@ -14,7 +14,7 @@
 	font-weight: 700;
 }
 
-#red
+.red
 {
 	color: var(--red);
 }
@@ -148,6 +148,16 @@ hr /* underneath "find your class groupme" */
 	text-align: center;
 	padding-top: 3%;
 	padding-bottom: 1%;
+}
+
+.tutorialNoMargin /* for section number */
+{
+	margin-top: -3%;
+	list-style: none;
+	color: rgb(111,120,126);
+	font-size: .35em;
+	margin-bottom: 1%;
+	text-align: center;
 }
 
 input[type=submit] /* submit buttin */

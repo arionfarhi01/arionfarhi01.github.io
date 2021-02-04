@@ -45,7 +45,7 @@
 
 			<form name= "indexForm" id= "form" autocomplete= "off">
 
-				<h2> Find Your Class GroupMe  </h2>
+				<h2> Find Your Class GroupMe </h2>
 				<hr>
 
 				<!-- UNIVERSITY DROPDOWN -->
@@ -72,7 +72,7 @@
 
 			<div id = "courseTitle">
 
-				<p> <span class= "bold"> Course Title: </span> <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
+				<p> <span class= "bold"> Course Title: <span class= "red">*</span></span> <br> <input type= "text" name= "CourseTitle" id = "input1" placeholder= "" onblur= "return validateFormTitle();"></p> 
 				<p id = "error1"> </p>
 
 			</div>
@@ -83,6 +83,7 @@
 
 				<p> <span class= "bold"> Section Number: </span> <br> <input
 					type= "text" name= "SectionNumber" id="input2" placeholder= "" onblur= "return validateFormSection()"> </p> 
+					<p class = "tutorialNoMargin"> Leave blank if you wish to join the plenary session</p>
 					<p id = "error2"> </p>
 
 				</div>
@@ -100,7 +101,7 @@
 
 			<footer>
 
-				<p class = "emp"> How <span id="red">HANGR </span> Works </p>
+				<p class = "emp"> How <span class="red">HANGR </span> Works </p>
 
 				<div class= "tutorial"> 
 					<p id="bot_margin"> Enter your university, course title, and section number. </p>
@@ -142,7 +143,7 @@
 							<p class="title"> Course Title: </p>
 							<p id= "courseTitleDisplay"></p>
 
-							<p class="title"> Section Number: </p>
+							<p class="title" id="sectionNumberSummary"> Section Number: </p>
 							<p id= "sectionNumberDisplay"></p>
 
 						</summary>
@@ -173,7 +174,7 @@
 							<p class="title"> Course Title: </p>
 							<p id= "courseTitleDisplay"></p>
 
-							<p class="title"> Section Number: </p>
+							<p class="title" id="sectionNumberSummary"> Section Number: </p>
 							<p id= "sectionNumberDisplay"></p>
 
 						</summary>
