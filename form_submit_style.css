@@ -41,7 +41,7 @@ summary
 	margin-top: 7.5%;
 	margin-left: 1.5%;
 	margin-right: 1.5%;
-	border: 1px dashed grey;
+	border: 1px solid grey;
 	border-radius: 30px;
 	text-align: center;
 	margin-bottom: 10%;
@@ -76,7 +76,8 @@ summary
 {
 	width: 85%;
 	height: 20px;
-	border: 3px solid var(--red);
+	border: 3px dashed var(--red);
+	background-color: lightgrey;
 	padding-left: 6.5%;
 	padding-right: 6.5%;
 	padding-top: 1%;
@@ -156,7 +157,8 @@ input[type=text]:focus
 	font-size: .825em;
 	text-align: center;
 	border-radius: 10px;
-	border: 2px solid var(--red);
+	border: 3px dashed var(--red);
+	background-color: lightgrey;
 	padding-top: 2%;
 	padding-bottom: 2%;
 	padding-left: .5%;

@@ -181,6 +181,12 @@ function validateFormSection()
   }
   */
 
+  if (sectionNumberNoSpace == "")
+  {
+    document.getElementById("error2").innerHTML = "";
+    return false;
+  }
+
   /* CHECKS IF HAS NUMBERS ONLY */
   var numbers = /^[0-9]+$/;
 
@@ -191,7 +197,7 @@ function validateFormSection()
     return false;
   }
 
-  if(!sectionNumberNoSpace.match(numbers) && !(sectionNumberNoSpace == "") )
+  if (!sectionNumberNoSpace.match(numbers) && !(sectionNumberNoSpace == "") )
   {
   	document.getElementById("error2").innerHTML = "Section Number may consist of numbers only";
     return false;
