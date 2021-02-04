@@ -119,13 +119,13 @@ function submitGroupClicked()
 {
 	var link = document.forms["linkForm"]["link"].value.replace(/ /g, "");
 	/* fix glitch with capitals in groupme */
-	try
+	if (link.includes("groupme.com"))
 	{
 		link = link.split("groupme.com");
 	}
-	catch (no_groupme)
+	else
 	{
-		error4.innerHTML = "Invalid Link";
+		error4.innerHTML = "Link must contain \"groupme.com\"";
 		return false;
 	}
 
