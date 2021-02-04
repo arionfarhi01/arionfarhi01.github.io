@@ -85,7 +85,7 @@ function doesMatch(courseTitleVal, collegeVal, sectionNumberVal, userData)
 	document.getElementById("addAnother").style.display = "block";
 	document.getElementById("noMatch").remove();
 
-	document.getElementById("collegeDisplay").innerHTML = collegeVal;
+	document.getElementById("collegeDisplay").innerHTML = "(" + collegeVal + ")";
 	document.getElementById("courseTitleDisplay").innerHTML = courseTitleVal;
 	document.getElementById("sectionNumberDisplay").innerHTML = sectionNumberVal;
 	if (sectionNumberVal == "")
@@ -106,7 +106,7 @@ function doesNotMatch(courseTitleVal, collegeVal, sectionNumberVal)
 	document.getElementById("noMatch").style.display = "block";
 	document.getElementById("match").remove();
 
-	document.getElementById("collegeDisplay").innerHTML = collegeVal;
+	document.getElementById("collegeDisplay").innerHTML = "(" + collegeVal + ")";
 	document.getElementById("courseTitleDisplay").innerHTML = courseTitleVal;
 	document.getElementById("sectionNumberDisplay").innerHTML = sectionNumberVal;
 	if (sectionNumberVal == "")
