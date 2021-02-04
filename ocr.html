@@ -5,16 +5,23 @@
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+	<script src = "ocr.js"></script>
 	<title>OCR</title>
 </head>
 
 <body>
 	<h1> OCR </h1>
+	<input type= file onchange= "process()">
 
 	<script>
 
+		function process()
+		{
+
+		var image = document.getElementById('fileInput');
+
 		Tesseract.recognize(
-  		'img1.png',
+  		image,
   		'eng',
  		 { 
  	 	logger: m => console.log(m) }
@@ -22,6 +29,8 @@
   		console.log(text);
   		window.alert("Hello!!!!!");
 		})
+
+	}
 		
 	</script>
 </body>
