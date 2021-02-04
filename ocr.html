@@ -11,14 +11,14 @@
 
 <body>
 	<h1> OCR </h1>
-	<input type= file onchange= "process()" id="fileInput" type= "image/*">
+	<input type= file onchange= "process()" id="fileInput" accept= "image/*">
 
 	<script>
 
 		function process()
 		{
 
-		var image = document.getElementById('fileInput').files;
+		var image = document.getElementById('fileInput').files[0];
 		console.log(image);
 
 		Tesseract.recognize(
