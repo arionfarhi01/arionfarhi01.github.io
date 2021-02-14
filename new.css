@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body
+{
+	font-family: "Lato";
+}
+
+:root
+{
+	--red: rgb(255,49,8,.95);
+}
+
+header
+{
+	background-color: #FAFAFA;
+	margin-left: -2.5%;
+	margin-top: -2%;
+	position: fixed;
+  	top: .7%;
+ 	width: 100%;
+ 	z-index: 9999;
+
+ 	/* shadow */
+ 	box-shadow: 4px 4px 2px #ccc;
+    -moz-box-shadow: 4px 4px 2px #ccc;
+    -webkit-box-shadow: 4px 4px 2px #ccc;
+}
+
+#menuButton 
+{
+	width: 26px;
+	position: relative;
+	top: 32px;
+	left: 12.5px;
+	margin-top: -5%;
+}
+
+small 
+{
+	display: inline;
+	clear: both;
+	font-size: .1em;
+}
+
+#titleText
+{
+	display: block;
+	color: var(--red);
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 0%;
+	text-indent: 5%; /* centers exactly */
+}
+
+table
+{
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.normal_link a
+{
+	text-decoration: underline;
+}
+
+.normal_link a:hover, .normal_link a:active
+{
+	color: black;
+}
+
+a
+{
+	color: inherit;
+	background-color: inherit;
+	text-decoration: none;
+}
+
+a:hover, a:active
+{
+	color: var(--red);
+}
+
+.courseBackground
+{
+	margin-bottom: 3%;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-size: 1.05em;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.heading
+{
+	font-size: 1.25em; 
+	margin-left: 2.5%;
+	text-transform: capitalize;
+}
+
+.heading2
+{
+	margin-left: 2.5%;
+	font-size: .9em;
+}
+
+.w
+{
+	text-transform: lowercase;
+}
+
+.info, .info2
+{
+	margin-left: 2.5%;
+	font-size: .75em;
+}
+
+.info2
+{
+	font-size: .75em;
+}
+
+#search_and_plus
+{
+	display: flex;
+	justify-content: flex-start;
+}
+
+#plusButton
+{
+	width: 25px;
+}
+
+#search_bar
+{
+	margin-left: 2%;
+	width: 90%;
+	height: 25px;
+}
+
+.sidenav /* general menu */
+{
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
+  transition: 0.4s; 
+  padding-top: 55px; /* right below header */
+}
+
+.sidenav .closebtn /* close button */
+{
+  position: absolute;
+  top: 0;
+  right: 0; /* top right corner */
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none;
+  padding-top: 55px; /* right below header */
+}
+
+
+
+
+
+
+
+
