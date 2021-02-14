@@ -75,25 +75,29 @@
 	<br>
 	<br>
 
-	<p id= "ocr_link" class= "normal_link"> <a href= ocr.html> OCR </a> </p>
+	<div id= "push">
 
-	<p> Join group by tapping or if it doesn't exist yet add group with "+" above. I can also explain OCR stuff here too! </p>
+		<p id= "ocr_link" class= "normal_link"> <a href= ocr.html> OCR </a> </p>
 
-	<div id= "search_and_plus">
+		<p> Join group by tapping or if it doesn't exist yet add group with "+" above. I can also explain OCR stuff here too! </p>
 
-		<div id= "plus">
-				<input type="image" src="plus.png" name="plus" id="plusButton" onclick= "openForm()">
-			</div>
+		<div id= "search_and_plus">
 
-		<input type= "search" id= "search_bar" placeholder= "Search Courses Or Professors" oninput = "return search()">
+			<div id= "plus">
+					<input type="image" src="plus.png" name="plus" id="plusButton" onclick= "openForm()">
+				</div>
+
+			<input type= "search" id= "search_bar" placeholder= "Search Courses Or Professors" oninput = "return search()">
+
+		</div>
+
+		<table id= "table">
+	  	<tr class="tr"></tr>
+		</table> 
+
+		<p id= "no_matches"> </p>
 
 	</div>
-
-	<table id= "table">
-  	<tr class="tr">
-	</table> 
-
-	<p id= "no_matches"> </p>
 
 
 	<script>
