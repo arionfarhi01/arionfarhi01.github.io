@@ -24,7 +24,6 @@
 			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "")).toUpperCase());
 
 			var course_common_name_val = ((document.forms["add_group"]["course_common_name"].value).toLowerCase());
-			toTitleCase(course_common_name_val);
 			var course_professor_val = (((document.forms["add_group"]["course_professor"].value).replace(/ /g, "")).toLowerCase());
 			var course_time_val = (((document.forms["add_group"]["course_time"].value).replace(/ /g, "")).toLowerCase());
 			var course_dates_val = (((document.forms["add_group"]["course_dates"].value).replace(/ /g, "")).toUpperCase());
@@ -189,8 +188,8 @@
 
 		function openForm() 
 		{
-			document.getElementById("mySidenav").style.width = "50%";
-			document.getElementById("push").style.marginLeft = "50%";
+			document.getElementById("mySidenav").style.width = "100%";
+			document.getElementById("push").style.marginLeft = "105%";
 			  //document.getElementById("menuButton").style.display = "none";
 			 // document.getElementById("titleText").style.display = "none";
 		}

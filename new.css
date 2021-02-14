@@ -149,9 +149,8 @@ a:hover, a:active
   top: 0; 
   left: 0;
   overflow-x: hidden; 
-  transition: 0.4s; 
+  transition: 0.6s; 
   margin-top: 55px; /* right below header */
-  background-color: lightgrey;
 }
 
 .sidenav .closebtn /* close button */
@@ -160,14 +159,13 @@ a:hover, a:active
   top: 0;
   right: 0; /* top right corner */
   font-size: 36px;
-  margin-left: 50px;
+  margin-left: 55px;
   text-decoration: none;
-  padding-top: 55px; /* right below header */
 }
 
 #push /* shifts scrren over when opening nav up */
 {
-  transition: margin-left .4s;
+  transition: margin-left .6s;
 }
 
 
