@@ -21,8 +21,9 @@
 	
 			// get variables
 
-			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "")).toUpperCase());
+			var college_selection_val = document.getElementById("titleText").innerHTML.substring(47).split("<")[0].toUpperCase();
 
+			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "")).toUpperCase());
 			var course_common_name_val = ((document.forms["add_group"]["course_common_name"].value).toLowerCase());
 			var course_professor_val = (((document.forms["add_group"]["course_professor"].value).replace(/ /g, "")).toLowerCase());
 			var course_time_val = (((document.forms["add_group"]["course_time"].value).replace(/ /g, "")).toLowerCase());
@@ -38,8 +39,6 @@
 			{
 				recitation_val = " (recitation)";
 			}
-
-			var college_selection_val = document.getElementById("college_selection").value;
 
 
 			var ref = database.ref(college_selection_val);

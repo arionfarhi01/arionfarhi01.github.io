@@ -37,16 +37,10 @@
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeForm()">&times;</a>
 			
-			<h1> Form </h1>
+			<h1> Add Group </h1>
 			<p> Make it easier to find by entering optional fields below! </p>
 
 			<form name= "add_group" autocomplete= "off">
-
-				<select id= "college_selection">
-					<option value= "New York University"> New York University </option>
-					<option value= "Georgetown University"> Georgetown University </option>
-
-				</select>
 
 				<input type= "text" name= "course_name" placeholder = "Course name">
 
@@ -77,17 +71,21 @@
 
 	<div id= "push">
 
-		<p id= "ocr_link" class= "normal_link"> <a href= ocr.html> OCR </a> </p>
+		<div id= "intro">
 
-		<p> Join group by tapping or if it doesn't exist yet add group with "+" above. I can also explain OCR stuff here too and show albert screenshot! </p>
+			<p id= "ocr_link" class= "normal_link"> <a href= ocr.html> OCR </a> </p>
 
-		<div id= "search_and_plus">
+			<p> Join group by tapping or if it doesn't exist yet add group with "+" above. I can also explain OCR stuff here too and show albert screenshot! </p>
 
-			<div id= "plus">
-					<input type="image" src="plus.png" name="plus" id="plusButton" onclick= "openForm()">
-				</div>
+			<div id= "search_and_plus">
 
-			<input type= "search" id= "search_bar" placeholder= " Search for course or professor..." oninput = "return search()">
+				<div id= "plus">
+						<input type="image" src="plus.png" name="plus" id="plusButton" onclick= "openForm()">
+					</div>
+
+				<input type= "search" id= "search_bar" placeholder= " Search for course or professor..." oninput = "return search()">
+
+			</div>
 
 		</div>
 
@@ -102,7 +100,7 @@
 
 	<script>
 
-		displayInfo("New York University");
+		displayInfo("NYU");
 
 	</script>
 
