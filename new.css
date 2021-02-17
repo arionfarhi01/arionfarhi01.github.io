@@ -6,9 +6,11 @@
 
 /* fonts */
 
-body
+body, html
 {
 	font-family: "Alegreya SC";
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 ::-webkit-input-placeholder 
@@ -19,6 +21,12 @@ body
 #intro
 {
 	font-family: "Lato";
+}
+
+#intro_text
+{
+	margin-top: 2%;
+	text-align: center;
 }
 
 :root
@@ -58,7 +66,6 @@ small
 	display: inline;
 	clear: both;
 	font-size: .1em;
-	color: #330662;
 }
 
 #titleText
@@ -104,10 +111,15 @@ a:hover, a:active
 	color: var(--red);
 }
 
+.courseBackground:first-child
+{
+	margin-top: 2%;
+}
+
 .courseBackground
 {
-	margin-bottom: 3%;
-	border: 1px solid black;
+	margin-bottom: 0%;
+	border: 2px solid black;
 	border-radius: 10px;
 	font-size: 1.05em;
 	padding-top: 1%;
@@ -116,7 +128,7 @@ a:hover, a:active
 
 .heading
 {
-	font-size: 1.25em; 
+	font-size: 1em; 
 	margin-left: 2.5%;
 	text-transform: capitalize;
 }
@@ -135,12 +147,18 @@ a:hover, a:active
 .info, .info2
 {
 	margin-left: 2.5%;
-	font-size: .75em;
+	font-size: .8em;
 }
 
 .info2
 {
-	font-size: .75em;
+	font-size: .8em;
+	margin-left: 2.5%;
+}
+
+.time
+{
+	font-size: 1.2em;
 }
 
 #search_and_plus
@@ -152,6 +170,8 @@ a:hover, a:active
 #plusButton
 {
 	width: 25px;
+	position: relative;
+	top: 1.5px;
 }
 
 #search_bar
@@ -159,6 +179,15 @@ a:hover, a:active
 	margin-left: 2%;
 	width: 90%;
 	height: 30px;
+}
+
+.group_title
+{
+	font-size: .85em;
+	text-decoration: underline;
+	font-family: "Ubuntu";
+	margin-left: 1%;
+	font-weight: bold;
 }
 
 /* form sidenav */
@@ -174,17 +203,20 @@ a:hover, a:active
   left: 0;
   overflow-x: hidden; 
   transition: 0.6s; 
-  margin-top: 55px; /* right below header */
+  margin-top: 65px; /* right below header */
+  background-color: #ECECEC;
 }
 
 .sidenav .closebtn /* close button */
 {
   position: absolute;
-  top: 5px;
-  right: 5px; /* top right corner */
+  top: 17.5px;
+  right: 10px; /* top right corner */
   font-size: 36px;
-  margin-left: 55px;
+  margin-left: 65px;
+  margin-right: 5%;
   text-decoration: none;
+  background-color: transparent;
 }
 
 #push /* shifts scrren over when opening nav up */
@@ -192,15 +224,68 @@ a:hover, a:active
   transition: margin-left .6s;
 }
 
-.sidenav > h1
+#caption
 {
-	color: var(--red);
 	text-align: center;
+	font-size: 1.25em;
+	text-decoration: underline;
+	text-decoration-color: var(--red);
+	margin-bottom: 7.5%;
 }
 
+form
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: white;
+}
 
+form > ::-webkit-input-placeholder 
+{ 
+  	font-family: "Ubuntu";
+}
 
+#border
+{
+	border: 1px solid black;
+	border-radius: 15px;
+	background-color: white;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
 
+form > input[type = submit]
+{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color: red;
+	width: 90%;
+	height: 50px;
+	color: white;
+	font-size: 1.1em;
+	font-family: "Ubuntu";
+	border: none;
+}	
+
+form > input[type = "text"]
+{
+	border: none;
+	border-bottom: 3px solid black;
+	width: 90%;
+}
+
+form > p
+{
+	margin-bottom: 5%;
+}
+
+#section_number_info
+{
+	font-size: .5em;
+	margin-right: 10%;
+	font-color: lightgrey;
+}
 
 
 

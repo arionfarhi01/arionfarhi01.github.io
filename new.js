@@ -21,7 +21,7 @@
 	
 			// get variables
 
-			var college_selection_val = document.getElementById("titleText").innerHTML.substring(47).split("<")[0].toUpperCase();
+			var college_selection_val = document.getElementById("titleText").innerHTML.substring(77).split("<")[0].toUpperCase();
 
 			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "")).toUpperCase());
 			var course_common_name_val = ((document.forms["add_group"]["course_common_name"].value).toLowerCase());
@@ -31,13 +31,15 @@
 			var course_link_val = (((document.forms["add_group"]["course_link"].value).replace(/ /g, "")).toLowerCase());
 
 			var recitation_val = document.getElementById("recitation").value;
+			var recitation_placeholder = "";
 			if (recitation_val == "no")
 			{
-				recitation_val = "";
+				recitation_val = "Prof. ";
 			}
 			else
 			{
-				recitation_val = " (recitation)";
+				recitation_val = "";
+				recitation_placeholder = " (Recitation)";
 			}
 
 
@@ -52,7 +54,7 @@
 		 		course_common_name_val,
 
 		 		professor:
-		 		course_professor_val + recitation_val,
+		 		recitation_val + course_professor_val + recitation_placeholder,
 
 		 		time:
 		 		course_time_val,
@@ -70,15 +72,44 @@
 
 		function displayInfo(collegeName)
 		{
-			var i = 0;
+			getColorTitleText(collegeName);
 
-			database.ref(collegeName).once('value', function(snapshot)
+			var i = 0;
+			var group_title_array = [];
+			var course_name_beginning = "";
+
+
+			database.ref(collegeName).orderByChild("name").once('value', function(snapshot)
 			{
        			if(snapshot.exists())
        		 	{
           			var content = '';
           			snapshot.forEach(function(data){
              		var val = data.val();
+
+             		course_name_beginning = val.name.split("-")[0];
+
+             		/* Make sure no overlapping group titles */
+
+             		if (group_title_array.includes(course_name_beginning)) //if duplicate
+             		{
+             			group_title_array.push(course_name_beginning);
+             			//content += "<span class= 'group_title'></span>";
+             		}
+             		else
+             		{
+             			group_title_array.push(course_name_beginning);
+
+             			if (i == 0) //if first occurance
+             			{
+             				//content += "<span class= 'group_title'>" + val.name.split("-")[0] + "</span>";
+             			}
+             			else
+             			{
+             				//content += "<br> <span class= 'group_title'>" + val.name.split("-")[0] + "</span>";
+             			}
+             		}
+
 
              		content += '<a href= "' + val.link + '" >';
 
@@ -122,20 +153,22 @@
              		{
              			content += '<div class= "courseBackground" style= "background-color: #C4F1EB">';
              		}
+             		
 
              		content +='<tr>';
 
               		content += '<td>' + '<span class= "heading"> ' + 
-             		val.common_name + " <br> <span class= 'heading2'> <span class= 'w'> </span> " +
+             		val.common_name + " <br> <span class= 'heading2'>" +
               		val.professor + "</span> </span> <br> <span class= 'info'> " +
-              		val.name + " </span> <br> " + "<span class = 'info2'>" +
-              		val.dates + " | " +
+              		val.name + " </span> <br> <span class = 'info2'>" +
+              		val.dates + "; <span class = 'time'> " +
               		val.time +
-              		'</div> </a> </span>'
+              		'</span> </div> </a> </span> </td>'
 
              		content += '</tr>';
 
              		i++;
+
              		if (i > 7)
              		{
              			i= 0;
@@ -144,9 +177,18 @@
            		 });
 
             		$('#table').append(content);
+
         		}
     		});
 
+		}
+
+		function getColorTitleText(collegeName) 
+		{
+			if (collegeName == "NYU")
+			{
+				document.getElementsByTagName("small")[0].style.color = "#" + 330662;
+			}
 		}
 
 		function search() 
@@ -158,17 +200,20 @@
 			var input = document.getElementById("search_bar").value.toLowerCase();
 			var headingArray = document.getElementsByClassName("heading");
 			var infoArray = document.getElementsByClassName("info");
+			var groupTitleArray = document.getElementsByClassName("group_title");
 
 			while (numberOfClasses > i)
 			{
 				if (headingArray[i].innerHTML.toLowerCase().includes(input) || infoArray[i].innerHTML.toLowerCase().includes(input))
 				{
 					$(classDiv[i]).show();
+					$(groupTitleArray[i]).show();
 				}
 
 				else
 				{
 					$(classDiv[i]).hide();
+					$(groupTitleArray[i]).hide();
 					classDivCount--;
 				}
 
