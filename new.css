@@ -266,6 +266,7 @@ form > input[type = submit]
 	font-size: 1.1em;
 	font-family: "Ubuntu";
 	border: none;
+	/*TODO: center*/
 }	
 
 form > input[type = "text"]
@@ -277,7 +278,9 @@ form > input[type = "text"]
 
 form > p
 {
-	margin-bottom: 5%;
+	margin-bottom: 3%
+	margin-top: 5%;
+	font-weight: bold;
 }
 
 #section_number_info
@@ -285,10 +288,49 @@ form > p
 	font-size: .5em;
 	margin-right: 10%;
 	font-color: lightgrey;
+	font-weight: 400;
 }
 
+.weekDays-selector
+{
+	text-align: center;
+}
 
+.weekDays-selector input 
+{
+  display: none!important;
 
+}
 
+.weekDays-selector input[type=checkbox] + label 
+{
+  display: inline-block;
+  border-radius: 50%;
+  background: #dddddd;
+  height: 40px;
+  line-height: 40px;
+  width: 12.5%;
+  cursor: pointer;
+}
+
+.weekDays-selector input[type=checkbox]:checked + label 
+{
+  background: var(--red);
+  color: #ffffff;
+}
+
+#recitation_div
+{
+	margin-top: 5%;
+	display: inline-flex;
+}
+
+#recitation
+{
+	margin-top: 7%;
+	height: 25px;
+	position: relative;
+	left: 10px;
+}
 
 

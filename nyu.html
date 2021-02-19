@@ -47,7 +47,7 @@
 				<input type= "text" name= "course_name" placeholder = "i.e. ACCT-UB 1 001">
 				<br>
 
-				<p id= "section_number_info"> Section number is optional, depending on if you want to make a GroupMe for the entire course or just your section </p>
+				<p id= "section_number_info"> Section numbers are optional </p>
 
 				<p> Course Nickname: </p>
 				<input type= "text" name= "course_common_name" placeholder = "i.e. Principles of Financial Accounting">
@@ -57,16 +57,42 @@
 				<input type= "text" name= "course_professor" placeholder = "i.e. Johnson">
 				<br>
 
-				<input type= "text" name= "course_time" placeholder = "Class time">
-				<input type= "text" name= "course_dates" placeholder = "Class day of week">
-				<input type= "text" name= "course_link" placeholder = "Class link">
+				<p> Days of week: </p>
+				<div class="weekDays-selector">
+					<input type="checkbox" id="weekday-sun" class="weekday" />
+					  <label for="weekday-sun">Su</label>
+  					<input type="checkbox" id="weekday-mon" class="weekday" />
+					  <label for="weekday-mon">M</label>
+					<input type="checkbox" id="weekday-tue" class="weekday" />
+					  <label for="weekday-tue">Tu</label>
+					<input type="checkbox" id="weekday-wed" class="weekday" />
+					  <label for="weekday-wed">W</label>
+					<input type="checkbox" id="weekday-thu" class="weekday" />
+					  <label for="weekday-thu">Th</label>
+					<input type="checkbox" id="weekday-fri" class="weekday" />
+					  <label for="weekday-fri">F</label>
+					<input type="checkbox" id="weekday-sat" class="weekday" />
+					  <label for="weekday-sat">Sa</label>
+				</div>
 
-				<select id= "recitation">
+				<p> Time: </p>
+				<div class= "time-selector">
+					<input type= "time" id="time-sunday">
+				</div>
+				<br>
+				
+			<p> Course Link: </p>
+				<input type= "text" name= "course_link" placeholder = "Groupme.com/join_group/...">
+				<br>
 
-					<option value= "no">No </option>
-					<option value= "yes"> Yes </option>
 
-				</select>
+			<div id= "recitation_div">
+				<p id= "recitation_paragraph"> Is this a recitation? </p>
+					<select id= "recitation">
+						<option value= "no">No </option>
+						<option value= "yes"> Yes </option>
+					</select>
+			</div>
 
 				<br>
 
@@ -96,7 +122,7 @@
 						<input type="image" src="plus.png" name="plus" id="plusButton" onclick= "openForm()">
 					</div>
 
-				<input type= "search" id= "search_bar" placeholder= " Search for course or professor..." oninput = "return search()">
+				<input type= "search" id= "search_bar" placeholder= " Search for class, recitation, or professor..." oninput = "return search()">
 
 			</div>
 
