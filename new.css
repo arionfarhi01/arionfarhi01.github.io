@@ -331,4 +331,26 @@ form > p
 	left: 10px;
 }
 
+.time-selector
+{
+	text-align: center;
+	display: inline-flex;
+}
+
+input[type= "time"]
+{
+	width: 50%;
+	margin-right: 10%;
+}
+
+input[type= "time"]:first-child
+{
+	margin-left: 5%;
+}
+
+#time_paragraph
+{
+	margin-right: 10%;
+}
+
 
