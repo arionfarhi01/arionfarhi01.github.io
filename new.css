@@ -229,7 +229,7 @@ a:hover, a:active
 	font-size: 1.25em;
 	text-decoration: underline;
 	text-decoration-color: var(--red);
-	margin-bottom: 3.5%;
+	margin-bottom: 5%;
 }
 
 form
@@ -259,13 +259,15 @@ form > ::-webkit-input-placeholder
 {
 	margin-top: 3%;
 	margin-bottom: 3%;
-	background-color: red;
+	background-color: var(--red);
+	border-radius: 10px;
 	width: 90%;
 	height: 50px;
 	color: white;
 	font-size: 1.1em;
 	font-family: "Ubuntu";
 	border: none;
+	z-index: 99;
 }
 
 #submit_div
@@ -283,8 +285,8 @@ form > input[type = "text"]
 form > p
 {
 	font-weight: bold;
-	margin-top: 3%;
-	margin-bottom: 3%;
+	margin-top: 4%;
+	margin-bottom: 4%;
 	font-size: .9em;
 }
 
@@ -312,9 +314,9 @@ form > p
   display: inline-block;
   border-radius: 50%;
   background: #dddddd;
-  height: 35px;
-  line-height: 35px;
-  width: 12%;
+  height: 40px;
+  line-height: 40px;
+  width: 12.5%;
   cursor: pointer;
   font-size: .7em;
 }
@@ -327,21 +329,20 @@ form > p
 
 #recitation_div
 {
-	margin-top: 2%;
+	margin-top: -2%;
 	display: inline-flex;
 }
 
-#recitation
+#recitation_check
 {
-	margin-top: 4%;
-	height: 25px;
+	margin-top: 16%;
 	position: relative;
-	left: 10px;
+	left: 5px;
 }
 
 #recitation_paragraph
 {
-	font-size: .75em;
+	font-size: .9em;
 }
 
 .time-selector
@@ -353,7 +354,7 @@ form > p
 
 input[type= "time"]
 {
-	width: 100%;
+	width: 100px;
 	margin-right: 10%;
 	height: 25px;
 }
