@@ -268,7 +268,13 @@ form > ::-webkit-input-placeholder
 	font-family: "Ubuntu";
 	border: none;
 	z-index: 99;
+}
+
+input[type = "submit"]
+{
 	--webkit-appearance: none;
+	-moz-appearance: none;
+    appearance: none;
 }
 
 #submit_div
@@ -281,13 +287,15 @@ form > input[type = "text"]
 	border: none;
 	border-bottom: 3px solid black;
 	width: 90%;
+	height: 22.5px;
+	font-size: .9em;
 }
 
 form > p
 {
 	font-weight: bold;
 	margin-top: 4%;
-	margin-bottom: 4%;
+	margin-bottom: 3%;
 	font-size: .9em;
 }
 
@@ -297,6 +305,7 @@ form > p
 	margin-right: 10%;
 	font-color: lightgrey;
 	font-weight: 400;
+	margin-top: 2.5%;
 }
 
 .weekDays-selector
@@ -336,9 +345,9 @@ form > p
 
 #recitation_check
 {
-	margin-top: 17%;
+	margin-top: 18%;
 	position: relative;
-	left: 7.5px;
+	left: 6px;
 }
 
 #recitation_paragraph
@@ -356,18 +365,18 @@ form > p
 input[type= "time"]
 {
 	width: 100px;
-	margin-right: 7.5%;
+	margin-right: 6%;
 	height: 25px;
 }
 
 input[type= "time"]:first-child
 {
-	margin-left: 5%;
+	margin-left: 2.5%; 
 }
 
 #time_paragraph
 {
-	margin-right: 7.5%;
+	margin-right: 6%;
 	position: relative;
 	bottom: 12.5px;
 }

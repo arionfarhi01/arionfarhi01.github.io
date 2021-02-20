@@ -246,6 +246,22 @@
 			//document.getElementById("titleText").style.display = "block";
 		}
 
+		function openNav() 
+		{
+			document.getElementById("mySidenav").style.width = "32%";
+   			document.getElementById("push").style.marginLeft = "32%";
+  			document.getElementById("menuButton").style.display = "none";
+ 			document.getElementById("titleText").style.display = "none";
+		}
+
+		function closeNav() 
+		{		
+ 			document.getElementById("mySidenav").style.width = "0";
+  			document.getElementById("push").style.marginLeft = "0";
+ 			document.getElementById("menuButton").style.display = "inline";
+  			document.getElementById("titleText").style.display = "block";
+		}
+
 
 
 
