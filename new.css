@@ -203,6 +203,7 @@ a:hover, a:active
   transition: 0.6s; 
   margin-top: 65px; /* right below header */
   background-color: #ECECEC;
+  overflow-y: scroll;
 }
 
 .sidenav .closebtn /* close button */
