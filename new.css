@@ -205,7 +205,7 @@ a:hover, a:active
   top: 0; 
   left: 0;
   overflow-x: hidden; 
-  transition: 0.6s; 
+  transition: 1s; 
   margin-top: 65px; /* right below header */
   background-color: #ECECEC;
   overflow-y: scroll;
@@ -277,7 +277,7 @@ form > ::-webkit-input-placeholder
 
 input[type = "submit"]
 {
-	--webkit-appearance: none;
+	-webkit-appearance: none;
 	-moz-appearance: none;
     appearance: none;
 }
