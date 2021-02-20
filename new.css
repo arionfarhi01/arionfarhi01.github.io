@@ -9,8 +9,6 @@
 body, html
 {
 	font-family: "Alegreya SC";
-	max-width: 100%;
-	overflow-x: hidden;
 }
 
 ::-webkit-input-placeholder 
