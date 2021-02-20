@@ -232,7 +232,7 @@
 
 		function openForm() 
 		{
-			document.getElementById("mySidenav").style.width = "100%";
+			document.getElementById("my_form").style.width = "100%";
 			document.getElementById("push").style.marginLeft = "105%";
 			  //document.getElementById("menuButton").style.display = "none";
 			 // document.getElementById("titleText").style.display = "none";
@@ -240,7 +240,7 @@
 
 		function closeForm() 
 		{
-			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("my_form").style.width = "0";
 			document.getElementById("push").style.marginLeft = "0";
 			//document.getElementById("menuButton").style.display = "inline";
 			//document.getElementById("titleText").style.display = "block";
@@ -250,6 +250,12 @@
 		{
 			document.getElementById("mySidenav").style.width = "32%";
    			document.getElementById("push").style.marginLeft = "32%";
+   			try
+   			{
+   				document.getElementById("my_form").style.marginLeft = "32%";
+   			}
+   			catch (e)
+   			{}
   			document.getElementById("menuButton").style.display = "none";
  			document.getElementById("titleText").style.display = "none";
 		}
@@ -258,6 +264,12 @@
 		{		
  			document.getElementById("mySidenav").style.width = "0";
   			document.getElementById("push").style.marginLeft = "0";
+  			try
+  			{
+  				document.getElementById("my_form").style.marginLeft = "0";
+  			}
+  			catch (e)
+   			{}
  			document.getElementById("menuButton").style.display = "inline";
   			document.getElementById("titleText").style.display = "block";
 		}

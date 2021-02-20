@@ -18,13 +18,18 @@ body, html
 
 #intro
 {
-	font-family: "Lato";
+	font-family: "Ubuntu";
 }
 
 #intro_text
 {
-	margin-top: 2%;
+	padding: 4%;
+	margin-top: 4%;
+	margin-bottom: 6%;
 	text-align: center;
+	border: 2px solid grey;
+	border-radius: 25px;
+	background-color: #ECECEC;
 }
 
 :root
@@ -190,7 +195,7 @@ a:hover, a:active
 
 /* form sidenav */
 
-.sidenav /* general menu */
+.form /* general menu */
 {
   font-family: "Ubuntu";
   height: 100%; 
@@ -206,7 +211,7 @@ a:hover, a:active
   overflow-y: scroll;
 }
 
-.sidenav .closebtn /* close button */
+.form .closebtn /* close button */
 {
   position: absolute;
   top: 17.5px;
@@ -381,4 +386,47 @@ input[type= "time"]:first-child
 	bottom: 12.5px;
 }
 
+/* sidenav menu */
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a 
+{
+  text-align: center;
+  text-decoration: underline;
+  color: var(--red);
+  font-size: 1.3em;
+  display: block;
+  transition: 0.3s;
+  font-family: "lato";
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover 
+{
+  text-decoration: none;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn 
+{
+  position: absolute;
+  text-decoration: none;
+  top: 10px;
+  right: 0;
+  font-size: 2em;
+  margin-left: 50px;
+}
 
