@@ -47,7 +47,7 @@
 				<input type= "text" name= "course_name" placeholder = "i.e. ACCT-UB 1 001">
 				<br>
 
-				<p id= "section_number_info"> Section numbers are optional </p>
+				<p class= "form_info"> Section numbers are optional </p>
 
 				<p> Course Nickname: </p>
 				<input type= "text" name= "course_common_name" placeholder = "i.e. Principles of Financial Accounting">
@@ -81,24 +81,23 @@
 					<p id= "time_paragraph"> to </p>
 					<input type= "time" id="time_end">
 				</div>
-				<br>
 				
-			<p> Course Link: </p>
-				<input type= "text" name= "course_link" placeholder = "Groupme.com/join_group/...">
-				<br>
-
-
-			<div id= "recitation_div">
+				
+				<p> Course Link: </p>
+					<input type= "text" name= "course_link" placeholder = "Groupme.com/join_group/...">
+					<p class= "form_info"> Settings > Share Group > Copy (extraneous text is fine) </p>
+				
+				<div id= "recitation_div">
 				<p id= "recitation_paragraph"> Is this a recitation? </p>
 					<select id= "recitation">
 						<option value= "no">No </option>
 						<option value= "yes"> Yes </option>
 					</select>
-			</div>
+				</div>
 
-				<br>
-
-				<input type= "submit" id= "button" value= "Submit" onclick= "return pushInfo()">
+				<div id= submit_div>
+					<input type= "submit" id= "button" value= "Submit" onclick= "return pushInfo()">
+				</div>
 
 			</form>
 
