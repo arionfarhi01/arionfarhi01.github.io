@@ -222,13 +222,14 @@
 
 			if (classDivCount == 0)
 			{
-				document.getElementById("no_matches").innerHTML = "There are no matches";
+				document.getElementById("no_matches").innerHTML = "This Class' GroupMe Is Not Yet Created. Make It Yourself Then Press The Plus Button To Add It!";
 			}
 			else
 			{
 				document.getElementById("no_matches").innerHTML = "";
 			}
 		} 
+
 
 		function openForm() 
 		{
@@ -246,33 +247,12 @@
 			//document.getElementById("titleText").style.display = "block";
 		}
 
-		function openNav() 
+		function goBack()
 		{
-			document.getElementById("mySidenav").style.width = "32%";
-   			document.getElementById("push").style.marginLeft = "32%";
-   			try
-   			{
-   				document.getElementById("my_form").style.marginLeft = "32%";
-   			}
-   			catch (e)
-   			{}
-  			document.getElementById("menuButton").style.display = "none";
- 			document.getElementById("titleText").style.display = "none";
+			location.href = "index.html";
 		}
 
-		function closeNav() 
-		{		
- 			document.getElementById("mySidenav").style.width = "0";
-  			document.getElementById("push").style.marginLeft = "0";
-  			try
-  			{
-  				document.getElementById("my_form").style.marginLeft = "0";
-  			}
-  			catch (e)
-   			{}
- 			document.getElementById("menuButton").style.display = "inline";
-  			document.getElementById("titleText").style.display = "block";
-		}
+
 
 
 

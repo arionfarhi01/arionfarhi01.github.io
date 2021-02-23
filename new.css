@@ -30,6 +30,8 @@ body, html
 	border: 2px solid grey;
 	border-radius: 25px;
 	background-color: #ECECEC;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 :root
@@ -55,12 +57,12 @@ header
     -webkit-box-shadow: 4px 4px 2px #ccc;
 }
 
-#menuButton 
+#back_arrow 
 {
-	width: 26px;
+	width: 30px;
 	position: relative;
-	top: 32px;
-	left: 12.5px;
+	top: 35px;
+	left: 20px;
 	margin-top: -5%;
 }
 
@@ -174,7 +176,7 @@ a:hover, a:active
 {
 	width: 25px;
 	position: relative;
-	top: 1.5px;
+	top: 2px;
 }
 
 #search_bar
@@ -386,9 +388,17 @@ input[type= "time"]:first-child
 	bottom: 12.5px;
 }
 
-/* sidenav menu */
+hr
+{
+	border: 2px dashed lightgrey;
+	margin-top: 4%;
+	margin-bottom: -2%;
+}
 
-.sidenav {
+/* sidenav menu for if i want to implement */
+
+.sidenav 
+{
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
