@@ -1,5 +1,3 @@
-@import 'style.css';
-
 p
 {
 	font-size: .9em;
@@ -31,6 +29,316 @@ a:link#backbutton, a:visited#backbutton
 	margin-top: 15px;
 	font-size: 1.25em;
 	text-decoration: underline;
+}
+
+/* variables and fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+:root
+{
+	--red: rgb(255,49,8, .95);
+}
+
+.bold
+{
+	font-weight: 700;
+}
+
+.red
+{
+	color: var(--red);
+}
+
+
+
+
+/* overall page functions */ 
+
+body
+{
+	font-family: "Ubuntu";
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+html
+{
+	--webkit: text-size-adjust: 100%; 
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: 
+}
+
+/* links */
+
+a:link /* make links not underlined normally */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* make links underlined when pressed */
+{
+   text-decoration: underline;
+   background-color: none;
+}
+
+
+
+
+/* header */
+
+header
+{
+	background-color: #FAFAFA;
+	margin-left: -2.5%;
+	margin-top: -2%;
+	position: fixed;
+  	top: .7%;
+ 	width: 100%;
+ 	z-index: 9999;
+
+ 	/* shadow */
+ 	box-shadow: 4px 4px 2px #ccc;
+    -moz-box-shadow: 4px 4px 2px #ccc;
+    -webkit-box-shadow: 4px 4px 2px #ccc;
+}
+
+#menuButton 
+{
+	width: 26px;
+	position: relative;
+	top: 32px;
+	left: 12.5px;
+	margin-top: -5%;
+}
+
+#titleText
+{
+	display: block;
+	color: var(--red);
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 0%;
+	text-indent: 5%; /* centers exactly */
+}
+
+small /* for "beta" */
+{
+	display: inline;
+	clear: both;
+	font-size: .1em;
+	position: relative;
+	bottom: 12px;
+}
+
+
+
+
+/* form */ 
+
+#form
+{
+	position: relative;
+	top: 52px;
+	margin-left: 3%;
+	margin-right: 3%;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-radius: 20px;
+	text-align: center;
+	border: 1px dotted var(--red);
+}
+
+h2 /* "find your class groupme" */
+{
+	text-align: center;
+	padding-bottom: 3%;
+	font-size: 1.125em;
+}
+
+hr /* underneath "find your class groupme" */
+{
+	margin-top: -4%;
+}
+
+#dropdown /* input #1 */
+{
+	margin-top: 5%;
+	margin-bottom: 7.5%;
+}
+
+#courseTitle /* input #2 */
+{
+	padding-bottom: 4%;
+}
+ 
+#submitButton /* input #3 */
+{
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+
+.tutorialNoMargin /* for section number */
+{
+	margin-top: -3%;
+	list-style: none;
+	color: rgb(111,120,126);
+	font-size: .35em;
+	margin-bottom: 1%;
+	text-align: center;
+}
+
+input[type=submit] /* submit buttin */
+{
+	font-size: .85em;
+	border: 1.5px solid black;
+}
+
+input /* makes input bar bigger, input font bigger size, input centered */
+{
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: .9em;
+	text-align: center;
+	margin-top: 2%;
+}
+
+select /* only works for chrome, centers text */
+{
+	text-align-last: center; 
+	font-size: .85em;
+}
+
+/* makes placeholders italic */
+
+::-webkit-input-placeholder 
+{
+   font-style: italic;
+}
+:-moz-placeholder 
+{
+   font-style: italic;  
+}
+::-moz-placeholder 
+{
+   font-style: italic;  
+}
+:-ms-input-placeholder 
+{  
+   font-style: italic; 
+}
+
+/* error messages */
+
+#error1, #error2, #error3, #error4
+{
+	font-size: .5em;
+	color: var(--red);
+	text-align: center;
+}
+
+#error3
+{
+	padding-bottom: 2%;
+}
+
+
+
+
+/* footer */
+
+footer
+{
+	margin-top: 22.5%;
+}
+
+.emp /* "how hangr works" */
+{
+	font-size: 1em;
+	text-align: center;
+	margin-bottom: -1%; 
+	margin-top: -2.5%;
+}
+
+.tutorial, .explain /* text below "how hangr words" */
+{
+	margin-top: 3%;
+	list-style: none;
+	color: rgb(111,120,126);
+	font-size: .65em;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+#bot_margin
+{
+	margin-bottom: -2.5%;
+}
+
+.call_to_action /* We are still in... */
+{
+	text-align: center;
+	margin-bottom: 5%;
+	font-size: .75em;
+}
+
+.call_to_action > a:link, a:visited /* style links red */
+{
+	color: var(--red);
+}
+
+#bottomText
+{
+	font-size: .5em;
+	text-align: center;
+}
+
+
+
+
+/* side navigation */
+
+.sidenav /* general menu */
+{
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  z-index: .5; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
+  padding-top: 55px; 
+  transition: 0.4s; 
+}
+
+.sidenav a /* link styling */
+{
+  padding: 3% 5% 5% 20%;
+  text-decoration: underline;
+  font-size: 1.25em;
+  color: var(--red);
+  display: block;
+  transition: 0.4s;
+}
+
+.sidenav .closebtn /* close button */
+{
+  position: absolute;
+  top: 0;
+  right: 0; /* top right corner */
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+#push /* shifts scrren over when opening nav up */
+{
+  transition: margin-left .4s;
+  padding: 20px;
 }
 
 @media screen and (min-width: 700px) 
