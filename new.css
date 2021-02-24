@@ -3,22 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
 
 /* fonts */
 
 body, html
 {
-	font-family: "Alegreya SC";
+	font-family: "Alegreya Sans SC";
+	line-height: 20px;
 }
 
 ::-webkit-input-placeholder 
 { 
-  	font-family: "Alegreya SC";
+  	font-family: "Alegreya Sans SC";
 }
 
 #intro
 {
-	font-family: "Ubuntu";
+	font-family: "Lato";
 }
 
 #intro_text
@@ -153,18 +155,19 @@ a:hover, a:active
 .info, .info2
 {
 	margin-left: 2.5%;
-	font-size: .8em;
+	font-size: 1em;
+	text-transform: lowercase;
 }
 
 .info2
 {
-	font-size: .85em;
+	font-size: 1em;
 	margin-left: 2.5%;
 }
 
 .time
 {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 #search_and_plus
@@ -341,6 +344,8 @@ form > p
 #form_info_margin
 {
 	margin-left: 2.5%;
+	margin-top: 0%;
+	margin-bottom: -1%;
 }
 
 .weekdays_selector input[type=checkbox]:checked + label 

@@ -1,0 +1,56 @@
+@import "new.css";
+
+h1
+{
+	margin-top: 20%;
+	text-align: center;
+}
+
+p
+{
+	color: white;
+	font-family: "Ubuntu";
+}
+
+#back_arrow /* make invisible */
+{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#titleText
+{
+	margin-top: 5%;
+}
+
+.college_list
+{
+	display: flex;
+	text-align: center;
+}
+
+/* Where to add color */
+
+#NYU
+{
+	background-color: #330662;
+	width: 40%;
+	height: 100px;
+	border-radius: 10px;
+	margin-right: 10%;
+	margin-left: 5%;
+	line-height: 90px;
+}
+
+#Georgetown
+{
+	background-color: #00183F;
+	width: 40%;
+	height: 100px;
+	border-radius: 10px;
+	margin-right: 5%;
+	line-height: 90px;
+}
+
+

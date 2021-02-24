@@ -6,16 +6,40 @@
 	<meta charset= "utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="icon.ico"/>
+	<link rel= "stylesheet" href= "index.css">
+	<script src= new.js> </script>
+
 	<title>Select College</title>
 
 </head>
 
 <body>
 
+	<header>
+
+		<!-- MENU BUTTON -->
+
+			<input type="image" src="back.png" id="back_arrow" onclick= "goBack()"/>
+
+
+			<div id="mySidenav" class="sidenav">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Select College</a>
+			</div>
+
+
+			<div id= "title">
+				<a href= "index.html"><h1 id= "titleText"><span class= "centered">HANGR</span><small>.org</small></h1></a>
+			</div>
+
+	</header>
+
 	<h1> Select College </h1>
 	
-	<p> <a href= nyu.html> NYU </a> </p>
-	<p> <a href = georgetown.html> Georgetown </a> </p>
+	<div class= "college_list">
+		<p id= "NYU"> <a href= nyu.html> NYU </a> </p>
+		<p id = "Georgetown"> <a href = georgetown.html> Georgetown </a> </p>
+	</div>
 
 </body>
 

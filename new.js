@@ -120,7 +120,7 @@
 			
 			if (course_start_time_val == "" || course_end_time_val == "")
 			{
-				submission_error.innerHTML = "Both the beginiing and end time of the course must be filled out";
+				submission_error.innerHTML = "Both the beginning and end time of the course must be filled out";
 				return 0; //exit
 			}
 
@@ -136,7 +136,42 @@
 				return 0; //exit
 			}
 
-			/* convert into normal time here */
+			if (course_start_time_val.substring(0,2) < 12) //AM
+			{
+				course_start_time_val += "AM";
+			}
+			else
+			{
+				course_start_time_val += "PM";
+				if (course_start_time_val.substring(0,2) >= 13)
+				{
+					course_start_time_val = (course_start_time_val.substring(0,2) -12) + course_start_time_val.substring(2);
+				}
+			}
+
+			if (course_start_time_val.substring(0,2) < 10) //before 10 AM
+			{
+				course_start_time_val = course_start_time_val.substring(1); //get rid of trailing zero
+			}
+
+
+			if (course_end_time_val.substring(0,2) < 12) //AM
+			{
+				course_end_time_val += "am";
+			}
+			else
+			{
+				course_end_time_val += "pm";
+				if (course_end_time_val.substring(0,2) >= 13)
+				{
+					course_end_time_val = (course_end_time_val.substring(0,2) -12) + course_end_time_val.substring(2);
+				}
+			}
+
+			if (course_end_time_val.substring(0,2) < 10) //before 10 AM
+			{
+				course_end_time_val = course_end_time_val.substring(1); //get rid of trailing zero
+			}
 
 
 			var course_link_val = (document.forms["add_group"]["course_link"].value).replace(/ /g, "");
