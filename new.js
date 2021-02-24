@@ -18,29 +18,161 @@
 
 		function pushInfo() //for form
 		{
-	
+			var submission_error = document.getElementById("submission_error");
 			// get variables
 
-			var college_selection_val = document.getElementById("titleText").innerHTML.substring(77).split("<")[0].toUpperCase();
+			/* depends on inner html of titleText, make sure works with Georgetown */
+			var college_selection_val = document.getElementById("titleText").innerHTML.substring(78).split("<")[0].toUpperCase();
 
-			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "")).toUpperCase());
-			var course_common_name_val = ((document.forms["add_group"]["course_common_name"].value).toLowerCase());
-			var course_professor_val = (((document.forms["add_group"]["course_professor"].value).replace(/ /g, "")).toLowerCase());
-			var course_time_val = (((document.forms["add_group"]["course_time"].value).replace(/ /g, "")).toLowerCase());
-			var course_dates_val = (((document.forms["add_group"]["course_dates"].value).replace(/ /g, "")).toUpperCase());
-			var course_link_val = (((document.forms["add_group"]["course_link"].value).replace(/ /g, "")).toLowerCase());
 
-			var recitation_val = document.getElementById("recitation").value;
-			var recitation_placeholder = "";
-			if (recitation_val == "no")
+			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "").replace("-","")).toUpperCase());
+
+
+			if (course_name_val.length > 20)
 			{
-				recitation_val = "Prof. ";
+				submission_error.innerHTML = "Please shorten the Course Name";
+				return 0; //exit 
+			}
+
+			if (course_name_val.length < 5)
+			{
+				submission_error.innerHTML = "Course Name is too short";
+				return 0; //exit 
+			}
+
+
+			var course_nickname_val = ((document.forms["add_group"]["course_nickname"].value).trim().toLowerCase());
+
+			if (course_nickname_val.length > 42) //will go onto other line otherwise
+			{
+				submission_error.innerHTML = "Course Nickname is too long";
+				return 0; //exit 
+			}
+
+			if (course_nickname_val.length < 4)
+			{
+				submission_error.innerHTML = "Course Nickname is too short";
+				return 0; //exit 
+			}
+
+
+			var course_professor_val = (((document.forms["add_group"]["course_professor"].value).trim()).toLowerCase());
+			course_professor_val = course_professor_val.replace("professor", "").trim();
+
+
+			if (course_professor_val.length < 2)
+			{
+				submission_error.innerHTML = "Course Professor name is too short";
+				return 0; //exit 
+			}
+
+			if (course_professor_val.length > 20)
+			{
+				submission_error.innerHTML = "Course Professor name is too long. Just include last name.";
+				return 0; //exit 
+			}
+
+
+			var course_days_of_week = "";
+
+
+			if (document.getElementById("weekday-mon").checked)
+			{
+				course_days_of_week += "M, "
+			}
+			if (document.getElementById("weekday-tue").checked)
+			{
+				course_days_of_week += "Tu, "
+			}
+			if (document.getElementById("weekday-wed").checked)
+			{
+				course_days_of_week += "W, "
+			}
+			if (document.getElementById("weekday-thu").checked)
+			{
+				course_days_of_week += "Th, "
+			}
+			if (document.getElementById("weekday-fri").checked)
+			{
+				course_days_of_week += "F, "
+			}
+			if (document.getElementById("weekday-sat").checked)
+			{
+				course_days_of_week += "Sa, "
+			}
+			if (document.getElementById("weekday-sun").checked)
+			{
+				course_days_of_week += "Su, "
+			}
+
+			if (course_days_of_week == "")
+			{
+				submission_error.innerHTML = "Please select the days of the week the class occurs";
+				return 0; //exit 
+			}
+
+			/* get rid of ending comma and space */
+			course_days_of_week = course_days_of_week.substring(0, course_days_of_week.length - 2);
+
+
+			var course_start_time_val = document.forms["add_group"]["time_begin"].value;
+			var course_end_time_val = document.forms["add_group"]["time_end"].value;
+			
+			if (course_start_time_val == "" || course_end_time_val == "")
+			{
+				submission_error.innerHTML = "Both the beginiing and end time of the course must be filled out";
+				return 0; //exit
+			}
+
+			if (course_end_time_val <= course_start_time_val) //end cannot be before start
+			{
+				submission_error.innerHTML = "Course start time must before course end time";
+				return 0; //exit
+			}
+
+			if ((course_end_time_val.substring(0,2) - course_start_time_val.substring(0,2)) > 5) //if longer than 5 hours
+			{
+				submission_error.innerHTML = "Course time cannot be longer than 5 hours";
+				return 0; //exit
+			}
+
+			/* convert into normal time here */
+
+
+			var course_link_val = (document.forms["add_group"]["course_link"].value).replace(/ /g, "");
+			
+			var codeIndex = course_link_val.indexOf("join_group");
+
+			if (codeIndex == -1) //does not contain
+			{
+				submission_error.innerHTML = "Link is not correct";
+				return 0; //exit
+			}
+
+			course_link_val = course_link_val.substring(codeIndex+11);
+			
+			if (course_link_val.length < 16) //if code is shorter than 16 characters
+			{
+				submission_error.innerHTML = "Link is not correct";
+				return 0; //exit
+			}
+
+
+			var recitation_val = "";
+			var recitation_placeholder = "";
+
+			if (document.getElementById("recitation_check").checked)
+			{
+				recitation_placeholder = " (Recitation)";
 			}
 			else
 			{
-				recitation_val = "";
-				recitation_placeholder = " (Recitation)";
+				recitation_val = "Prof. ";
 			}
+
+
+			submission_error.innerHTML = "Your group is posted! Thank you!";
+			
 
 
 			var ref = database.ref(college_selection_val);
@@ -48,25 +180,28 @@
 			var data = // how data is held before it is pushed/submitted to entry
 			{
 		 		name: 
-		 		course_name_val,
+		  	    course_name_val,
 
-		 		common_name:
-		 		course_common_name_val,
+		 		nickname:
+				course_nickname_val,
 
-		 		professor:
+		  		professor:
 		 		recitation_val + course_professor_val + recitation_placeholder,
 
-		 		time:
-		 		course_time_val,
+		 		start_time:
+		 		course_start_time_val,
 
-		 		dates:
-		 		course_dates_val,
+		 		end_time:
+		 		course_end_time_val,
+
+		  		days_of_week:
+		 		course_days_of_week,
 
 		 		link:
 		 		course_link_val
-			}
+		    }
 
-			ref.push(data);
+		    ref.push(data);
 		}
 
 
@@ -87,9 +222,10 @@
           			snapshot.forEach(function(data){
              		var val = data.val();
 
-             		course_name_beginning = val.name.split("-")[0];
+             		//course_name_beginning = val.name.split("-")[0];
 
-             		/* Make sure no overlapping group titles */
+             		/* Make sure no overlapping group titles  -- not using currently*/
+             		/*
 
              		if (group_title_array.includes(course_name_beginning)) //if duplicate
              		{
@@ -109,6 +245,7 @@
              				//content += "<br> <span class= 'group_title'>" + val.name.split("-")[0] + "</span>";
              			}
              		}
+             		*/
 
 
              		content += '<a href= "' + val.link + '" >';
@@ -158,11 +295,11 @@
              		content +='<tr>';
 
               		content += '<td>' + '<span class= "heading"> ' + 
-             		val.common_name + " <br> <span class= 'heading2'>" +
+             		val.nickname + " <br> <span class= 'heading2'>" +
               		val.professor + "</span> </span> <br> <span class= 'info'> " +
               		val.name + " </span> <br> <span class = 'info2'>" +
-              		val.dates + "; <span class = 'time'> " +
-              		val.time +
+              		val.days_of_week + " | <span class = 'time'> " +
+              		val.start_time + "-" + val.end_time + 
               		'</span> </div> </a> </span> </td>'
 
              		content += '</tr>';
