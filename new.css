@@ -64,7 +64,7 @@ header
 {
 	width: 32.5px;
 	position: relative;
-	top: 37.5px;
+	top: 32.5px;
 	left: 25px;
 	margin-top: -5%;
 }
@@ -220,8 +220,8 @@ a:hover, a:active
 .form .closebtn /* close button */
 {
   position: absolute;
-  top: 17.5px;
-  right: 10px; /* top right corner */
+  top: 27.5px;
+  right: 15px; /* top right corner */
   font-size: 36px;
   margin-left: 65px;
   margin-right: 5%;

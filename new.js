@@ -192,6 +192,8 @@
 				return 0; //exit
 			}
 
+			course_link_val = "https://www.groupme.com/join_group/" + course_link_val;
+
 
 			var recitation_val = "";
 			var recitation_placeholder = "";
