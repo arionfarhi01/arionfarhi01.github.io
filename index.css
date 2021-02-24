@@ -26,6 +26,7 @@ p
 
 .college_list
 {
+	margin-top: 10%;
 	display: flex;
 	text-align: center;
 }
