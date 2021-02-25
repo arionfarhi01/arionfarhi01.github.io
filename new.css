@@ -238,7 +238,6 @@ a:hover, a:active
 	font-size: 1.25em;
 	text-decoration: underline;
 	text-decoration-color: var(--red);
-	margin-bottom: 5%;
 }
 
 form
@@ -259,7 +258,7 @@ form > ::-webkit-input-placeholder
 	border: 1px solid black;
 	border-radius: 15px;
 	background-color: white;
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-left: 5%;
 	margin-right: 5%;
 }
