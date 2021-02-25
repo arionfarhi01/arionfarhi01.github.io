@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap');
 
 /* fonts */
 
@@ -139,17 +141,13 @@ a:hover, a:active
 	font-size: 1em; 
 	margin-left: 2.5%;
 	text-transform: capitalize;
+	font-weight: 500;
 }
 
 .heading2
 {
 	margin-left: 2.5%;
 	font-size: .9em;
-}
-
-.w
-{
-	text-transform: lowercase;
 }
 
 .info, .info2
@@ -253,7 +251,7 @@ form
 form > ::-webkit-input-placeholder 
 { 
   	font-family: "Ubuntu";
-  	font-size: .9em;
+  	font-size: .8em;
 }
 
 #border
@@ -268,7 +266,7 @@ form > ::-webkit-input-placeholder
 
 #submit_div > input[type = "button"]
 {
-	margin-top: 3%;
+	margin-top: 0%;
 	background-color: var(--red);
 	border-radius: 10px;
 	width: 90%;
@@ -304,9 +302,9 @@ form > input[type = "text"]
 form > p
 {
 	font-weight: bold;
-	margin-top: 4%;
-	margin-bottom: 3%;
-	font-size: .9em;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-size: .8em;
 }
 
 .form_info
@@ -332,10 +330,10 @@ form > p
 .weekdays_selector input[type=checkbox] + label 
 {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 100%;
   background: #dddddd;
-  height: 40px;
-  line-height: 40px;
+  height: 35px;
+  line-height: 35px;
   width: 12.5%;
   cursor: pointer;
   font-size: .7em;
@@ -356,34 +354,37 @@ form > p
 
 #recitation_div
 {
-	margin-top: -2%;
+	margin-top: -3%;
 	display: inline-flex;
 }
 
 #recitation_check
 {
-	margin-top: 18%;
+	margin-top: 14.25%;
 	position: relative;
 	left: 6px;
 }
 
 #recitation_paragraph
 {
-	font-size: .9em;
+	font-size: .8em;
+	position: relative;
+	bottom: 5px;
+
 }
 
 .time-selector
 {
 	text-align: center;
 	display: inline-flex;
-	margin-bottom: -5%;
+	margin-bottom: -7.5%;
 }
 
 input[type= "time"]
 {
 	width: 100px;
 	margin-right: 6%;
-	height: 25px;
+	height: 22.5px;
 }
 
 input[type= "time"]:first-child
@@ -395,7 +396,7 @@ input[type= "time"]:first-child
 {
 	margin-right: 6%;
 	position: relative;
-	bottom: 12.5px;
+	bottom: 15px;
 }
 
 hr

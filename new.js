@@ -19,14 +19,37 @@
 		function pushInfo() //for form
 		{
 			var submission_error = document.getElementById("submission_error");
-			// get variables
+			
+
+			/* get variables */
 
 			/* depends on inner html of titleText, make sure works with Georgetown */
 			var college_selection_val = document.getElementById("titleText").innerHTML.substring(78).split("<")[0].toUpperCase();
 
 
-			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "").replace("-","")).toUpperCase());
+			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "")));
+			var dash_index = course_name_val.indexOf("-");
 
+			if (course_name_val.substring(dash_index+1).indexOf("-") != -1) //if second dash exists
+			{
+				dash_index = course_name_val.substring(dash_index+1).indexOf("-") + dash_index;
+				course_name_val = course_name_val.replace("-","");
+			}
+			
+
+			if ((dash_index > 2) && /\d/.test(course_name_val.substring(dash_index -1, dash_index))) //if previous entry is number, ie not in like "Econ-UB"
+			{
+				course_name_val = course_name_val.replace("-"," ");
+			}
+			else if (dash_index == -1)
+			{
+				//do nothing
+			}
+			else
+			{
+				submission_error.innerHTML = "Course Name is not formatted correctly. Please fix dashes."
+				return 0; //exit
+			}
 
 			if (course_name_val.length > 20)
 			{
@@ -39,6 +62,47 @@
 				submission_error.innerHTML = "Course Name is too short";
 				return 0; //exit 
 			}
+
+ 			if(!(course_name_val.match(/^[0-9a-zA-Z ]+$/)))
+ 			{
+ 				submission_error.innerHTML = "Course Name must contain only letters, numbers, and a dash";
+ 				return 0; //exit
+ 			}
+
+ 			if(!(/\d/.test(course_name_val))) //if contains numbers
+ 			{
+ 				submission_error.innerHTML = "Course Name must contain numbers";
+ 				return 0; //exit
+ 			}
+
+ 			/* Find section number */
+ 			try
+ 			{
+ 				var section_number = course_name_val.split(" ")[1];
+ 				section_number = section_number.toString(); 
+ 				section_number = section_number.replace(/^0+/, ''); //gets rid of leading zeroes
+
+ 				if (section_number.length > 3)
+ 				{
+ 					submission_error.innerHTML = "Section Number in Course Name cannot be more than 3 digits";
+ 					return 0; //exit
+ 				}
+
+ 				if (section_number.toString().length == 1)
+ 				{
+ 					section_number = "00" + section_number;
+ 				}
+
+ 				if (section_number.toString().length == 2)
+ 				{
+ 					section_number = "0" + section_number;
+ 				}
+
+ 				course_name_val = course_name_val.split(" ")[0] + " " + section_number;
+ 			}
+ 			catch (no_section_number)
+ 			{
+ 			}
 
 
 			var course_nickname_val = ((document.forms["add_group"]["course_nickname"].value).trim().toLowerCase());
@@ -200,7 +264,7 @@
 
 			if (document.getElementById("recitation_check").checked)
 			{
-				recitation_placeholder = " (Recitation)";
+				recitation_placeholder = " (recitation)";
 			}
 			else
 			{
@@ -208,7 +272,11 @@
 			}
 
 
-			submission_error.innerHTML = "Your group is posted! Thank you!";
+			/* If group works: */
+			document.getElementById("my_form").style.width = "0";
+			document.getElementById("push").style.marginLeft = "0";
+			document.getElementById("intro_text").style.border = "1px solid var(--red)";
+			document.getElementById("intro_text").innerHTML = "Group successfully created! <br> <br> Refresh to view";
 			
 
 
@@ -258,6 +326,17 @@
           			var content = '';
           			snapshot.forEach(function(data){
              		var val = data.val();
+
+             		/* Ensure format of val.professor is correct */
+
+             		if (val.professor.includes("recitation"))
+             		{
+             			val.professor = val.professor.substring(0,1).toUpperCase() + val.professor.substring(1);
+             		}
+             		else
+             		{
+             			val.professor = val.professor.substring(0,6) + val.professor.substring(6,7).toUpperCase() + val.professor.substring(7);
+             		}
 
              		//course_name_beginning = val.name.split("-")[0];
 
@@ -332,8 +411,8 @@
              		content +='<tr>';
 
               		content += '<td>' + '<span class= "heading"> ' + 
-             		val.nickname + " <br> <span class= 'heading2'>" +
-              		val.professor + "</span> </span> <br> <span class= 'info'> " +
+             		val.nickname + " </span> <br> <span class= 'heading2'>" +
+              		val.professor + "</span> <br> <span class= 'info'> " +
               		val.name + " </span> <br> <span class = 'info2'>" +
               		val.days_of_week + " | <span class = 'time'> " +
               		val.start_time + "-" + val.end_time + 
@@ -373,12 +452,13 @@
 			var classDivCount = document.getElementsByClassName("courseBackground").length;
 			var input = document.getElementById("search_bar").value.toLowerCase();
 			var headingArray = document.getElementsByClassName("heading");
+			var headingArray2 = document.getElementsByClassName("heading2");
 			var infoArray = document.getElementsByClassName("info");
 			var groupTitleArray = document.getElementsByClassName("group_title");
 
 			while (numberOfClasses > i)
 			{
-				if (headingArray[i].innerHTML.toLowerCase().includes(input) || infoArray[i].innerHTML.toLowerCase().includes(input))
+				if (headingArray[i].innerHTML.toLowerCase().includes(input) || headingArray2[i].innerHTML.toLowerCase().includes(input) || infoArray[i].innerHTML.toLowerCase().includes(input))
 				{
 					$(classDiv[i]).show();
 					$(groupTitleArray[i]).show();
