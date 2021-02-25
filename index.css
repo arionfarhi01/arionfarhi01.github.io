@@ -6,6 +6,13 @@ h1
 	text-align: center;
 }
 
+#page_title
+{
+	text-transform: none;
+	text-decoration: underline;
+	text-decoration-color: var(--red);
+}
+
 p
 {
 	color: white;
