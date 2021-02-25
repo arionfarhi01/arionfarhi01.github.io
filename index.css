@@ -41,7 +41,7 @@ p
 	border-radius: 10px;
 	margin-right: 10%;
 	margin-left: 5%;
-	line-height: 60px;
+	line-height: 100px;
 }
 
 #Georgetown
@@ -51,7 +51,13 @@ p
 	height: 100px;
 	border-radius: 10px;
 	margin-right: 5%;
-	line-height: 60px;
+	line-height: 100px;
+}
+
+p
+{
+	position: relative;
+	bottom: 20px;
 }
 
 

@@ -25,18 +25,30 @@ body, html
 	font-family: "Lato";
 }
 
+#intro_text_bottom
+{
+	margin-bottom: 4%;
+	text-align: center;
+	border-radius: 25px;
+	/*background-color: #ECECEC;*/
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+	font-size: .8em;
+}
+
+#intro_text_top
+{
+	font-size: 1.25em;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
 #intro_text
 {
-	padding: 4%;
-	margin-top: 4%;
-	margin-bottom: 6%;
-	text-align: center;
-	border: 2px solid grey;
-	border-radius: 25px;
+	border: 1px solid transparent;
+	border-radius: 20px;
 	background-color: #ECECEC;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-	font-size: .95em;
+	padding-top: 1%;
 }
 
 :root
@@ -395,7 +407,7 @@ input[type= "time"]:first-child
 {
 	margin-right: 6%;
 	position: relative;
-	bottom: 15px;
+	bottom: 13px;
 }
 
 hr

@@ -275,8 +275,8 @@
 			/* If group works: */
 			document.getElementById("my_form").style.width = "0";
 			document.getElementById("push").style.marginLeft = "0";
-			document.getElementById("intro_text").style.border = "1px solid var(--red)";
-			document.getElementById("intro_text").innerHTML = "Group successfully created! <br> <br> Refresh to view";
+			document.getElementById("intro_text_top").innerHTML = "Group successfully created!";
+			document.getElementById("intro_text_bottom").innerHTML = "Refresh to view";
 			
 
 
@@ -441,6 +441,10 @@
 			if (collegeName == "NYU")
 			{
 				document.getElementsByTagName("small")[0].style.color = "#" + 330662;
+			}
+			if (collegeName == "GEORGETOWN")
+			{
+				document.getElementsByTagName("small")[0].style.color = "#" + "00183F";
 			}
 		}
 
