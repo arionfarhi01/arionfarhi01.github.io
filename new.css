@@ -329,7 +329,7 @@ form > p
 .weekdays_selector input[type=checkbox] + label 
 {
   display: inline-block;
-  border-radius: 100%;
+  border-radius: 70%;
   background: #dddddd;
   height: 35px;
   line-height: 35px;
@@ -359,7 +359,7 @@ form > p
 
 #recitation_check
 {
-	margin-top: 14.25%;
+	margin-top: 13.5%;
 	position: relative;
 	left: 6px;
 }
