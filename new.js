@@ -85,7 +85,7 @@ var firebaseConfig =
 			}
 
 			//if course name is too short
-			if (course_name_val.length < 5)
+			if (course_name_val.length < 3)
 			{
 				submission_error.innerHTML = "Course Name is too short";
 				return 0; //exit 
@@ -116,7 +116,7 @@ var firebaseConfig =
 				return 0; //exit 
 			}
 
-			if (course_nickname_val.length < 4)
+			if (course_nickname_val.length < 3)
 			{
 				submission_error.innerHTML = "Course Nickname is too short";
 				return 0; //exit 
@@ -475,14 +475,14 @@ var firebaseConfig =
 			{
 				if (headingArray[i].innerHTML.toLowerCase().includes(input) || headingArray2[i].innerHTML.toLowerCase().includes(input) || infoArray[i].innerHTML.toLowerCase().includes(input))
 				{
-					$(classDiv[i]).show();
-					$(groupTitleArray[i]).show();
+					$(classDiv[i]).show('1');
+					$(groupTitleArray[i]).show('1');
 				}
 
 				else
 				{
-					$(classDiv[i]).hide();
-					$(groupTitleArray[i]).hide();
+					$(classDiv[i]).hide('1');
+					$(groupTitleArray[i]).hide('1');
 					classDivCount--;
 				}
 
@@ -531,12 +531,12 @@ var firebaseConfig =
 			{
 				if (college_list[i].innerHTML.toLowerCase().includes(input))
 				{
-					$(college_list[i]).show();
+					$(college_list[i]).show('1');
 				}
 
 				else
 				{
-					$(college_list[i]).hide();
+					$(college_list[i]).hide('1');
 				}
 			}
 			
