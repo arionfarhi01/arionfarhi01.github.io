@@ -527,9 +527,11 @@ var firebaseConfig =
 			var college_list = document.getElementsByClassName("college");
 			var college_list_length = college_list.length;
 
+			console.log(college_list[0].id);
+
 			for (var i= 0; i < college_list_length; i++)
 			{
-				if (college_list[i].innerHTML.toLowerCase().includes(input))
+				if (college_list[i].id.toLowerCase().startsWith(input))
 				{
 					$(college_list[i]).show('1');
 				}
