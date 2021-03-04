@@ -1,4 +1,10 @@
 
+if(window.innerWidth > window.innerHeight)
+{
+    alert("This website is designed only for mobile!");
+}
+
+
 var firebaseConfig = 
 {
 	apiKey: "AIzaSyB3GZydX8zppzuImZfD2eQyY60j85Sq5as",
