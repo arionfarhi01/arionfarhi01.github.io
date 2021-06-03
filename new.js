@@ -475,21 +475,53 @@ var firebaseConfig =
 			var headingArray = document.getElementsByClassName("heading");
 			var headingArray2 = document.getElementsByClassName("heading2");
 			var infoArray = document.getElementsByClassName("info");
-			var groupTitleArray = document.getElementsByClassName("group_title");
 
 			while (numberOfClasses > i)
 			{
 				if (headingArray[i].innerHTML.toLowerCase().includes(input) || headingArray2[i].innerHTML.toLowerCase().includes(input) || infoArray[i].innerHTML.toLowerCase().includes(input))
 				{
 					$(classDiv[i]).show('1');
-					$(groupTitleArray[i]).show('1');
+
+					if (headingArray[i].innerHTML.toLowerCase().includes(input))
+					{
+						headingArray[i].style.fontWeight = 700;
+					}
+					else
+					{
+						headingArray[i].style.fontWeight = 500;
+					}
+
+					if (headingArray2[i].innerHTML.toLowerCase().includes(input))
+					{
+						headingArray2[i].style.fontWeight = 700;
+					}
+					else
+					{
+						headingArray2[i].style.fontWeight = 500;
+					}
+
+					if (infoArray[i].innerHTML.toLowerCase().includes(input))
+					{
+						infoArray[i].style.fontWeight = 700;
+					}
+					else
+					{
+						infoArray[i].style.fontWeight = 500;
+					}
+					
 				}
 
 				else
 				{
 					$(classDiv[i]).hide('1');
-					$(groupTitleArray[i]).hide('1');
-					classDivCount--;
+				}
+
+
+				if (input == "")
+				{
+					headingArray[i].style.fontWeight = 500;
+					headingArray2[i].style.fontWeight = 400;
+					infoArray[i].style.fontWeight = 400;
 				}
 
 				i++;
@@ -532,8 +564,6 @@ var firebaseConfig =
 			var input = document.getElementById("search_bar_index").value.toLowerCase();
 			var college_list = document.getElementsByClassName("college");
 			var college_list_length = college_list.length;
-
-			console.log(college_list[0].id);
 
 			for (var i= 0; i < college_list_length; i++)
 			{
