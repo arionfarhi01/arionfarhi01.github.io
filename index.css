@@ -18,6 +18,7 @@
 	text-align: left;
 	color: var(--red);
 	margin-left: 5%;
+	letter-spacing: 1px;
 }
 
 button
@@ -113,6 +114,12 @@ button:hover, button:active
 { 
   	font-family: "Ubuntu";
   	font-size: 10px;
+}
+
+#contactInput2::-webkit-input-placeholder
+{
+	position: relative;
+  	right: 15px;
 }
 
 input[type="submit"]
