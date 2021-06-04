@@ -50,6 +50,11 @@ a
     appearance: none;
 }
 
+small
+{
+	font-size: .2em;
+}
+
 button 
 {
   background: none!important;
