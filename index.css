@@ -176,7 +176,6 @@ input[type="submit"]
     font-family: "Ubuntu";
 }
 
-
 #form_container
 {
 	display: flex;
@@ -195,7 +194,7 @@ input[type="submit"]
 
 #main_text
 {
-	font-family: "lato";
+	font-family: "Ubuntu";
 	font-weight: 700;
 	margin-top: -1%;
 	margin-left: 10%;
