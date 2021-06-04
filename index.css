@@ -137,7 +137,7 @@ input[type="submit"]
     border: 2px solid var(--red);
     background-color: var(--red);
     color: white;
-    font-size: .5em;
+    font-size: .75em;
     text-align: center;
     font-family: "Ubuntu";
 }
