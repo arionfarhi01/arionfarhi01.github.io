@@ -131,11 +131,11 @@ input[type="submit"]
 	-moz-appearance: none;
     appearance: none;
     border-radius: 7.5px;
-    height: 30px;
+    height: 40px;
     border: 2px solid var(--red);
     background-color: var(--red);
     color: white;
-    font-size: 1.1em;
+    font-size: 1.25em;
     font-family: "Ubuntu";
 }
 
@@ -150,11 +150,30 @@ input[type="submit"]
 	font-size: 7.5px;
 	margin-top: 7.5%;
 	color: grey;
-	margin-left: 3%;
+	margin-left: 2%;
 }
 
 /* End modal */
 
+#main_text
+{
+
+}
+
+#search_bar_index
+{
+	margin-top: 2%;
+	margin-left: 5%;
+	width: 90%;
+	height: 40px;
+	border-radius: 0;
+	border: 2px solid grey;
+}
+
+#search_bar_index::-webkit-input-placeholder 
+{ 
+  	font-family: "Ubuntu";
+}
 
 #page_title
 {
@@ -163,13 +182,7 @@ input[type="submit"]
 	text-decoration-color: var(--red);
 }
 
-#search_bar_index
-{
-	margin-top: 2%;
-	margin-left: 5%;
-	width: 90%;
-	height: 30px;
-}
+
 
 p
 {
