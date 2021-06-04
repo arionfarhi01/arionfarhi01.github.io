@@ -1,7 +1,29 @@
-@import "colleges.css";
+/* @import "colleges.css"; */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
+body, html
+{
+	font-family: "Alegreya Sans SC";
+	line-height: 20px;
+	text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+a
+{
+	text-decoration: none;
+}
 
 #index_header
 {
@@ -126,7 +148,7 @@ button:hover, button:active
 
 input[type="submit"]
 {
-	width: 30%;
+	width: 100%;
 	margin-left: 30%;
 	margin-right: auto;
 	-webkit-appearance: none;
