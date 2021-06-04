@@ -18,7 +18,7 @@
 	text-align: left;
 	color: var(--red);
 	margin-left: 5%;
-	word-spacing: -0.7rem; 
+	letter-spacing: 3px;
 }
 
 button
