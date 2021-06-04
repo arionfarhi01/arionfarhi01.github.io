@@ -137,7 +137,7 @@ input[type="submit"]
     border: 2px solid var(--red);
     background-color: var(--red);
     color: white;
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: "Ubuntu";
 }
 
@@ -168,8 +168,11 @@ input[type="submit"]
 	margin-left: 5%;
 	width: 90%;
 	height: 40px;
-	border-radius: 0;
 	border: 2px solid grey;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 #search_bar_index::-webkit-input-placeholder 
