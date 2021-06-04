@@ -97,7 +97,7 @@ button:hover, button:active
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 4px;
   box-sizing: border-box;
   position: relative;
@@ -117,7 +117,7 @@ button:hover, button:active
 
 input[type="submit"]
 {
-	width: 25%;
+	width: 30%;
 	margin-left: 30%;
 	margin-right: auto;
 	-webkit-appearance: none;
@@ -142,7 +142,7 @@ input[type="submit"]
 	font-size: 7.5px;
 	margin-top: 10%;
 	color: grey;
-	margin-left: 2.5%;
+	margin-left: 5%;
 }
 
 /* End modal */
