@@ -188,7 +188,12 @@ input[type="submit"]
 
 #main_text
 {
-
+	margin-top: 3%;
+	margin-left: 10%;
+	margin-right: 10%;
+    font-size: 1.75em;
+    text-align: center;
+    line-height: 25px;
 }
 
 input, textarea 
