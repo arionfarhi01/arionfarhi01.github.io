@@ -20,6 +20,11 @@ body, html
     -ms-text-size-adjust: none;
 }
 
+:root
+{
+	--red: rgb(255,49,8,.95);
+}
+
 a
 {
 	text-decoration: none;
@@ -45,7 +50,7 @@ a
     appearance: none;
 }
 
-button
+button 
 {
   background: none!important;
   border: none;
@@ -148,21 +153,22 @@ button:hover, button:active
 
 input[type="submit"]
 {
-	width: 100%;
+	width: 50%;
 	margin-left: 30%;
 	margin-right: auto;
+	border: 2px solid var(--red);
+    background-color: var(--red);
 	-webkit-appearance: none;
 	-moz-appearance: none;
     appearance: none;
     border-radius: 7.5px;
     height: 40px;
-    border: 2px solid var(--red);
-    background-color: var(--red);
     color: white;
     font-size: .75em;
     text-align: center;
     font-family: "Ubuntu";
 }
+
 
 #form_container
 {
