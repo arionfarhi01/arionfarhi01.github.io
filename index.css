@@ -12,13 +12,12 @@
 
 #logo
 {
-	font-family: "Oleo Script";
-	font-size: 1.4em;
+	font-family: "Ubuntu";
+	font-size: 1.2em;
 	font-weight: 400;
 	text-align: left;
 	color: var(--red);
 	margin-left: 5%;
-	letter-spacing: 1px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
     appearance: none;
@@ -171,9 +170,6 @@ input[type="submit"]
 	height: 40px;
 	border-radius: 0;
 	border: 2px solid grey;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-    appearance: none;
 }
 
 #search_bar_index::-webkit-input-placeholder 
