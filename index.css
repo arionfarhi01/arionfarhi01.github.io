@@ -130,10 +130,9 @@ button:hover, button:active
 
 #contactInput2
 {
-  width: 100%;
+  width: 90%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid black;
   border-radius: 4px;
   box-sizing: border-box;
@@ -196,7 +195,7 @@ input[type="submit"]
 #main_text
 {
 	font-family: "lato";
-	margin-top: 0%;
+	margin-top: -3%;
 	margin-left: 10%;
 	margin-right: 10%;
     font-size: 1.75em;
