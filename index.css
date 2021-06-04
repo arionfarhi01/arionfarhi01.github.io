@@ -13,7 +13,7 @@
 #logo
 {
 	font-family: "Oleo Script";
-	font-size: 1.25em;
+	font-size: 1.4em;
 	font-weight: 400;
 	text-align: left;
 	color: var(--red);
@@ -148,9 +148,9 @@ input[type="submit"]
 #email
 {
 	font-size: 7.5px;
-	margin-top: 10%;
+	margin-top: 7.5%;
 	color: grey;
-	margin-left: 5%;
+	margin-left: 3%;
 }
 
 /* End modal */
