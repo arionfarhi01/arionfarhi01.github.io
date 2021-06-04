@@ -1,6 +1,7 @@
 /* @import "colleges.css"; */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
@@ -50,7 +51,7 @@ a
     appearance: none;
 }
 
-small
+#version
 {
 	font-size: .2em;
 }
@@ -194,13 +195,14 @@ input[type="submit"]
 
 #main_text
 {
-	font-family: "ubuntu";
+	font-family: "lato";
 	margin-top: 3%;
 	margin-left: 10%;
 	margin-right: 10%;
     font-size: 1.75em;
     text-align: center;
     line-height: 25px;
+    font-weight: 700;
 }
 
 input, textarea 
