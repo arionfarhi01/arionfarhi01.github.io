@@ -162,6 +162,12 @@ input[type="submit"]
 
 }
 
+input, textarea 
+{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 #search_bar_index
 {
 	margin-top: 2%;
