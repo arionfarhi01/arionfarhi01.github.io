@@ -138,6 +138,7 @@ button:hover, button:active
   box-sizing: border-box;
   position: relative;
   bottom: 20px;
+  height: 30px;
 }
 
 .red
