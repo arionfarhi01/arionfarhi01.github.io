@@ -556,7 +556,7 @@ var firebaseConfig =
 
 		function goBack()
 		{
-			window.location.href = "../index.html"
+			location.href = "index.html";
 		}
 
 		function search_index()
