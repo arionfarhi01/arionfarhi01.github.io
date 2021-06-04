@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap');
@@ -58,6 +59,7 @@ body, html
 
 /* header */
 
+/*
 header
 {
 	background-color: #FAFAFA;
@@ -67,12 +69,16 @@ header
   	top: .7%;
  	width: 100%;
  	z-index: 9999;
+ 	*/
 
  	/* shadow */
+ 	/*
  	box-shadow: 4px 4px 2px #ccc;
     -moz-box-shadow: 4px 4px 2px #ccc;
     -webkit-box-shadow: 4px 4px 2px #ccc;
 }
+*/
+
 
 #back_arrow 
 {

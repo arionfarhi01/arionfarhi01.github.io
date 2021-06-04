@@ -559,27 +559,6 @@ var firebaseConfig =
 			location.href = "index.html";
 		}
 
-		function search_index()
-		{
-			var input = document.getElementById("search_bar_index").value.toLowerCase();
-			var college_list = document.getElementsByClassName("college");
-			var college_list_length = college_list.length;
-
-			for (var i= 0; i < college_list_length; i++)
-			{
-				if (college_list[i].id.toLowerCase().startsWith(input))
-				{
-					$(college_list[i]).show('1');
-				}
-
-				else
-				{
-					$(college_list[i]).hide('1');
-				}
-			}
-			
-		}
-
 
 
 
