@@ -51,7 +51,7 @@ hr
 	font-weight: 400;
 	text-align: left;
 	color: var(--red);
-	margin-left: 3%;
+	margin-left: 4%;
 	-webkit-appearance: none;
 	-moz-appearance: none;
     appearance: none;
@@ -76,9 +76,9 @@ button
 
 #header_buttons
 {
-	margin-right: 8%;
+	margin-right: 6.5%;
 	margin-top: 3%;
-	margin-left: 0%;
+	margin-left: -5%;
 	color: #D3D3D3;
 
 }
