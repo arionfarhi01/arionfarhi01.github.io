@@ -230,6 +230,9 @@ input, textarea
 	border-radius: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	background: url(images/search_icon.png) no-repeat scroll;
+	background-size: 7%;
+	background-position: 96%;
 }
 
 #search_bar_index::-webkit-input-placeholder
