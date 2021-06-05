@@ -200,15 +200,14 @@ input[type="submit"]
 
 #main_text
 {
-	font-family: "Lato";
-	font-weight: 600;
+	font-family: "Ubuntu";
+	font-weight: 400;
 	margin-top: 0%;
 	margin-left: 10%;
 	margin-right: 10%;
-    font-size: 1.65em;
+    font-size: 1.4em;
     text-align: center;
     line-height: 30px;
-    font-weight: 700;
 }
 
 input, textarea 
