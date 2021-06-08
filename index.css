@@ -31,12 +31,6 @@ a
 	text-decoration: none;
 }
 
-hr
-{
-	margin-top: -5%;
-	color: grey;
-}
-
 #index_header
 {
 	display: flex;
@@ -245,7 +239,7 @@ input[type="submit"]
 	font-size: 20px;
 }
 
-#search_bar_index:focus
+#search_bar_index:active, #search_bar_index:focus
 {
 	-webkit-box-shadow: 1px 1px 1px #666;
     -moz-box-shadow: 1px 1px 1px #666;
