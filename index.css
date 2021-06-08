@@ -246,6 +246,7 @@ input[type="submit"]
     box-shadow: 1px 1px 1px #666;
     display: inline-block;
     outline: none;
+    font-size: 30em;
 }
 
 #search_bar_index::-webkit-input-placeholder
