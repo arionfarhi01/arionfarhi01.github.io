@@ -165,11 +165,12 @@ button:hover, button:active
 #contactInput2::-webkit-input-placeholder
 {
 	position: relative;
-  	right: 15px;
+  	right: 10px;
 }
 
 input[type="submit"]
 {
+	margin-top: 1%;
 	width: 50%;
 	margin-left: 30%;
 	margin-right: auto;
