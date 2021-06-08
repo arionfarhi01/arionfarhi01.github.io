@@ -119,7 +119,7 @@ button:hover, button:active
 {
 	color: black;
 	font-size: 1em;
-	margin-bottom: 0%;
+	margin-bottom: 6%;
 	font-weight: 700;
 }
 
@@ -141,7 +141,7 @@ button:hover, button:active
 #contact_email
 {
   width: 100%;
-  padding-left: 2px;
+  padding-left: 4px;
   margin: 8px 0;
   border: 1px solid black;
   box-sizing: border-box;
@@ -154,8 +154,10 @@ button:hover, button:active
 
 #contact_message
 {
+	padding-left: 4px;
 	border-radius: 5px;
-	padding-left: 2px;
+	margin-top: -4%;
+	margin-bottom: -5%;
 }
 
 #contact_message::-webkit-input-placeholder, #contact_email::-webkit-input-placeholder
@@ -204,7 +206,7 @@ input[type="submit"]
 #email
 {
 	font-size: 7.5px;
-	margin-top: 7.5%;
+	margin-top: 5%;
 	color: grey;
 	margin-left: 2%;
 }
@@ -221,13 +223,6 @@ input[type="submit"]
     font-size: 1.5em;
     text-align: center;
     line-height: 30px;
-}
-
-input, textarea 
-{
-  -webkit-appearance: none;
-  border-radius: 0;
-  margin-top: -3%;
 }
 
 #search_bar_index
@@ -297,7 +292,8 @@ input[type="search"]::-webkit-search-results-decoration
     box-shadow: 1px 1px 1px #666;
 }
 
-p
+
+.college p
 {
 	color: white;
 	font-family: "Ubuntu";
@@ -330,7 +326,7 @@ p
 	background-color: #FFB81C;
 }
 
-#More > p
+#More p
 {
 	color: black;
 	line-height: 30px;
