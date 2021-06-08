@@ -148,6 +148,7 @@ button:hover, button:active
   box-sizing: border-box;
   position: relative;
   bottom: 20px;
+  left: 3px;
   height: 30px;
 }
 
@@ -165,7 +166,7 @@ button:hover, button:active
 #contactInput2::-webkit-input-placeholder
 {
 	position: relative;
-  	right: 10px;
+  	right: 15px;
 }
 
 input[type="submit"]
