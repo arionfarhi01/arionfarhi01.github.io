@@ -135,7 +135,6 @@ button:hover, button:active
 #contact_email
 {
   width: 100%;
-  padding-left: 4px;
   margin: 8px 0;
   border: 1px solid black;
   box-sizing: border-box;
@@ -144,14 +143,15 @@ button:hover, button:active
   left: 1.5px;
   height: 30px;
   border-radius: 5px;
+  padding-left: 6px;
 }
 
 #contact_message
 {
-	padding-left: 4px;
 	border-radius: 5px;
 	margin-top: -4%;
 	margin-bottom: -5%;
+	padding-left: 6px;
 }
 
 #contact_message::-webkit-input-placeholder, #contact_email::-webkit-input-placeholder
@@ -189,6 +189,7 @@ input[type="submit"]
     font-size: .85em;
     text-align: center;
     font-family: "Ubuntu";
+    margin-top: 1%;
 }
 
 #form_container
@@ -200,9 +201,10 @@ input[type="submit"]
 #email
 {
 	font-size: 7.5px;
-	margin-top: 5%;
+	margin-top: 4%;
 	color: grey;
 	margin-left: 2%;
+	margin-top: 5%;
 }
 
 input, textarea 
