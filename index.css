@@ -332,13 +332,13 @@ input[type="search"]::-webkit-search-results-decoration
 #More p
 {
 	color: black;
-	margin-top: 30%;
+	margin-top: 45%;
 	line-height: 20px;
 }
 
 #More
 {
-	border: 0.5px dotted lightgrey;
+	border: 0.75px dotted lightgrey;
 	-webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
