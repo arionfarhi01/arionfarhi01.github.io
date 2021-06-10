@@ -46,9 +46,6 @@ a
 	text-align: left;
 	color: var(--red);
 	margin-left: 4%;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-    appearance: none;
 }
 
 #version
@@ -57,6 +54,7 @@ a
 	margin-left: -3%;
 	margin-right: -10%;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 button 
@@ -340,7 +338,7 @@ input[type="search"]::-webkit-search-results-decoration
 
 #More
 {
-	border: 1px solid lightgrey;
+	border: 0.5px dotted lightgrey;
 	-webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
