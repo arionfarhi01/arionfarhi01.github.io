@@ -302,8 +302,8 @@ input[type="search"]::-webkit-search-results-decoration
 	font-family: "Ubuntu";
 	text-align: center;
 	vertical-align: middle;
-	line-height: 117px;
 	font-size: 1.05em;
+	margin-top: 30%;
 }
 
 
@@ -330,8 +330,7 @@ input[type="search"]::-webkit-search-results-decoration
 #More p
 {
 	color: black;
-	line-height: 30px;
-	margin-top: 40%;
+	margin-top: 30%;
 }
 
 #More
