@@ -303,9 +303,7 @@ input[type="search"]::-webkit-search-results-decoration
 	text-align: center;
 	vertical-align: middle;
 	font-size: 1.05em;
-	line-height: 117px;
-	position: relative;
-	bottom: 17px;
+	margin-top: 40%;
 }
 
 
