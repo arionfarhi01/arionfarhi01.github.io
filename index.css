@@ -286,10 +286,10 @@ input[type="search"]::-webkit-search-results-decoration
 {
 	margin-left: 5%;
 	margin-right: 5%;
+	width: 95%;
+	margin-bottom: 70%;
 	height: 117px;
 	border-radius: 7px;
-	width: 95%;
-	margin-bottom: 7%;
 	-webkit-box-shadow: 1px 1px 1px #666;
     -moz-box-shadow: 1px 1px 1px #666;
     box-shadow: 1px 1px 1px #666;
