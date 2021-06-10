@@ -303,7 +303,9 @@ input[type="search"]::-webkit-search-results-decoration
 	text-align: center;
 	vertical-align: middle;
 	font-size: 1.05em;
-	margin-top: 28%;
+	line-height: 117px;
+	position: relative;
+	bottom: 20px;
 }
 
 
@@ -330,7 +332,8 @@ input[type="search"]::-webkit-search-results-decoration
 #More p
 {
 	color: black;
-	margin-top: 28%;
+	margin-top: 30%;
+	line-height: 20px;
 }
 
 #More
