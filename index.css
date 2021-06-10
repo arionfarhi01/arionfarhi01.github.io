@@ -52,9 +52,7 @@ a
 {
 	font-size: .2em;
 	margin-left: -3%;
-	margin-right: -10%;
-	overflow: hidden;
-	white-space: nowrap;
+	margin-right: 0%;
 }
 
 button 
