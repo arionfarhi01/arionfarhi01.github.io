@@ -46,6 +46,8 @@ a
 	text-align: left;
 	color: var(--red);
 	margin-left: 4%;
+	white-space: nowrap;
+  	overflow: hidden;
 }
 
 #version
