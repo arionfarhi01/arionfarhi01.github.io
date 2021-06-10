@@ -299,13 +299,9 @@ input[type="search"]::-webkit-search-results-decoration
 
 .college p
 {
-	display: table-cell;
 	color: white;
 	font-family: "Ubuntu";
-	text-align: center;
-	vertical-align: middle;
 	font-size: 1.05em;
-	line-height: 117px;
 }
 
 
