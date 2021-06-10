@@ -140,7 +140,7 @@ button:hover, button:active
   position: relative;
   bottom: 20px;
   left: 1.5px;
-  height: 30px;
+  height: 27px;
   border-radius: 5px;
   padding-left: 6px;
 }
@@ -151,6 +151,7 @@ button:hover, button:active
 	margin-top: -4%;
 	margin-bottom: -5%;
 	padding-left: 6px;
+	width: 100%;
 }
 
 #contact_message::-webkit-input-placeholder, #contact_email::-webkit-input-placeholder
@@ -276,7 +277,7 @@ input[type="search"]::-webkit-search-results-decoration
 
 #college_list
 {
-	margin-top: 7%;
+	margin-top: 8%;
 	display: grid;
 	grid-template-columns: repeat(3,1fr);
 	text-align: center;
@@ -288,7 +289,7 @@ input[type="search"]::-webkit-search-results-decoration
 	margin-left: 5%;
 	margin-right: 5%;
 	width: 95%;
-	margin-bottom: 7%;
+	margin-bottom: 12%;
 	height: 117px;
 	border-radius: 7px;
 	border: none;

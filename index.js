@@ -1,4 +1,3 @@
-
 if(window.innerWidth > window.innerHeight)
 {
     alert("This website is designed only for mobile");
