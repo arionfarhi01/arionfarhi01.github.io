@@ -291,6 +291,7 @@ input[type="search"]::-webkit-search-results-decoration
 	margin-bottom: 7%;
 	height: 117px;
 	border-radius: 7px;
+	border: none;
 	-webkit-box-shadow: 1px 1px 1px #666;
     -moz-box-shadow: 1px 1px 1px #666;
     box-shadow: 1px 1px 1px #666;
@@ -301,7 +302,7 @@ input[type="search"]::-webkit-search-results-decoration
 {
 	color: white;
 	font-family: "Ubuntu";
-	font-size: 1.05em;
+	font-size: 1.25em;
 }
 
 
@@ -328,8 +329,7 @@ input[type="search"]::-webkit-search-results-decoration
 #More p
 {
 	color: black;
-	margin-top: 45%;
-	line-height: 20px;
+	background: none!important;
 }
 
 #More
