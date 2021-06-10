@@ -20,36 +20,35 @@
 
 	<header id= "index_header">
 
-			<div id= "logo">
-				<a href= "index.html" id="logoText" style="color:var(--red)"><h1> HANGR <span id= "version"> v1.1 </span> </h1></a>
+		<div id= "logo">
+			<a href= "index.html" id="logoText" style="color:var(--red)"><h1> HANGR <span id= "version"> v1.1 </span> </h1></a>
+		</div>
+
+		<div id= "header_buttons">
+			<button onclick="goToUpdates()" style="margin:20px"> updates </button>
+			<button id= "contactButton" onclick="openModal()"> contact </button>
+		</div>
+
+		<!-- modal -->
+		<div id="feedback_modal" class="modal">
+			<div class="modal-content">
+				<span class="closeModal">&times;</span>
+				<form action="https://formspree.io/f/xpzkdbyy" method="POST">
+					<p> Your Message <span class="red">*</span> </p>
+					<textarea id = "contact_message" name= "feedback" rows= "5" cols= "52" placeholder= "Let us know how we can improve our website, any requests you may have, or anything else!"></textarea>
+					<br>
+					<br>
+					<p> Your Email </p>
+					<input id= "contact_email" type="text" name="email" placeholder="So we can follow up with you">
+					<br>
+
+					<div id="form_container"> 
+						<p id="email"> hangrwebsite@gmail.com </p>
+						<input type="submit" value="SUBMIT">
+					</div>
+				</form>
 			</div>
-
-			<div id= "header_buttons">
-				<button onclick="goToUpdates()" style="margin:20px"> updates </button>
-				<button id= "contactButton" onclick="openModal()"> contact </button>
-			</div>
-
-			<!-- modal -->
-			<div id="feedback_modal" class="modal">
-				<div class="modal-content">
-    				<span class="closeModal">&times;</span>
-    				<form action="https://formspree.io/f/xpzkdbyy" method="POST">
-    					<p> Your Message <span class="red">*</span> </p>
-						<textarea id = "contact_message" name= "feedback" rows= "5" cols= "52" placeholder= "Let us know how we can improve our website, any requests you may have, or anything else!"></textarea>
-						<br>
-						<br>
-						<p> Your Email </p>
-						<input id= "contact_email" type="text" name="email" placeholder="So we can follow up with you">
-						<br>
-
-						<div id="form_container"> 
-							<p id="email"> hangrwebsite@gmail.com </p>
-							<input type="submit" value="SUBMIT">
-						</div>
-					</form>
-
-    			</div>
-  			</div>
+		</div>
 
 	</header>
 
@@ -64,7 +63,6 @@
 		<div class= "college" id = "PSU"> <a href = psu.html> <p> PSU </p> </a> </div>
 		<div class= "college" id = "Pitt"> <a href = pitt.html> <p> Pitt </p> </a> </div>
 		<div class= "college" id = "More"> <p> + More Coming Soon </p> </div>
-
 	</div>
 
 </body>

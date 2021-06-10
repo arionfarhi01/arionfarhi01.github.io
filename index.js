@@ -1,4 +1,9 @@
 
+if(window.innerWidth > window.innerHeight)
+{
+    alert("This website is designed only for mobile");
+}
+
 /* Begin Modal */
 var modal = document.getElementById("feedback_modal");
 var btn = document.getElementById("contactButton");

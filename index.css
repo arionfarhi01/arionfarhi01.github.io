@@ -49,6 +49,8 @@ a
 	-webkit-appearance: none;
 	-moz-appearance: none;
     appearance: none;
+    display: flex;
+    flex-direction: row;
 }
 
 #version
