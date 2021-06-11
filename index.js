@@ -40,20 +40,18 @@ function goToUpdates()
 function searchCollege()
 		{
 			var input = document.getElementById("search_bar_index").value.toLowerCase();
-			var college_list = document.getElementsByClassName("college");
-			var college_list_length = college_list.length;
+			var college_list = document.getElementsByClassName("college_div");
 
-			for (var i= 0; i < college_list_length; i++)
+			for (var i= 0; i < college_list.length; i++)
 			{
-				if (college_list[i].id.toLowerCase().startsWith(input))
+				if (college_list[i].getAttribute("name").toLowerCase().startsWith(input) || college_list[i].getAttribute("fullname").toLowerCase().startsWith(input))
 				{
-					$(college_list[i]).show('1');
+					$(college_list[i]).fadeIn('1');
 				}
 
 				else
 				{
-					$(college_list[i]).hide('1');
+					$(college_list[i]).fadeOut('1');
 				}
-			}
-			
+			}	
 		}
