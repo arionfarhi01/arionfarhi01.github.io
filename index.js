@@ -46,12 +46,12 @@ function searchCollege()
 			{
 				if (college_list[i].getAttribute("name").toLowerCase().startsWith(input) || college_list[i].getAttribute("fullname").toLowerCase().startsWith(input))
 				{
-					$(college_list[i]).fadeIn('1');
+					$(college_list[i]).fadeIn('fast');
 				}
 
 				else
 				{
-					$(college_list[i]).fadeOut('1');
+					$(college_list[i]).fadeOut('fast');
 				}
 			}	
 		}
