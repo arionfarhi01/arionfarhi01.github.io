@@ -25,6 +25,26 @@ body, html
   	font-family: "Alegreya Sans SC";
 }
 
+#logo
+{
+	font-family: "Ubuntu";
+	font-size: 1.2em;
+	font-weight: 400;
+	text-align: left;
+	color: var(--red);
+	margin-left: 4%;
+	white-space: nowrap;
+  	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
 #intro
 {
 	font-family: "Lato";
