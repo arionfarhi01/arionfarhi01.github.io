@@ -46,8 +46,8 @@ header
 	color: var(--red);
 	font-weight: 700;
 	font-family: ubuntu;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
 	font-size: 2.5em;
 	font-weight: 700;
 	border: none;
