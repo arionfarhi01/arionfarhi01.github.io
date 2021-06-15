@@ -538,29 +538,10 @@ function pushInfo() //for form
 		} 
 
 
-function openForm() 
+function goBack()
 {
-	document.getElementById("my_form").style.width = "100%";
-	document.getElementById("push").style.marginLeft = "105%";
-	//document.getElementById("menuButton").style.display = "none";
-	// document.getElementById("titleText").style.display = "none";
+	window.location.href = 'index.html'
 }
-
-function closeForm() 
-{
-	document.getElementById("my_form").style.width = "0";
-	document.getElementById("push").style.marginLeft = "0";
-	//document.getElementById("menuButton").style.display = "inline";
-	//document.getElementById("titleText").style.display = "block";
-}
-
-function openModal()
-{
-
-}
-
-
-
 
 
 

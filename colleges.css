@@ -17,46 +17,109 @@ body, html
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
+    margin: 0%;
 }
 
-/* header */ 
+/* Begin Header */ 
 
-#logo
+header
+{
+	position: fixed;
+	width: 100%;
+	background-color: #330662;
+	margin-top: -25%;
+}
+
+#content
+{
+	margin-top: 25%;
+}
+
+#header_content
 {
 	display: flex;
-	font-family: "Ubuntu";
-	font-size: 1.2em;
-	font-weight: 400;
-	text-align: left;
+	justify-content: space-between;
+}
+
+#back, #add
+{
 	color: var(--red);
-	margin-left: 4%;
-	white-space: nowrap;
-  	overflow: hidden;
+	font-weight: 700;
+	font-family: ubuntu;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 2.5em;
+	font-weight: 700;
+	border: none;
+	background-color: transparent;
 }
 
-#logoCollege
+#college_name
 {
-	font-weight: 400;
-	color: #330662;
-	font-size: 1.2em;
-	margin-top: 31px;
-	margin-left: 1%;
-}
-
-#plus
-{
-	margin-left: 75px;
+	color: white;
+	text-align: center;
+	font-size: 1.75em;
 	margin-top: 27px;
-	width: 27px;
-	height: 27px;
+	letter-spacing: 2px;
 }
 
-hr
+/* End Header */
+
+
+/* Begin modal */
+
+.modal 
 {
-	border: 3px dashed #330662;
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  padding-top: 5%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
 }
 
-/* end header */
+.modal-content 
+{
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  border-radius: 30px;
+  border: 2px solid black;
+}
+
+.modal-content p
+{
+	color: black;
+	font-size: 1em;
+	margin-bottom: 6%;
+	font-weight: 700;
+}
+
+.closeModal 
+{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeModal:hover, .closeModal:focus 
+{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* End modal */
+
+
+/* Instructions and search bar */
 
 #instructions
 {
@@ -110,6 +173,23 @@ input[type="search"]::-webkit-search-results-decoration
 {
   -webkit-appearance:none;
 }
+
+/* End instructions and search bar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -347,9 +427,10 @@ a:hover, a:active
   background-color: transparent;
 }
 
+
 #push /* shifts scrren over when opening nav up */
 {
-  transition: margin-left .6s;
+  /* transition: margin-left .6s; */
 }
 
 #caption
