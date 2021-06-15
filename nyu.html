@@ -6,7 +6,7 @@
 	<meta charset= "utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
 	<link rel="shortcut icon" href="images/icon.ico"/>
-	
+
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
@@ -37,70 +37,67 @@
 			<div class= "modal-content">
 				<span class="closeModal">&times;</span>
 
-				<div id= "border">
+				<h1 id= "caption"> Add GroupMe </h1>	
 
-					<h1 id= "caption"> Add GroupMe </h1>	
+				<form name= "add_group" autocomplete= "off">
 
-					<form name= "add_group" autocomplete= "off">
+					<p> Course Name: </p>
+					<input type= "text" name= "course_name" placeholder = "i.e. ACCTUB 1">
+					<br>
 
-						<p> Course Name: </p>
-						<input type= "text" name= "course_name" placeholder = "i.e. ACCTUB 1">
-						<br>
+					<p class= "form_info"> Section number is not necessary </p>
 
-						<p class= "form_info"> Section number is not necessary </p>
+					<p> Course Nickname: </p>
+					<input type= "text" name= "course_nickname" placeholder = "i.e. Principles of Financial Accounting">
+					<br>
 
-						<p> Course Nickname: </p>
-						<input type= "text" name= "course_nickname" placeholder = "i.e. Principles of Financial Accounting">
-						<br>
+					<p> Course Professor/TA: </p>
+					<input type= "text" name= "course_professor" placeholder = "i.e. Johnson">
+					<br>
 
-						<p> Course Professor/TA: </p>
-						<input type= "text" name= "course_professor" placeholder = "i.e. Johnson">
-						<br>
+					<p> Days of week: </p>
+					<div class="weekdays_selector">
+						<input type="checkbox" id="weekday-mon" class="weekday" />
+						<label for="weekday-mon">M</label>
+						<input type="checkbox" id="weekday-tue" class="weekday" />
+						<label for="weekday-tue">Tu</label>
+						<input type="checkbox" id="weekday-wed" class="weekday" />
+						<label for="weekday-wed">W</label>
+						<input type="checkbox" id="weekday-thu" class="weekday" />
+						<label for="weekday-thu">Th</label>
+						<input type="checkbox" id="weekday-fri" class="weekday" />
+						<label for="weekday-fri">F</label>
+						<input type="checkbox" id="weekday-sat" class="weekday" />
+						<label for="weekday-sat">Sa</label>
+						<input type="checkbox" id="weekday-sun" class="weekday" />
+						<label for="weekday-sun">Su</label>
+					</div>
 
-						<p> Days of week: </p>
-						<div class="weekdays_selector">
-							<input type="checkbox" id="weekday-mon" class="weekday" />
-							<label for="weekday-mon">M</label>
-							<input type="checkbox" id="weekday-tue" class="weekday" />
-							<label for="weekday-tue">Tu</label>
-							<input type="checkbox" id="weekday-wed" class="weekday" />
-							<label for="weekday-wed">W</label>
-							<input type="checkbox" id="weekday-thu" class="weekday" />
-							<label for="weekday-thu">Th</label>
-							<input type="checkbox" id="weekday-fri" class="weekday" />
-							<label for="weekday-fri">F</label>
-							<input type="checkbox" id="weekday-sat" class="weekday" />
-							<label for="weekday-sat">Sa</label>
-							<input type="checkbox" id="weekday-sun" class="weekday" />
-							<label for="weekday-sun">Su</label>
-						</div>
-
-						<p> Time: </p>
-						<div class= "time-selector">
-							<input type= "time" id="time_begin">
-							<p id= "time_paragraph"> to </p>
-							<input type= "time" id="time_end"> <p class= "form_info"> (EST) </p>
-						</div>
+					<p> Time: </p>
+					<div class= "time-selector">
+						<input type= "time" id="time_begin">
+						<p id= "time_paragraph"> to </p>
+						<input type= "time" id="time_end"> <p class= "form_info"> (EST) </p>
+					</div>
 
 
 
-						<p> Course Link: </p>
-						<input type= "text" name= "course_link" placeholder = "groupme.com/join_group/...">
-						<p class= "form_info"> Settings > Share Group > Copy (extraneous text is fine) </p>
+					<p> Course Link: </p>
+					<input type= "text" name= "course_link" placeholder = "groupme.com/join_group/...">
+					<p class= "form_info"> Settings > Share Group > Copy (extraneous text is fine) </p>
 
-						<div id= "recitation_div">
-							<p id= "recitation_paragraph"> Recitation? </p>
-							<input id= "recitation_check" type="checkbox">
-						</div>
+					<div id= "recitation_div">
+						<p id= "recitation_paragraph"> Recitation? </p>
+						<input id= "recitation_check" type="checkbox">
+					</div>
 
-						<div id= submit_div>
-							<input type= "button" id= "button" value= "Submit" onclick= "return pushInfo()">
-							<p id= "submission_error"> </p>
-						</div>
+					<div id= submit_div>
+						<input type= "button" id= "button" value= "Submit" onclick= "return pushInfo()">
+						<p id= "submission_error"> </p>
+					</div>
 
-					</form>
+				</form>
 
-				</div>
 			</div>
 
 		</div>
@@ -154,8 +151,8 @@
 
 		function openModal()
 		{
-		    $(modal).fadeIn('slow');
-		    modal.style.display = "block";
+			$(modal).fadeIn('slow');
+			modal.style.display = "block";
 		}
 
 		function closeModal()
@@ -165,15 +162,15 @@
 
 		span.onclick = function() 
 		{
-		  modal.style.display = "none";
+			modal.style.display = "none";
 		}
 
 		window.onclick = function(event) 
 		{
-		  if (event.target == modal) 
-		  {
-		    modal.style.display = "none";
-		  }
+			if (event.target == modal) 
+			{
+				modal.style.display = "none";
+			}
 		}
 
 	</script>

@@ -52,6 +52,18 @@ header
 	background-color: transparent;
 }
 
+#back
+{
+	position: relative;
+	right: 30px;
+}
+
+#add
+{
+	position: relative;
+	left: 30px;
+}
+
 #college_name
 {
 	color: white;
