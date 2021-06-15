@@ -54,13 +54,13 @@ header
 
 #back
 {
-	right: 70px;
-	bottom: 30px;
+	right: 30px;
+	bottom: 3px;
 }
 
 #add
 {
-	left: -10px;
+	left: 30px;
 	bottom: 3px;
 }
 
