@@ -26,7 +26,6 @@ header
 {
 	position: fixed;
 	width: 100%;
-	background-color: #330662;
 	margin-top: -25%;
 }
 
@@ -55,13 +54,13 @@ header
 #back
 {
 	position: relative;
-	right: 30px;
+	right: 25px;
 }
 
 #add
 {
 	position: relative;
-	left: 30px;
+	left: 25px;
 }
 
 #college_name
