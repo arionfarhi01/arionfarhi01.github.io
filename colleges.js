@@ -1,7 +1,6 @@
-
 if(window.innerWidth > window.innerHeight)
 {
-    alert("This website is designed only for mobile");
+	alert("This website is designed only for mobile");
 }
 
 
@@ -16,38 +15,37 @@ var firebaseConfig =
 	measurementId: "G-RGQD8RJWTM"
 };
 
-		// initialize firebase
+// initialize firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+const database = firebase.database();
 
-		firebase.initializeApp(firebaseConfig);
-		firebase.analytics();
-		const database = firebase.database();
-
-		function pushInfo() //for form
-		{
-			var submission_error = document.getElementById("submission_error");
-			
-
-			/* get variables */
-
-			/* depends on inner html of titleText, make sure works with Georgetown */
-			var college_selection_val = document.getElementById("titleText").innerHTML.substring(78).split("<")[0].toUpperCase();
-
-			
-			if (college_selection_val.includes("/"))
-			{
-				college_selection_val = college_selection_val.split("/")[1];
-			}
+function pushInfo() //for form
+{
+	var submission_error = document.getElementById("submission_error");
 
 
-			var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "").replaceAll("-","").toLowerCase()));
+	/* get variables */
 
-			var nums = course_name_val.match(/\d/);
-			var first_num_occurance = course_name_val.indexOf(nums);
-			var last_alphabet_occurance = -1;
-			
-			var last_alphabet_occurance = "";
-			var i = 0;
-			var contains_letters = "false";
+	/* depends on inner html of titleText, make sure works with Georgetown */
+	var college_selection_val = document.getElementById("titleText").innerHTML.substring(78).split("<")[0].toUpperCase();
+
+
+	if (college_selection_val.includes("/"))
+	{
+		college_selection_val = college_selection_val.split("/")[1];
+	}
+
+
+	var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "").replaceAll("-","").toLowerCase()));
+
+	var nums = course_name_val.match(/\d/);
+	var first_num_occurance = course_name_val.indexOf(nums);
+	var last_alphabet_occurance = -1;
+
+	var last_alphabet_occurance = "";
+	var i = 0;
+	var contains_letters = "false";
 
 			//finds last alphabet occurance
 			for (i=0; i< course_name_val.length; i++)
@@ -321,7 +319,7 @@ var firebaseConfig =
 
 		function displayInfo(collegeName)
 		{
-			getColorTitleText(collegeName);
+			//getColorTitleText(collegeName);
 
 			var i = 0;
 			var group_title_array = [];
@@ -445,6 +443,7 @@ var firebaseConfig =
 
 		}
 
+		/*
 		function getColorTitleText(collegeName) 
 		{
 			if (collegeName == "NYU")
@@ -464,6 +463,7 @@ var firebaseConfig =
 				document.getElementsByTagName("small")[0].style.color = "#" + "FFB81C";
 			}
 		}
+		*/
 
 		function search() 
 		{
@@ -538,26 +538,26 @@ var firebaseConfig =
 		} 
 
 
-		function openForm() 
-		{
-			document.getElementById("my_form").style.width = "100%";
-			document.getElementById("push").style.marginLeft = "105%";
-			  //document.getElementById("menuButton").style.display = "none";
-			 // document.getElementById("titleText").style.display = "none";
-			}
+function openForm() 
+{
+	document.getElementById("my_form").style.width = "100%";
+	document.getElementById("push").style.marginLeft = "105%";
+	//document.getElementById("menuButton").style.display = "none";
+	// document.getElementById("titleText").style.display = "none";
+}
 
-		function closeForm() 
-		{
-			document.getElementById("my_form").style.width = "0";
-			document.getElementById("push").style.marginLeft = "0";
-			//document.getElementById("menuButton").style.display = "inline";
-			//document.getElementById("titleText").style.display = "block";
-		}
+function closeForm() 
+{
+	document.getElementById("my_form").style.width = "0";
+	document.getElementById("push").style.marginLeft = "0";
+	//document.getElementById("menuButton").style.display = "inline";
+	//document.getElementById("titleText").style.display = "block";
+}
 
-		function goBack()
-		{
-			location.href = "index.html";
-		}
+function openModal()
+{
+
+}
 
 
 

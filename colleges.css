@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
@@ -7,8 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap');
-
-/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
 body, html
 {
@@ -20,13 +19,11 @@ body, html
     -ms-text-size-adjust: none;
 }
 
-::-webkit-input-placeholder 
-{ 
-  	font-family: "Alegreya Sans SC";
-}
+/* header */ 
 
 #logo
 {
+	display: flex;
 	font-family: "Ubuntu";
 	font-size: 1.2em;
 	font-weight: 400;
@@ -36,6 +33,93 @@ body, html
 	white-space: nowrap;
   	overflow: hidden;
 }
+
+#logoCollege
+{
+	font-weight: 400;
+	color: #330662;
+	font-size: 1.2em;
+	margin-top: 31px;
+	margin-left: 1%;
+}
+
+#plus
+{
+	margin-left: 75px;
+	margin-top: 27px;
+	width: 27px;
+	height: 27px;
+}
+
+hr
+{
+	border: 3px dashed #330662;
+}
+
+/* end header */
+
+#instructions
+{
+	text-align: center;
+	font-family: lato;
+	background-color: #D3D3D3;
+	border-radius: 10px;
+}
+
+#search_bar
+{
+	padding-top: 0%;
+	margin-top: 2%;
+	margin-left: 2.5%;
+	margin-right: auto;
+	padding-left: 12px;
+	width: 95%;
+	height: 50px;
+	border: 1px solid #D3D3D3;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: url(images/search_icon.png) no-repeat scroll;
+	background-size: 7%;
+	background-position: 96%;
+	font-family: "Lato";
+	font-size: 17.5px;
+}
+
+#search_bar:focus
+{
+	-webkit-appearance: none;
+	-webkit-box-shadow: 1px 1px 1px #666;
+    -moz-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+    display: inline-block;
+    outline: none;
+}
+
+::-webkit-input-placeholder 
+{ 
+  	font-family: "Lato";
+  	font-size: 15px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration 
+{
+  -webkit-appearance:none;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -223,12 +307,6 @@ a:hover, a:active
 	top: 2px;
 }
 
-#search_bar
-{
-	margin-left: 2%;
-	width: 90%;
-	height: 30px;
-}
 
 .group_title
 {
@@ -438,13 +516,6 @@ input[type= "time"]:first-child
 	margin-right: 6%;
 	position: relative;
 	bottom: 13px;
-}
-
-hr
-{
-	border: 2px dashed lightgrey;
-	margin-top: 4%;
-	margin-bottom: -2%;
 }
 
 #submission_error

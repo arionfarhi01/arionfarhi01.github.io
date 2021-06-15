@@ -10,7 +10,8 @@ var span = document.getElementsByClassName("closeModal")[0];
 
 function openModal()
 {
-  modal.style.display = "block";
+    $(modal).fadeIn('slow');
+    modal.style.display = "block";
 }
 
 function closeModal()
@@ -37,9 +38,10 @@ function goToUpdates()
 	location.href = "updates.html"
 }
 
+
 function searchCollege()
 		{
-			var input = document.getElementById("search_bar_index").value.toLowerCase();
+			var input = document.getElementById("search_bar").value.toLowerCase();
 			var college_list = document.getElementsByClassName("college_div");
 
 			for (var i= 0; i < college_list.length; i++)
