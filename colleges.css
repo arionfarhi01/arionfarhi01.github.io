@@ -49,18 +49,19 @@ header
 	font-weight: 700;
 	border: none;
 	background-color: transparent;
+	position: relative;
 }
 
 #back
 {
-	position: relative;
 	right: 25px;
+	bottom: 3px;
 }
 
 #add
 {
-	position: relative;
 	left: 25px;
+	bottom: 3px;
 }
 
 #college_name
@@ -70,6 +71,8 @@ header
 	font-size: 1.75em;
 	margin-top: 27px;
 	letter-spacing: 2px;
+	position: relative;
+	bottom: 3px;
 }
 
 /* End Header */
