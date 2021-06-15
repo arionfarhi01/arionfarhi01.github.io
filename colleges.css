@@ -38,7 +38,7 @@ header
 #header_content
 {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 #back, #add
