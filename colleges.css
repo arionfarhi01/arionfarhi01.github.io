@@ -68,28 +68,30 @@ header
 
 #college_name
 {
+	font-size: 24px;
 	color: white;
 	text-align: center;
-	font-size: 1.75em;
 	margin-top: 27px;
 	position: relative;
-	bottom: 3px;
+	bottom: 1px;
+	font-weight: 400;
 }
 
 #logo
 {
-	font-family: "Ubuntu";
-	font-size: 1.75em;
-	font-weight: 700;
+	font-size: 30px;
 	text-align: center;
 	color: var(--red);
 	position: relative;
-	top: 3px;
+	top: 4px;
 }
 
 #logo_and_college
 {
 	display: flex;
+	font-family: "Ubuntu";
+	font-weight: 700;
+	text-align: center;
 }
 
 /* End Header */
