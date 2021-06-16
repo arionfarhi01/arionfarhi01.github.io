@@ -27,8 +27,8 @@ header
 	position: fixed;
 	width: 100%;
 	margin-top: -25%;
-	border-bottom: 2px solid #330662; 
 	background-color: white;
+	padding-bottom: 2%;
 }
 
 #content
@@ -47,8 +47,7 @@ header
 	color: var(--red);
 	font-weight: 700;
 	font-family: ubuntu;
-	font-size: 2.75em;
-	font-weight: 700;
+	font-size: 2.5em;
 	border: none;
 	background-color: transparent;
 	position: relative;
@@ -57,23 +56,21 @@ header
 #back
 {
 	right: 15px;
-	bottom: 3px;
+	top: 2px;
 }
 
 #add
 {
 	left: 15px;
-	bottom: 3px;
+	top: 2px;
 }
 
 #college_name
 {
-	font-size: 24px;
+	font-size: 20px;
 	color: white;
 	text-align: center;
 	margin-top: 27px;
-	position: relative;
-	bottom: 1px;
 	font-weight: 400;
 }
 
@@ -84,13 +81,13 @@ header
 	color: var(--red);
 	position: relative;
 	top: 4px;
+	font-weight: 700;
 }
 
 #logo_and_college
 {
 	display: flex;
 	font-family: "Ubuntu";
-	font-weight: 700;
 	text-align: center;
 }
 
