@@ -29,6 +29,10 @@ header
 	margin-top: -25%;
 	background-color: white;
 	padding-bottom: 2%;
+	-webkit-appearance: none;
+	-webkit-box-shadow: 2px 2px 2px #666;
+    -moz-box-shadow: 2px 2px 2px #666;
+    box-shadow: 2px 2px 2px #666;
 }
 
 #content
@@ -49,21 +53,20 @@ header
 	border: none;
 	background-color: transparent;
 	position: relative;
+	font-size: 2.25em;
 }
 
 #back
 {
-	right: 20px;
+	right: 27.5px;
 	top: 2px;
-	font-size: 2em;
 	font-weight: 400;
 }
 
 #add
 {
 	top: 2px;
-	font-size: 2em;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 #college_name
