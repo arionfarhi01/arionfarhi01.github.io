@@ -20,7 +20,12 @@ body, html
     margin: 0%;
 }
 
-/* Begin Header */ 
+:root
+{
+	--red: rgb(255,49,8,.95);
+}
+
+/* Begin header */ 
 
 header
 {
@@ -155,15 +160,14 @@ header
 #instructions
 {
 	text-align: center;
-	font-family: lato;
-	background-color: #D3D3D3;
-	border-radius: 10px;
+	font-family: ubuntu;
+	font-size: .75em;
+	margin-top: 1%;
 }
 
 #search_bar
 {
-	padding-top: 0%;
-	margin-top: 2%;
+	margin-top: -3%;
 	margin-left: 2.5%;
 	margin-right: auto;
 	padding-left: 12px;
@@ -208,227 +212,59 @@ input[type="search"]::-webkit-search-results-decoration
 /* End instructions and search bar */
 
 
+/* Display of classes */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#intro
+#class_display_wrapper
 {
-	font-family: "Lato";
-}
-
-#intro_text_bottom
-{
-	margin-bottom: 4%;
+	margin-top: 5%;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
 	text-align: center;
-	border-radius: 25px;
-	/*background-color: #ECECEC;*/
-	margin-left: 12.5%;
-	margin-right: 12.5%;
-	font-size: .8em;
 }
 
-#intro_text_top
+.class_display_individual
+{
+	margin-bottom: 12%;
+	height: 150px;
+	width: 150px;
+	border-radius: 10px;
+	border: 3px solid black;
+	transition: all .5s ease-in-out;
+	font-family: Ubuntu;
+	font-weight: bold;
+	background-color: white;
+	padding: 0;
+	background: url(images/classroom.jpg) no-repeat scroll;
+	background-size: 100%;
+}
+
+.code_nickname
 {
 	font-size: 1.25em;
-	text-align: center;
-	margin-bottom: 5%;
+	background-color: white;
 }
 
-#intro_text
+.class_code
 {
-	border: 1px solid transparent;
-	border-radius: 20px;
-	background-color: #ECECEC;
-	padding-top: 1%;
 }
 
-:root
+.class_nickname
 {
-	--red: rgb(255,49,8,.95);
-}
-
-/* header */
-
-/*
-header
-{
-	background-color: #FAFAFA;
-	margin-left: -2.5%;
-	margin-top: -2%;
-	position: fixed;
-  	top: .7%;
- 	width: 100%;
- 	z-index: 9999;
- 	*/
-
- 	/* shadow */
- 	/*
- 	box-shadow: 4px 4px 2px #ccc;
-    -moz-box-shadow: 4px 4px 2px #ccc;
-    -webkit-box-shadow: 4px 4px 2px #ccc;
-}
-*/
-
-
-#back_arrow 
-{
-	width: 32.5px;
+	background-color: white;
 	position: relative;
-	top: 32.5px;
-	left: 25px;
-	margin-top: -5%;
+	top: 5px;
 }
 
-small 
+.prof_date_time
 {
-	display: inline;
-	clear: both;
-	font-size: .1em;
+	background-color: white;
+	margin-top: 10%;
 }
 
-#titleText
-{
-	display: block;
-	color: var(--red);
-	font-size: 1.5em;
-	text-align: center;
-	margin-top: 0%;
-	text-indent: 5%; /* centers exactly */
-	font-family: "Ubuntu";
-}
-
-/* body */
-
-table
-{
-	margin-top: 3%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-
-.normal_link a
-{
-	text-decoration: underline;
-}
-
-.normal_link a:hover, .normal_link a:active
-{
-	color: black;
-}
-
-a
-{
-	color: inherit;
-	background-color: inherit;
-	text-decoration: none;
-}
-
-a:hover, a:active
-{
-	color: var(--red);
-}
-
-.courseBackground:first-child
-{
-	margin-top: 2%;
-}
-
-.courseBackground
-{
-	margin-bottom: 0%;
-	border: 2px solid black;
-	border-radius: 10px;
-	font-size: 1.05em;
-	padding-top: 1%;
-	padding-bottom: 1%;
-}
-
-.heading
-{
-	font-size: 1em; 
-	margin-left: 2.5%;
-	text-transform: capitalize;
-	font-weight: 500;
-}
-
-.heading2
-{
-	margin-left: 2.5%;
-	font-size: .9em;
-}
-
-.info, .info2
-{
-	margin-left: 2.5%;
-	font-size: 1em;
-	text-transform: lowercase;
-}
-
-.info2
-{
-	font-size: 1em;
-	margin-left: 2.5%;
-}
-
-.time
-{
-	font-size: 1em;
-}
-
-#search_and_plus
-{
-	display: flex;
-	justify-content: flex-start;
-}
-
-#plusButton
-{
-	width: 25px;
-	position: relative;
-	top: 2px;
-}
+/* End display of classes */
 
 
-.group_title
-{
-	font-size: .85em;
-	text-decoration: underline;
-	font-family: "Ubuntu";
-	margin-left: 1%;
-	font-weight: 700;
-}
-
-/* form sidenav */
+/* Modal content */
 
 .form /* general menu */
 {
@@ -436,7 +272,7 @@ a:hover, a:active
   height: 100%; 
   width: 0; 
   position: fixed;
-  z-index: 1; 
+  z-index: 100; 
   top: 0; 
   left: 0;
   overflow-x: hidden; 
@@ -458,11 +294,6 @@ a:hover, a:active
   background-color: transparent;
 }
 
-
-#push /* shifts scrren over when opening nav up */
-{
-  /* transition: margin-left .6s; */
-}
 
 #caption
 {
@@ -636,47 +467,33 @@ input[type= "time"]:first-child
 	color: var(--red);
 }
 
-/* sidenav menu for if i want to implement */
+/* End modal content */
 
-.sidenav 
-{
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: white; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
 
-/* The navigation menu links */
-.sidenav a 
-{
-  text-align: center;
-  text-decoration: underline;
-  color: var(--red);
-  font-size: 1.3em;
-  display: block;
-  transition: 0.3s;
-  font-family: "lato";
-}
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover 
-{
-  text-decoration: none;
-}
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn 
-{
-  position: absolute;
-  text-decoration: none;
-  top: 10px;
-  right: 0;
-  font-size: 2em;
-  margin-left: 50px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

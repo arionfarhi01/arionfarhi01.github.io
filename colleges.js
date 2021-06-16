@@ -3,6 +3,7 @@ if(window.innerWidth > window.innerHeight)
 	alert("This website is designed only for mobile");
 }
 
+/* begin firebase init */
 
 var firebaseConfig = 
 {
@@ -20,21 +21,145 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 const database = firebase.database();
 
-function pushInfo() //for form
+/* end firebase init */
+
+function goBack()
+{
+	window.location.href = 'index.html'
+}
+
+function displayInfo(collegeName)
+{
+	var group_title_array = [];
+	var course_name_beginning = "";
+	var color_theme = document.getElementById("header").getAttribute("style").substring(18);
+
+	database.ref(collegeName).orderByChild("name").once('value', function(snapshot)
+	{
+		if(snapshot.exists())
+		{
+			var content = '';
+			snapshot.forEach(function(data){
+			var val = data.val();
+
+			/* Ensure format of val.professor is correct */
+
+			if (val.professor.includes("recitation"))
+			{
+				val.professor = val.professor.substring(0,1).toUpperCase() + val.professor.substring(1);
+			}
+			else
+			{
+				val.professor = val.professor.substring(0,6) + val.professor.substring(6,7).toUpperCase() + val.professor.substring(7);
+			}
+
+			/* content of button */
+
+            content += '<a href= "' + val.link + '" >';
+
+            content+= '<button class= "class_display_individual" style= "color: ' + color_theme + '">';
+
+            content += '<div class= "code_nickname">' +
+            '<span class= "class_code">' + val.name.toUpperCase() + '</span> <br>' +
+            '<span class= "class_nickname">' + val.nickname.toUpperCase() + "</span> <br> " +
+            '</div>' +
+
+            '<div class="prof_date_time">' +
+            '<span class= "prof">' + val.professor + "</span> <br> " +
+            val.days_of_week + "<br>" +
+            val.start_time + "-" + val.end_time + 
+            '</div>' +
+
+            '</button> </a>'
+
+            });
+
+			$('#class_display_wrapper').append(content);
+		}
+	});
+}
+
+function search() 
+{
+	var i = 0;
+	var input = document.getElementById("search_bar").value.toLowerCase();
+	var numberOfClasses = document.getElementsByClassName("class_display_individual").length;
+	var individualClasses = document.getElementsByClassName("class_display_individual");
+	var class_code = document.getElementsByClassName("class_code");
+	var class_nickname = document.getElementsByClassName("class_nickname");
+	var prof = document.getElementsByClassName("prof");
+
+	while (numberOfClasses > i)
+	{
+		if (class_code[i].innerHTML.toLowerCase().includes(input) || class_nickname[i].innerHTML.toLowerCase().includes(input) || prof[i].innerHTML.toLowerCase().includes(input))
+		{
+			$(individualClasses[i]).fadeIn('fast');
+
+			/*
+			if (headingArray[i].innerHTML.toLowerCase().includes(input))
+			{
+				headingArray[i].style.fontWeight = 700;
+			}
+			else
+			{
+				headingArray[i].style.fontWeight = 500;
+			}
+
+			if (headingArray2[i].innerHTML.toLowerCase().includes(input))
+			{
+				headingArray2[i].style.fontWeight = 700;
+			}
+			else
+			{
+				headingArray2[i].style.fontWeight = 500;
+			}
+
+			if (infoArray[i].innerHTML.toLowerCase().includes(input))
+			{
+				infoArray[i].style.fontWeight = 700;
+			}
+			else
+			{
+				infoArray[i].style.fontWeight = 500;
+			}
+			*/
+		}
+		else
+		{
+			$(individualClasses[i]).fadeOut('fast');
+		}
+
+		/*
+		if (input == "")
+		{
+			headingArray[i].style.fontWeight = 500;
+			headingArray2[i].style.fontWeight = 400;
+			infoArray[i].style.fontWeight = 400;
+		}
+		*/
+
+		i++;
+	}
+
+	/*
+	if (classDivCount == 0)
+	{
+		document.getElementById("no_matches").innerHTML = "This Class' GroupMe Is Not Yet Created. Make It Yourself Then Press The Plus Button To Add It!";
+	}
+	else
+	{
+		document.getElementById("no_matches").innerHTML = "";
+	}
+	*/
+} 
+
+function pushInfo() //upload info from form to database
 {
 	var submission_error = document.getElementById("submission_error");
 
-
 	/* get variables */
 
-	/* depends on inner html of titleText, make sure works with Georgetown */
-	var college_selection_val = document.getElementById("titleText").innerHTML.substring(78).split("<")[0].toUpperCase();
-
-
-	if (college_selection_val.includes("/"))
-	{
-		college_selection_val = college_selection_val.split("/")[1];
-	}
+	var college_selection_val = document.getElementById("college_name").innerHTML.substring(2).toUpperCase().trim();
 
 
 	var course_name_val = (((document.forms["add_group"]["course_name"].value).replace(/ /g, "").replaceAll("-","").toLowerCase()));
@@ -280,10 +405,7 @@ function pushInfo() //for form
 
 
 			/* If group works: */
-			document.getElementById("my_form").style.width = "0";
-			document.getElementById("push").style.marginLeft = "0";
-			document.getElementById("intro_text_top").innerHTML = "Group successfully created!";
-			document.getElementById("intro_text_bottom").innerHTML = "Refresh to view";
+			/* add later -- close modal, refresh page, leave message */
 			
 
 
@@ -313,234 +435,7 @@ function pushInfo() //for form
 				course_link_val
 			}
 
-			ref.push(data);
-		}
-
-
-		function displayInfo(collegeName)
-		{
-			//getColorTitleText(collegeName);
-
-			var i = 0;
-			var group_title_array = [];
-			var course_name_beginning = "";
-
-
-			database.ref(collegeName).orderByChild("name").once('value', function(snapshot)
-			{
-				if(snapshot.exists())
-				{
-					var content = '';
-					snapshot.forEach(function(data){
-						var val = data.val();
-
-						/* Ensure format of val.professor is correct */
-
-						if (val.professor.includes("recitation"))
-						{
-							val.professor = val.professor.substring(0,1).toUpperCase() + val.professor.substring(1);
-						}
-						else
-						{
-							val.professor = val.professor.substring(0,6) + val.professor.substring(6,7).toUpperCase() + val.professor.substring(7);
-						}
-
-             		//course_name_beginning = val.name.split("-")[0];
-
-             		/* Make sure no overlapping group titles  -- not using currently*/
-             		/*
-
-             		if (group_title_array.includes(course_name_beginning)) //if duplicate
-             		{
-             			group_title_array.push(course_name_beginning);
-             			//content += "<span class= 'group_title'></span>";
-             		}
-             		else
-             		{
-             			group_title_array.push(course_name_beginning);
-
-             			if (i == 0) //if first occurance
-             			{
-             				//content += "<span class= 'group_title'>" + val.name.split("-")[0] + "</span>";
-             			}
-             			else
-             			{
-             				//content += "<br> <span class= 'group_title'>" + val.name.split("-")[0] + "</span>";
-             			}
-             		}
-             		*/
-
-
-             		content += '<a href= "' + val.link + '" >';
-
-             		/* alternate colors */
-             		if (i==0)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: rgb(217,151,52)">';
-             		}
-
-             		if (i==1)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #E2F5BF">';
-             		}
-
-             		if (i==2)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #FDD451">';
-             		}
-
-             		if (i==3)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #F6B8DB">';
-             		}
-
-             		if (i==4)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #BEDEF4">';
-             		}
-
-             		if (i==5)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #DEDBF9">';
-             		}
-
-             		if (i==6)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #F4BFBE">';
-             		}
-
-             		if (i==7)
-             		{
-             			content += '<div class= "courseBackground" style= "background-color: #C4F1EB">';
-             		}
-             		
-
-             		content +='<tr>';
-
-             		content += '<td>' + '<span class= "heading"> ' + 
-             		val.nickname + " </span> <br> <span class= 'heading2'>" +
-             		val.professor + "</span> <br> <span class= 'info'> " +
-             		val.name + " </span> <br> <span class = 'info2'>" +
-             		val.days_of_week + " | <span class = 'time'> " +
-             		val.start_time + "-" + val.end_time + 
-             		'</span> </div> </a> </span> </td>'
-
-             		content += '</tr>';
-
-             		i++;
-
-             		if (i > 7)
-             		{
-             			i= 0;
-             		}
-
-             	});
-
-					$('#table').append(content);
-
-				}
-			});
-
-		}
-
-		/*
-		function getColorTitleText(collegeName) 
-		{
-			if (collegeName == "NYU")
-			{
-				document.getElementsByTagName("small")[0].style.color = "#" + 330662;
-			}
-			if (collegeName == "GEORGETOWN")
-			{
-				document.getElementsByTagName("small")[0].style.color = "#" + "00183F";
-			}
-			if (collegeName == "PSU")
-			{
-				document.getElementsByTagName("small")[0].style.color = "#" + "1E407C";
-			}
-			if (collegeName == "PITT")
-			{
-				document.getElementsByTagName("small")[0].style.color = "#" + "FFB81C";
-			}
-		}
-		*/
-
-		function search() 
-		{
-			var i = 0;
-			var numberOfClasses = document.getElementsByClassName("heading").length;
-			var classDiv = document.getElementsByClassName("courseBackground");
-			var classDivCount = document.getElementsByClassName("courseBackground").length;
-			var input = document.getElementById("search_bar").value.toLowerCase();
-			var headingArray = document.getElementsByClassName("heading");
-			var headingArray2 = document.getElementsByClassName("heading2");
-			var infoArray = document.getElementsByClassName("info");
-
-			while (numberOfClasses > i)
-			{
-				if (headingArray[i].innerHTML.toLowerCase().includes(input) || headingArray2[i].innerHTML.toLowerCase().includes(input) || infoArray[i].innerHTML.toLowerCase().includes(input))
-				{
-					$(classDiv[i]).show('1');
-
-					if (headingArray[i].innerHTML.toLowerCase().includes(input))
-					{
-						headingArray[i].style.fontWeight = 700;
-					}
-					else
-					{
-						headingArray[i].style.fontWeight = 500;
-					}
-
-					if (headingArray2[i].innerHTML.toLowerCase().includes(input))
-					{
-						headingArray2[i].style.fontWeight = 700;
-					}
-					else
-					{
-						headingArray2[i].style.fontWeight = 500;
-					}
-
-					if (infoArray[i].innerHTML.toLowerCase().includes(input))
-					{
-						infoArray[i].style.fontWeight = 700;
-					}
-					else
-					{
-						infoArray[i].style.fontWeight = 500;
-					}
-					
-				}
-
-				else
-				{
-					$(classDiv[i]).hide('1');
-				}
-
-
-				if (input == "")
-				{
-					headingArray[i].style.fontWeight = 500;
-					headingArray2[i].style.fontWeight = 400;
-					infoArray[i].style.fontWeight = 400;
-				}
-
-				i++;
-			}
-
-			if (classDivCount == 0)
-			{
-				document.getElementById("no_matches").innerHTML = "This Class' GroupMe Is Not Yet Created. Make It Yourself Then Press The Plus Button To Add It!";
-			}
-			else
-			{
-				document.getElementById("no_matches").innerHTML = "";
-			}
-		} 
-
-
-function goBack()
-{
-	window.location.href = 'index.html'
+	ref.push(data);
 }
 
 

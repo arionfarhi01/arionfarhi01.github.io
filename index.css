@@ -272,7 +272,7 @@ input[type="search"]::-webkit-search-results-decoration
 
 /* College display grid begins here */
 
-#college_list
+#college_list /* wrapper of whole list */
 {
 	margin-top: 5%;
 	display: grid;
@@ -281,7 +281,7 @@ input[type="search"]::-webkit-search-results-decoration
 }
 
 
-.college
+.college /* individual colleges */
 {
 	margin-left: 5%;
 	margin-right: 5%;

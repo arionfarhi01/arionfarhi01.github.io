@@ -20,7 +20,7 @@
 
 <body>
 
-	<header style="background-color: #330662">
+	<header id="header" style="background-color: #330662">
 
 		<div id= "header_content">
 			<button id= "back" onclick= "goBack()"> < </button>
@@ -108,45 +108,23 @@
 
 	<div id= "content">
 
-
-		<p id="instructions"> Here I explain! </p>
-
 		<input type= "search" id= "search_bar" placeholder= " Search for class, recitation, or professor..." oninput = "return search()">
 
+		<p id="instructions"> Click on your class to join the GroupMe, or add a class with the "+" </p>
 
-		<table id= "table">
-			<tr class="tr">
-			</tr>
-		</table> 
+
+		<div id= "class_display_wrapper">
+		</div> 
 
 		<p id= "no_matches"> </p>
 
-		<p> HI </p>
-		<p> HI </p>
-		<p> HI </p>
-		<p> HI </p>
-		<p> HI </p>
-
-		v
-		v
-		<p> HI </p>
-		<p> HI </p>
-		<p> HI </p>
-
-		<p> HI </p>
-		<p> HI </p>
-		<p> HI </p>
-		<p> HI </p>
-
-		v
-		v
 
 	</div>
 
 
 	<script>
 
-		displayInfo("NYU"); //make sure this is consistent with what is after the "/"" in titleText
+		displayInfo("NYU"); 
 
 		var modal = document.getElementById("addClass_modal");
 		var btn = document.getElementById("add");
