@@ -55,14 +55,14 @@ header
 
 #back
 {
-	right: 17.5px;
+	right: 20px;
 	top: 2px;
-	font-size: 2.1em;
+	font-size: 2em;
+	font-weight: 400;
 }
 
 #add
 {
-	left: 15px;
 	top: 2px;
 }
 
