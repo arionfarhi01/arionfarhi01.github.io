@@ -27,6 +27,8 @@ header
 	position: fixed;
 	width: 100%;
 	margin-top: -25%;
+	border-bottom: 2px solid #330662; 
+	background-color: white;
 }
 
 #content
@@ -54,13 +56,13 @@ header
 
 #back
 {
-	right: 30px;
+	right: 15px;
 	bottom: 3px;
 }
 
 #add
 {
-	left: 30px;
+	left: 15px;
 	bottom: 3px;
 }
 
@@ -70,13 +72,27 @@ header
 	text-align: center;
 	font-size: 1.75em;
 	margin-top: 27px;
-	letter-spacing: 2px;
 	position: relative;
 	bottom: 3px;
 }
 
-/* End Header */
+#logo
+{
+	font-family: "Ubuntu";
+	font-size: 1.75em;
+	font-weight: 700;
+	text-align: center;
+	color: var(--red);
+	position: relative;
+	top: 3px;
+}
 
+#logo_and_college
+{
+	display: flex;
+}
+
+/* End Header */
 
 /* Begin modal */
 
