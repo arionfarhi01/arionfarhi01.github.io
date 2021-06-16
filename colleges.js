@@ -55,9 +55,7 @@ function displayInfo(collegeName)
 
 			/* content of button */
 
-            content += '<a href= "' + val.link + '" >';
-
-            content+= '<button class= "class_display_individual" style= "color: ' + color_theme + '">';
+            content+= '<button onclick="location.href=\'' + val.link +'\'"; class= "class_display_individual" style= "color: ' + color_theme + '">';
 
             content += '<div class= "code_nickname">' +
             '<span class= "class_code">' + val.name.toUpperCase() + '</span> <br>' +
@@ -70,7 +68,7 @@ function displayInfo(collegeName)
             val.start_time + "-" + val.end_time + 
             '</div>' +
 
-            '</button> </a>'
+            '</button>'
 
             });
 
@@ -93,7 +91,7 @@ function search()
 	{
 		if (class_code[i].innerHTML.toLowerCase().includes(input) || class_nickname[i].innerHTML.toLowerCase().includes(input) || prof[i].innerHTML.toLowerCase().includes(input))
 		{
-			$(individualClasses[i]).fadeIn('fast');
+			$(individualClasses[i]).fadeIn('slow');
 
 			/*
 			if (headingArray[i].innerHTML.toLowerCase().includes(input))
@@ -126,7 +124,7 @@ function search()
 		}
 		else
 		{
-			$(individualClasses[i]).fadeOut('fast');
+			$(individualClasses[i]).fadeOut('slow');
 		}
 
 		/*
@@ -420,7 +418,7 @@ function pushInfo() //upload info from form to database
 				course_nickname_val,
 
 				professor:
-				recitation_val + course_professor_val + recitation_placeholder,
+				course_professor_val,
 
 				start_time:
 				course_start_time_val,
@@ -437,5 +435,3 @@ function pushInfo() //upload info from form to database
 
 	ref.push(data);
 }
-
-
