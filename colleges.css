@@ -330,6 +330,13 @@ select
 	margin-right: 3%;
 	height: 25px;
 	-webkit-appearance: none;
+	font-size: 1.1em;
+}
+
+#form_info
+{
+	margin-top: 0%;
+	font-size: .1em;
 }
 
 #recitation_div
