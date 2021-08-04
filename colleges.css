@@ -102,76 +102,16 @@ header
 
 /* End Header */
 
-/* Begin modal */
-
-.modal 
-{
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; 
-  padding-top: 5%;
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
-}
-
-.modal-content 
-{
-  background-color: #fefefe;
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; 
-  border-radius: 30px;
-  border: 2px solid black;
-}
-
-.modal-content p
-{
-	color: black;
-	font-size: 1em;
-	margin-bottom: 6%;
-	font-weight: 700;
-}
-
-.closeModal 
-{
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.closeModal:hover, .closeModal:focus 
-{
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* End modal */
-
 
 /* Instructions and search bar */
 
-#instructions
-{
-	text-align: center;
-	font-family: ubuntu;
-	font-size: .75em;
-	margin-top: 1%;
-}
-
 #search_bar
 {
+	width: 95%;
 	margin-top: -3%;
 	margin-left: 2.5%;
 	margin-right: auto;
 	padding-left: 12px;
-	width: 95%;
 	height: 50px;
 	border: 1px solid #D3D3D3;
 	-webkit-border-radius: 0;
@@ -182,7 +122,7 @@ header
 	background-size: 7%;
 	background-position: 96%;
 	font-family: "Lato";
-	font-size: 17.5px;
+	font-size: 15px;
 }
 
 #search_bar:focus
@@ -209,6 +149,14 @@ input[type="search"]::-webkit-search-results-decoration
   -webkit-appearance:none;
 }
 
+#instructions
+{
+	text-align: center;
+	font-family: ubuntu;
+	font-size: .75em;
+	margin-top: 1%;
+}
+
 /* End instructions and search bar */
 
 
@@ -227,9 +175,8 @@ input[type="search"]::-webkit-search-results-decoration
 	margin-bottom: 12%;
 	height: 155px;
 	width: 155px;
-	border-radius: 10px;
-	border: 3px solid black;
-	transition: all .5s ease-in-out;
+	border-radius: 15px;
+	border: 2px solid black;
 	padding: 0;
 	background: url(images/classroom.jpg) no-repeat scroll;
 	background-size: 100%;
@@ -255,71 +202,153 @@ input[type="search"]::-webkit-search-results-decoration
 {
 	background-color: white;
 	margin-top: 10%;
+	font-family: Lato;
 }
 
 /* End display of classes */
 
 
-/* Modal content */
+/* Add class Modal content */
 
-.form /* general menu */
+.modal 
 {
-  font-family: "Ubuntu";
-  height: 100%; 
-  width: 0; 
-  position: fixed;
-  z-index: 100; 
-  top: 0; 
+  font-family: "Lato";
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
-  overflow-x: hidden; 
-  transition: 1s; 
-  margin-top: 65px; /* right below header */
-  background-color: #ECECEC;
-  overflow-y: scroll;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  padding-top: 5%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
 }
 
-.form .closebtn /* close button */
+.modal-content 
 {
-  position: absolute;
-  top: 17.5px;
-  right: 15px; /* top right corner */
-  font-size: 36px;
-  margin-left: 65px;
-  margin-right: 5%;
-  text-decoration: none;
-  background-color: transparent;
+  font-family: "Lato";
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  border-radius: 30px;
+  border: 2px solid black;
 }
 
+.modal-content p
+{
+	color: black;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-size: .85em;
+}
 
-#caption
+.closeModal 
+{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeModal:hover, .closeModal:focus 
+{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal_header
 {
 	text-align: center;
 	font-size: 1.25em;
-	text-decoration: underline;
-	text-decoration-color: var(--red);
-}
-
-form
-{
-	margin-left: 5%;
-	margin-right: 5%;
-	background-color: white;
 }
 
 form > ::-webkit-input-placeholder 
 { 
-  	font-family: "Ubuntu";
   	font-size: .8em;
 }
 
-#border
+form > input[type = "text"]
 {
-	border: 1px solid black;
-	border-radius: 15px;
-	background-color: white;
-	margin-top: 2%;
-	margin-left: 5%;
-	margin-right: 5%;
+	width: 90%;
+	height: 22.5px;
+	padding-left: 2%;
+	font-size: .85em;
+}
+
+form > input[type = "text"]:focus
+{
+	-webkit-appearance: none;
+	-webkit-box-shadow: .5px .5px .5px #666;
+    -moz-box-shadow: .5px .5px .5px #666;
+    box-shadow: .5px .5px .5px #666;
+    display: inline-block;
+    outline: none;
+}
+
+#dateAndTime
+{
+	text-align: center;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.weekdays_selector input 
+{
+  display: none!important;
+}
+
+.weekdays_selector input[type=checkbox] + label 
+{
+  display: inline-block;
+  border-radius: 70%;
+  background: #dddddd;
+  height: 35px;
+  line-height: 35px;
+  width: 12.5%;
+  cursor: pointer;
+  font-size: .7em;
+}
+
+.weekdays_selector input[type=checkbox]:checked + label 
+{
+  background: var(--red);
+  color: #ffffff;
+}
+
+.time-selector
+{
+	display: inline-flex;
+}
+
+select
+{
+	width: 100px;
+	margin-right: 3%;
+	height: 25px;
+}
+
+#recitation_div
+{
+	margin-top: -3%;
+	display: inline-flex;
+}
+
+#recitation_check
+{
+	margin-top: 1%;
+	position: relative;
+	left: 6px;
+}
+
+#recitation_paragraph
+{
+	font-size: .8em;
+	position: relative;
+	bottom: 5px;
 }
 
 #submit_div > input[type = "button"]
@@ -346,115 +375,6 @@ input[type = "button"]
 #submit_div
 {
 	text-align: center;
-}	
-
-form > input[type = "text"]
-{
-	border: none;
-	border-bottom: 3px solid black;
-	width: 90%;
-	height: 22.5px;
-	font-size: .9em;
-}
-
-form > p
-{
-	font-weight: bold;
-	margin-top: 2%;
-	margin-bottom: 2%;
-	font-size: .8em;
-}
-
-.form_info
-{
-	font-size: .5em;
-	margin-right: 10%;
-	font-color: lightgrey;
-	font-weight: 400;
-	margin-top: 2.5%;
-}
-
-.weekdays_selector
-{
-	text-align: center;
-}
-
-.weekdays_selector input 
-{
-  display: none!important;
-
-}
-
-.weekdays_selector input[type=checkbox] + label 
-{
-  display: inline-block;
-  border-radius: 70%;
-  background: #dddddd;
-  height: 35px;
-  line-height: 35px;
-  width: 12.5%;
-  cursor: pointer;
-  font-size: .7em;
-}
-
-#form_info_margin
-{
-	margin-left: 2.5%;
-	margin-top: 0%;
-	margin-bottom: -1%;
-}
-
-.weekdays_selector input[type=checkbox]:checked + label 
-{
-  background: var(--red);
-  color: #ffffff;
-}
-
-#recitation_div
-{
-	margin-top: -3%;
-	display: inline-flex;
-}
-
-#recitation_check
-{
-	margin-top: 13.5%;
-	position: relative;
-	left: 6px;
-}
-
-#recitation_paragraph
-{
-	font-size: .8em;
-	position: relative;
-	bottom: 5px;
-
-}
-
-.time-selector
-{
-	text-align: center;
-	display: inline-flex;
-	margin-bottom: -7.5%;
-}
-
-input[type= "time"]
-{
-	width: 100px;
-	margin-right: 6%;
-	height: 22.5px;
-}
-
-input[type= "time"]:first-child
-{
-	margin-left: 2.5%; 
-}
-
-#time_paragraph
-{
-	margin-right: 6%;
-	position: relative;
-	bottom: 13px;
 }
 
 #submission_error

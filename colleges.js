@@ -1,3 +1,4 @@
+
 if(window.innerWidth > window.innerHeight)
 {
 	alert("This website is designed only for mobile");
@@ -40,37 +41,37 @@ function displayInfo(collegeName)
 		{
 			var content = '';
 			snapshot.forEach(function(data){
-			var val = data.val();
+				var val = data.val();
 
-			/* Ensure format of val.professor is correct */
+				/* Ensure format of val.professor is correct */
 
-			if (val.professor.includes("recitation"))
-			{
-				val.professor = val.professor.substring(0,1).toUpperCase() + val.professor.substring(1);
-			}
-			else
-			{
-				val.professor = val.professor.substring(0,6) + val.professor.substring(6,7).toUpperCase() + val.professor.substring(7);
-			}
+				if (val.professor.includes("recitation"))
+				{
+					val.professor = val.professor.substring(0,1).toUpperCase() + val.professor.substring(1);
+				}
+				else
+				{
+					val.professor = val.professor.substring(0,6) + val.professor.substring(6,7).toUpperCase() + val.professor.substring(7);
+				}
 
-			/* content of button */
+				/* content of button */
 
-            content+= '<button onclick="location.href=\'' + val.link +'\'"; class= "class_display_individual" style= "color: ' + color_theme + '">';
+				content+= '<button onclick="location.href=\'' + val.link +'\'"; class= "class_display_individual" style= "color: ' + color_theme + '">';
 
-            content += '<div class= "code_nickname">' +
-            '<span class= "class_code">' + val.name.toUpperCase() + '</span> <br>' +
-            '<span class= "class_nickname">' + val.nickname.toUpperCase() + "</span> <br> " +
-            '</div>' +
+				content += '<div class= "code_nickname">' +
+				'<span class= "class_code">' + val.name.toUpperCase() + '</span> <br>' +
+				'<span class= "class_nickname">' + val.nickname.toUpperCase() + "</span> <br> " +
+				'</div>' +
 
-            '<div class="prof_date_time">' +
-            '<span class= "prof">' + val.professor + "</span> <br> " +
-            val.days_of_week + "<br>" +
-            val.start_time + "-" + val.end_time + 
-            '</div>' +
+				'<div class="prof_date_time">' +
+				'<span class= "prof">' + val.professor + "</span> <br> " +
+				val.days_of_week + "<br>" +
+				val.start_time + "-" + val.end_time + 
+				'</div>' +
 
-            '</button>'
+				'</button>'
 
-            });
+			});
 
 			$('#class_display_wrapper').append(content);
 		}
@@ -79,7 +80,6 @@ function displayInfo(collegeName)
 
 function search() 
 {
-	var i = 0;
 	var input = document.getElementById("search_bar").value.toLowerCase();
 	var numberOfClasses = document.getElementsByClassName("class_display_individual").length;
 	var individualClasses = document.getElementsByClassName("class_display_individual");
@@ -87,68 +87,17 @@ function search()
 	var class_nickname = document.getElementsByClassName("class_nickname");
 	var prof = document.getElementsByClassName("prof");
 
-	while (numberOfClasses > i)
+	for (var i= 0; i < numberOfClasses; i++)
 	{
 		if (class_code[i].innerHTML.toLowerCase().includes(input) || class_nickname[i].innerHTML.toLowerCase().includes(input) || prof[i].innerHTML.toLowerCase().includes(input))
 		{
-			$(individualClasses[i]).fadeIn('slow');
-
-			/*
-			if (headingArray[i].innerHTML.toLowerCase().includes(input))
-			{
-				headingArray[i].style.fontWeight = 700;
-			}
-			else
-			{
-				headingArray[i].style.fontWeight = 500;
-			}
-
-			if (headingArray2[i].innerHTML.toLowerCase().includes(input))
-			{
-				headingArray2[i].style.fontWeight = 700;
-			}
-			else
-			{
-				headingArray2[i].style.fontWeight = 500;
-			}
-
-			if (infoArray[i].innerHTML.toLowerCase().includes(input))
-			{
-				infoArray[i].style.fontWeight = 700;
-			}
-			else
-			{
-				infoArray[i].style.fontWeight = 500;
-			}
-			*/
+			$(individualClasses[i]).fadeIn('fast');
 		}
 		else
 		{
-			$(individualClasses[i]).fadeOut('slow');
+			$(individualClasses[i]).fadeOut('fast');
 		}
-
-		/*
-		if (input == "")
-		{
-			headingArray[i].style.fontWeight = 500;
-			headingArray2[i].style.fontWeight = 400;
-			infoArray[i].style.fontWeight = 400;
-		}
-		*/
-
-		i++;
 	}
-
-	/*
-	if (classDivCount == 0)
-	{
-		document.getElementById("no_matches").innerHTML = "This Class' GroupMe Is Not Yet Created. Make It Yourself Then Press The Plus Button To Add It!";
-	}
-	else
-	{
-		document.getElementById("no_matches").innerHTML = "";
-	}
-	*/
 } 
 
 function pushInfo() //upload info from form to database
@@ -433,5 +382,5 @@ function pushInfo() //upload info from form to database
 				course_link_val
 			}
 
-	ref.push(data);
+			ref.push(data);
 }
