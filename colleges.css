@@ -329,6 +329,7 @@ select
 	width: 100px;
 	margin-right: 3%;
 	height: 25px;
+	-webkit-appearance: none;
 }
 
 #recitation_div
