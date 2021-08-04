@@ -235,6 +235,7 @@ input[type="search"]::-webkit-search-results-decoration
   width: 80%; 
   border-radius: 30px;
   border: 2px solid black;
+  text-align: center;
 }
 
 .modal-content p
@@ -243,6 +244,8 @@ input[type="search"]::-webkit-search-results-decoration
 	margin-top: 2%;
 	margin-bottom: 2%;
 	font-size: .85em;
+	text-align: left;
+	margin-left: 15px;
 }
 
 .closeModal 
@@ -294,6 +297,11 @@ form > input[type = "text"]:focus
 	text-align: center;
 	margin-top: 3%;
 	margin-bottom: 3%;
+}
+
+#dateAndTime p
+{
+	text-align: center;
 }
 
 .weekdays_selector input 
