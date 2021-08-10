@@ -282,9 +282,9 @@ form > input[type = "text"]
 form > input[type = "text"]:focus
 {
 	-webkit-appearance: none;
-	-webkit-box-shadow: .5px .5px .5px #666;
-    -moz-box-shadow: .5px .5px .5px #666;
-    box-shadow: .5px .5px .5px #666;
+	-webkit-box-shadow: 1px 1px 1px #666;
+    -moz-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
     display: inline-block;
     outline: none;
 }
