@@ -1,0 +1,38 @@
+@import 'index.css';
+
+#updates
+{
+	color: var(--red);
+}
+
+h2
+{
+	margin-bottom: 7.5vw;
+}
+
+.post
+{
+	font-family: "Alegreya Sans SC";
+	width: 90%;
+	margin-left: 5%;
+}
+
+.post_header
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 0%;
+}
+
+.post_content
+{
+	font-family: "Ubuntu";
+	text-align: center;
+	font-size: 3vw;
+}
+
+#hr_end
+{
+	border-top: .75vw solid black;
+}

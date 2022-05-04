@@ -1,0 +1,24 @@
+@import 'index.css';
+
+/* MAIN */
+
+#color
+{
+	color: #330662;
+}
+
+ul
+{
+	list-style-type: none;
+	font-family: "Alegrya Sans";
+	padding-left: 0;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+li
+{
+	border: 1vw solid blue;
+	padding: 3vw;
+	margin-bottom: 2vw;
+}
