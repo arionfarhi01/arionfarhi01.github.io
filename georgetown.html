@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+	<meta charset= "utf-8">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
+	<link rel="shortcut icon" href="images/icon.ico"/>
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src= new.js> </script>
+	<link rel= "stylesheet" href= "new.css">
+
+	<title>Georgetown</title>
+
+</head>
+
+<body>
+
+	<header>
+
+		<!-- MENU BUTTON -->
+
+			<input type="image" src="images/back.png" id="back_arrow" onclick= "goBack()"/>
+
+
+			<div id="mySidenav" class="sidenav">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Select College</a>
+			</div>
+
+
+			<div id= "title">
+				<a href= "index.html"><h1 id= "titleText"><span class= "centered">HANGR</span><small>.org/georgetown</small></h1></a>
+			</div>
+
+		<!-- FORM SIDNAV -->
+
+		<div id="my_form" class="form">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeForm()">&times;</a>
+
+			<div id= "border">
+
+			<h1 id= "caption"> Add GroupMe </h1>	
+
+			<form name= "add_group" autocomplete= "off">
+
+				<p> Course Name: </p>
+				<input type= "text" name= "course_name" placeholder = "i.e. ACCT 101">
+				<br>
+
+				<p class= "form_info"> Section number is not necessary </p>
+
+				<p> Course Nickname: </p>
+				<input type= "text" name= "course_nickname" placeholder = "i.e. Principles of Financial Accounting">
+				<br>
+
+				<p> Course Professor/TA: </p>
+				<input type= "text" name= "course_professor" placeholder = "i.e. Johnson">
+				<br>
+
+				<p> Days of week: </p>
+				<div class="weekdays_selector">
+  					<input type="checkbox" id="weekday-mon" class="weekday" />
+					  <label for="weekday-mon">M</label>
+					<input type="checkbox" id="weekday-tue" class="weekday" />
+					  <label for="weekday-tue">Tu</label>
+					<input type="checkbox" id="weekday-wed" class="weekday" />
+					  <label for="weekday-wed">W</label>
+					<input type="checkbox" id="weekday-thu" class="weekday" />
+					  <label for="weekday-thu">Th</label>
+					<input type="checkbox" id="weekday-fri" class="weekday" />
+					  <label for="weekday-fri">F</label>
+					<input type="checkbox" id="weekday-sat" class="weekday" />
+					  <label for="weekday-sat">Sa</label>
+					  <input type="checkbox" id="weekday-sun" class="weekday" />
+					  <label for="weekday-sun">Su</label>
+				</div>
+
+				<p> Time: </p>
+				<div class= "time-selector">
+					<input type= "time" id="time_begin">
+					<p id= "time_paragraph"> to </p>
+					<input type= "time" id="time_end"> <p class= "form_info"> (EST) </p>
+				</div>
+				
+				
+				
+				<p> Course Link: </p>
+					<input type= "text" name= "course_link" placeholder = "groupme.com/join_group/...">
+					<p class= "form_info"> Settings > Share Group > Copy (extraneous text is fine) </p>
+				
+				<div id= "recitation_div">
+				<p id= "recitation_paragraph"> Recitation? </p>
+					<input id= "recitation_check" type="checkbox">
+				</div>
+
+				<div id= submit_div>
+					<input type= "button" id= "button" value= "Submit" onclick= "return pushInfo()">
+					<p id= "submission_error"> </p>
+				</div>
+
+			</form>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<br>
+	<br>
+	<br>
+
+	<div id= "push">
+
+		<div id= "intro">
+
+			<div id= "intro_text">
+				<p id= "intro_text_top"> Tap on your class below to join </p>
+				<p id= "intro_text_bottom"> If the class GroupMe isn't yet added, you can make it yourself and add it with the "+" <br> <small> Contact us: hangrwebsite@gmail.com </small> </p>
+			</div>
+
+			<br>
+
+			<div id= "search_and_plus">
+
+				<div id= "plus">
+						<input type="image" src="images/plus.png" name="plus" id="plusButton" onclick= "openForm()">
+					</div>
+
+				<input type= "search" id= "search_bar" placeholder= " Search for class, recitation, or professor..." oninput = "return search()">
+
+			</div>
+
+		</div>
+
+		<hr>
+
+		<table id= "table">
+	  	<tr class="tr">
+	  	</tr>
+		</table> 
+
+		<p id= "no_matches"> </p>
+
+	</div>
+
+
+	<script>
+
+		displayInfo("GEORGETOWN"); //make sure this is consistent with what is after the "/"" in titleText
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+	<meta charset= "utf-8">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+	<script src = "ocr.js"></script>
+	<title>OCR</title>
+
+</head>
+
+<body>
+
+	<h1> OCR </h1>
+	<input type= file onchange= "process()" id="fileInput" accept= "image/*">
+
+	<script>
+
+		var rendered = "";
+		var i = 1;
+		var finalClassNames = "";
+
+		function process()
+		{
+
+		var image = document.getElementById('fileInput').files[0];
+
+		Tesseract.recognize(
+  		image,
+  		'eng',
+  		//'Gotham SSm 4r',
+ 		 { 
+ 	 	logger: m => console.log(m) }
+		).then(({ data: { text } }) => {
+  		//console.log(text);
+  		rendered += text;
+  		rendered = parseRendered(rendered);
+  		//window.alert("Finished!!!!!" + rendered);
+		})
+
+		function parseRendered(rendered)
+		{
+			//put string to lower case
+			var renderedLower = rendered.toLowerCase();
+			//find first instance of "units"
+			var firstReferencePosition = renderedLower.search("units");
+			//start string on first insance of "(course)units"
+			var renderedCut = renderedLower.substring(firstReferencePosition - 7 );
+
+			//count occurances of "units" from cut string
+			var classCount = (renderedCut.match(/course/g) || []).length;
+			
+			//split string where it says "units"
+			//renderedSplit is an array
+			var renderedSplit = renderedCut.split("course(units)");
+
+			//itterate through entirety of class count
+			while (classCount+1 > i)
+			{
+				try
+				{
+					//if not duplicate next to each other
+					if ((renderedSplit[i].split("(")[0]) != (renderedSplit[i+1].split("(")[0]))
+					{	
+						var strLength = renderedSplit[i].split("(")[0].length;
+						//add to finalClassNames, splitting at "(", and ensuring section number has a space before it
+						finalClassNames += (renderedSplit[i].split("(")[0].substring(0, strLength-4) + " " + renderedSplit[i].split("(")[0].substring(strLength-4));
+					}
+				}
+				catch (recitation)
+				{
+					//TODO: delete all non numbers?
+					finalClassNames += "recitation " + renderedSplit[i].split("recitation")[1].substring(1,4) + " for " + renderedSplit[i-1].split("(")[0];
+				}
+
+				//increase itteration
+				i = i + 1;
+			}
+			console.log (finalClassNames);
+			//Todo: see if each class is a match
+			//Todo: test hella inputs
+		}
+
+	}
+		
+	</script>
+
+</body>
+
+</html>

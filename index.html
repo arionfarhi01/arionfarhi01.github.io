@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+	<meta charset= "utf-8">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
+	<link rel="shortcut icon" href="images/icon.ico"/>
+	<link rel= "stylesheet" href= "index.css">
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<title>Hangr</title>
+
+</head>
+
+<body>
+
+	<header>
+
+		<div id= "logo">
+			<a href= "index.html" style="color:var(--red)"><h1> HANGR <span id= "version"> v1.0 </span> </h1></a>
+		</div>
+
+		<div id= "header_buttons">
+			<button onclick="goToUpdates()" style="margin:20px"> updates </button>
+			<button id= "contactButton" onclick="openModal()"> contact </button>
+		</div>
+
+		<!-- modal -->
+		<div id="feedback_modal" class="modal">
+			<div class="modal-content">
+				<span class="closeModal">&times;</span>
+				<form action="https://formspree.io/f/xpzkdbyy" method="POST">
+					<p> Your Message <span class="red">*</span> </p>
+					<textarea id = "contact_message" name= "feedback" rows= "5" cols= "5" placeholder= "Let us know how we can improve our website, any requests you may have, or anything else!"></textarea>
+					<br>
+					<br>
+					<p> Your Email </p>
+					<input id= "contact_email" type="text" name="email" placeholder="So we can follow up with you">
+					<br>
+
+					<div id="form_container"> 
+						<p id="email"> hangrwebsite@gmail.com </p>
+						<input type="submit" value="SUBMIT">
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</header>
+
+
+	<h2 id= "main_text"> Find your class GroupMe with HANGR </h2>
+
+	<input type= "search" id= "search_bar" placeholder= "Find your college" oninput = "return searchCollege()">
+	
+	<div id= "college_list">
+
+	    <div class= "college_div" name= "NYU" fullname= "New York University"> <a href= "nyu.html"> <button type="button" class= "college" id= "NYU"> <p> NYU </p> </button> </a> </div>
+
+		<div class= "college_div" name= "Georgetown" fullname= "Georgetown University"> <a href= "georgetown.html"> <button type="button" class= "college" id= "Georgetown"> <p> Georgetown </p> </button> </a> </div>
+
+		<div class= "college_div" name= "PSU" fullname= "Penn State University"> <a href= "psu.html"> <button type="button" class= "college" id= "PSU"> <p> PSU </p> </button> </a> </div>
+
+		<div class= "college_div" name= "Pitt" fullname= "University of Pittsburgh"> <a href= "pitt.html"> <button type="button" class= "college" id= "Pitt"> <p> Pitt </p> </button> </a> </div>
+
+		<div class= "college_div" name= "more" fullname= "more"> <button type="button" class= "college" id= "More"> <p> + More Coming Soon </p> </button> </div> 
+
+	</div>
+
+</body>
+
+<script src= index.js> </script>
+
+</html>
